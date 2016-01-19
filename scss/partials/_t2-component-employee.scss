@@ -1,0 +1,46 @@
+//Component: Employee
+.t2-component-employee {
+	
+	@media #{$small-only} {}
+	@media #{$medium-up} {}
+	@media #{$large-up} {}
+}
+
+//Component: Employee Preview
+.t2-component-employee-preview {
+    $scope-background-color: $t2-color-gray-haze;
+    $scope-border-color: darken($t2-color-gray-fog, 5%);
+    .t2-wrapper {
+        .t2-image-container {
+            img { min-width: 100%; }
+        }
+        .t2-info-container {
+            display: block;
+            padding: $t2-size-small;
+            background-color: $scope-background-color;
+            .t2-title-container {
+                border-bottom: 1px solid $scope-border-color;
+                padding-bottom: rem-calc(13);
+                margin-bottom: rem-calc(14);
+                .t2-title {
+                    @extend .t2-font-regular;
+                    font-size: rem-calc(20);
+                    color: $t2-color-gray-concrete;
+                    margin: 0;
+                }
+            }
+            .t2-info-list {
+                list-style-type: none;
+                margin: 0;
+                li {
+                    display: block;
+                    font-size: rem-calc(14);
+                    &:first-child a { font-weight: bold; }
+                }
+            }
+        }
+    }
+    @media #{$small-only} {}
+    @media #{$medium-up} {}
+    @media #{$large-up} {}
+}

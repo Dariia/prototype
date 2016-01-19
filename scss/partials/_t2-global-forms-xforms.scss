@@ -1,0 +1,85 @@
+//t2 forms: xforms styling.
+
+//form: xform
+.form.xform {
+	@extend .t2-form;
+	//.row
+	> div {
+		@extend .row;
+		padding: $t2-size-xsmall 0;
+		//.large-24, .columns (tot-wrapper)
+		> div {
+			@extend .large-24;
+			@extend .columns;
+			white-space: normal;
+			//.row
+			> div {
+				//.large-24, .columns (element-container)
+				> div {}
+			}
+		}
+	}
+	
+	.xform-table {}
+	.xform-row {}
+	.xform-col {}
+	
+	label, legend {
+		background-color: transparent;
+        @extend .t2-sans-serif-bold;
+		font-size: rem-calc(14);
+		display: block;
+		color: $t2-color-gray-carbon;
+		margin-bottom: $t2-size-small/2;
+		input[type=radio],
+		input[type=checkbox] {
+            margin-top: 3px;
+            & + * {}
+        }
+		
+		input[type=radio] {}
+		input[type=checkbox] {}
+	}
+
+	//input elements
+	input[type="text"],
+	input[type="password"],
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="month"],
+	input[type="week"],
+	input[type="email"],
+    input[type="phone"],
+	input[type="number"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="time"],
+	input[type="url"],
+	textarea {
+		border:2px solid $t2-color-gray-gravle;
+		height: $t2-size-xlarge;
+		line-height: rem-calc(16);
+		font-size: rem-calc(16);
+		margin-bottom: $t2-size-xsmall;
+	}
+	
+	textarea { min-height: $t2-size-xlarge*2; }
+	
+	//fieldset
+	fieldset {
+		border: none;
+		padding: 0;
+	}
+	
+	//input[type=submit]
+	input[type=submit] {
+		@extend .t2-button;
+		@extend input.t2-button;
+		@extend .t2-button.t2-button-type-solid;
+		@extend .t2-button.t2-button-type-solid.t2-button-color-300;
+		&:hover, &:active {
+			@extend .t2-button.t2-button-type-solid.t2-button-color-300:hover;	
+		}
+	}	
+}

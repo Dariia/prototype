@@ -1,0 +1,23 @@
+﻿.t2-map{
+	/*background-color: $t2-color-gray-ultralight;*/
+	.t2-map-content{
+		padding:$t2-gutter-larger 0;
+		h2.t2-pagetitle{
+			@extend .t2-font-heavy;
+			text-align: center;
+			font-size:rem-calc(22);
+		}
+		.t2-ingress {
+			> p{
+				text-align: center;
+				font-size: rem-calc(15);
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	.t2-map-container{
+	height:500px;
+	}
+} 

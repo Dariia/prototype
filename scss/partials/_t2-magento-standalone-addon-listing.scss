@@ -1,0 +1,255 @@
+input.t2-magento-input,
+input.t2-magento-input:focus[type="text"]{
+    border: 2px solid $t2-color-gray-dark-concrete;
+    color: $t2-color-gray-graphite;
+    padding: 5px 10px;
+    height: 42px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    line-height: 42px;
+}
+.t2-magento-standalone-title {
+    padding:30px 20px;
+    @media #{$large-up}{
+        padding:50px 0 40px 0;
+    }
+    @media #{$small-only}{
+        font-size:rem-calc(16);
+    }
+    h2 {
+        font-weight:400;
+        @extend .t2-font-bold;
+    }
+}
+.t2-magento-centered-form {
+    > .row {
+        text-align:center;
+        @media #{$small-only}{
+            padding:0 20px;
+            margin:0 !important;
+        }
+        > div {
+            display:inline-block;
+            text-align:left;
+            vertical-align:top;
+        }
+    }
+    label {
+        font-weight:700;
+        padding-bottom:5px;
+        color:$t2-color-gray-graphite;
+    }
+    .large-pull-1 {
+        padding-right:15px;
+        @media #{$small-only}{
+            padding-right:0;
+        }
+    }
+    input.t2-magento-input,
+    input.t2-magento-input:focus[type="text"] {
+        height:45px;
+        font-size:rem-calc(18);
+        color:$t2-color-gray-concrete;
+    }
+    .t2-button {
+        padding:0 20px;
+        width:100%;
+        height:45px;
+        line-height:45px;
+        font-size:rem-calc(15);
+    }
+}
+
+.t2-magento-lisling-page.standalone-listing {
+    .t2-magento-standalone-empty-select {
+        font-weight: bold;
+        color: $t2-color-gray-graphite !important;
+    }
+    .t2-block-discover-columns {
+        @media #{$medium-only}{
+            padding:0 20px;
+        }
+        > ul {
+            @media #{$small-only}{
+                margin-left:-10px;
+            }
+            > li {
+                margin-left:0;
+            }
+        }
+    }
+    .t2-magento-bordered-block {
+        &:after {
+            display:none !important;
+        }
+        .t2-magento-listing-desc h2.t2-title {
+            @extend .t2-font-bold;
+            font-size: rem-calc(20);
+            color: $t2-color-gray-graphite;
+            margin: 0;
+            a:hover {
+                color: $t2-color-black;
+            }
+        }
+        .t2-button.t2-magento-button-addto {
+            padding:20px;
+            &:before {
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+            }
+            &.add {
+                color: $t2-color-gray-concrete;
+                &:before {
+                    font-family: 't2-iconic';
+                    content: "\6a";
+                    padding-right: 5px;
+                }
+            }
+        }
+        .t2-magento-icon-info {
+            position:relative;
+            top:0;
+            left:0;
+            right:0;
+            display:block;
+        }
+        .t2-magento-listing-price {
+            font-size:rem-calc(20);
+            margin-bottom:20px;
+        }
+        .t2-magento-item-promo-tip.inline-message.correct {
+            padding:20px;
+            color: $t2-color-green-light !important;
+            font-style: normal;
+            &:before {
+                font-family:'t2-magento-iconic';
+                content: '\e811';
+                color: $t2-color-green-light;
+            }
+        }
+        .t2-magento-sms-block {
+            .large-pull-1 {
+                padding-left:10px;
+            }
+            label {
+                font-weight:bold;
+                color:$t2-color-gray-graphite;
+                text-align:left;
+                display:block;
+                padding-bottom:3px;
+                margin:0 20px;
+            }
+            > .row {
+                margin:0 20px;
+                > div {
+                    display:inline-block;
+                    float:left;
+                }
+            }
+            input.t2-magento-input {
+                width:100%;
+                text-align:center;
+                color: $t2-color-gray-concrete;
+                font-weight:700;
+            }
+            .t2-button {
+                width:100%;
+                height:42px;
+                line-height:42px;
+                padding-top:0;
+                padding-bottom:0;
+            }
+        }
+    }
+
+    .t2-magento-select {
+        width:80%;
+        select {
+            opacity:0;
+        }
+        select,
+        .t2-magento-selector {
+            width:100%;
+        }
+        select {
+            @media #{$large-up}{
+                display:none !important;
+            }
+            @media #{$medium-only}{
+                display:none !important;
+            }
+            @media #{$small-only}{
+                display:block !important;
+            }
+        }
+        .t2-magento-selectorOpen {
+            border-color:$t2-color-gray-graphite;
+            color:$t2-color-gray-graphite;
+        }
+    }
+    .t2-magento-custom-select {
+        position:relative;
+        ul {
+            list-style:none;
+            margin:0;
+            background:$t2-color-white;
+            box-shadow:1px 2px 0 2px $t2-color-gray-haze;
+            position:absolute;
+            margin-top:-3px;
+            top:100%;
+            width:80%;
+            left:50%;
+            margin-left:-40%;
+            border:1px solid $t2-color-gray-light;
+            display:none;
+            z-index:100;
+            @media #{$small-only}{
+                display:none !important;
+            }
+            &:after {
+                top:-10px;
+                left:30px;
+                margin-left:-5px;
+                position:absolute;
+                content:'';
+                width: 10px;
+                height: 10px;
+                background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTVBQUI5NjFDOEI0MTFFNEFGNDdDMDEyMUIzNDJBOTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTVBQUI5NjJDOEI0MTFFNEFGNDdDMDEyMUIzNDJBOTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5NUFBQjk1RkM4QjQxMUU0QUY0N0MwMTIxQjM0MkE5NyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5NUFBQjk2MEM4QjQxMUU0QUY0N0MwMTIxQjM0MkE5NyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtBYGcAAAACLSURBVHjatI9BCoMwFERTL+AlehJv4x2L0APUhYvuCkYIpGmJ8BfVapLpT1EXlVI3fTAwMG8zOwBiC4nYyJ/Fq5Q5WYuYlRnPxOi6zlpjTtwdB1ZrP2/vw5O0vyt15k6YCN7jphQtIkupaZoqhCDxgRtH8HaZxYN3rsQXnl0Hdgox9P0RP3gQ4SXAAKzbw97ln0cCAAAAAElFTkSuQmCC) no-repeat;
+            }
+            li {
+                list-style:none;
+                font-size:rem-calc(14);
+                font-weight:bold;
+                background:$t2-color-white;
+                color:$t2-color-gray-concrete;
+                border-top:1px solid $t2-color-gray-light;
+                padding:15px;
+                display:block;
+                float:none;
+                overflow:hidden;
+                margin:0;
+                > span {
+                    display:inline-block;
+                }
+                .col-1 {
+                    float:left;
+                }
+                .col-2 {
+                    float:right;
+                }
+                &:first-child {
+                    border-top:0;
+                }
+                &.selected {
+                    background:$t2-color-gray-haze;
+                    color:$t2-color-gray-graphite;
+                }
+            }
+        }
+    }
+}

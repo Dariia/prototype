@@ -1,0 +1,126 @@
+﻿//block: account: contract selector. 
+.t2-block-contract-selector {
+    padding: $t2-size-medium 0;
+    //margin-top: $t2-size-xlarge;
+    position: relative;
+    z-index: 1;
+    border-bottom:1px solid #f4f4f4;
+    .t2-relative { position: relative; }
+    //heading:
+	.t2-heading-container {
+		display: block;
+		text-align: center;
+		padding: 0 0 $t2-size-small 0;
+		.t2-heading {
+            @extend .t2-font-bold;
+			font-size: rem-calc(20);
+			//line-height: rem-calc(24);
+            color: $t2-color-gray-carbon;
+            margin: 0;	
+		}
+		
+	}
+    
+    //nav: submenu
+    .t2-nav-submenu.t2-dropdown-container {
+        width: 100%;
+        background-color: transparent;
+        margin:0;
+        .t2-nav-dropdownlist {
+            margin:0;
+            width: 100%;
+            text-align: center;
+            > .title {
+                &, &.expanded:hover {
+                    color: $t2-color-gray-concrete;
+                    text-align: left;
+                    font-size: rem-calc(14);
+                    display: block;
+                    padding: 6px $t2-size-xsmall*2 6px $t2-size-xsmall;
+                    min-height: 0;
+                    background-color: $t2-color-white;
+                    position: relative;
+                    z-index: 10;
+                }
+                .t2-text { padding-top: 0; }
+                &, .t2-text { @extend .t2-sans-serif-bold; }
+                .t2-icon {
+                    width: auto;
+                    margin-right: 13px;
+                    margin-top: -9px;
+                }
+                &:hover {
+                    background-color: transparent;
+                    color: darken($t2-color-gray-concrete, 10%);
+                }
+            }
+            > ul {
+                border: 2px solid lighten($t2-color-gray-concrete, 13.2%);
+                border-top: none;
+                margin-top: -3px;
+                border-radius: 0 0 2px 2px;
+                background-color: $t2-color-white;
+                z-index: 1;
+                display: none;
+                &.t2-active { display: block; }
+                li {
+                    text-align: left;
+                    a.title {
+                        font-size: rem-calc(14);
+                        color: $t2-color-gray-concrete;
+                        padding: $t2-size-xsmall;
+                    }
+                    &.t2-filter-container {
+                        position: relative;
+                        input {
+                            &, &:hover, &:active, &:focus {
+                                padding: $t2-size-xsmall $t2-size-xsmall $t2-size-xsmall 37px;
+                                height: 55px;
+                                margin: 0;
+                                border: 0;
+                                font-size: rem-calc(14);
+                                color: $t2-color-gray-concrete;
+                                box-shadow: none;
+                                font-weight: bold;
+                                border-top: 1px solid #eee;
+                                border-bottom: 1px solid #eee;
+                                border-radius: 0;
+                            }
+                            &:active, &:focus {
+                                background-color: #f9f9f9;
+                                border-top: 1px solid lighten($t2-color-gray-concrete, 13.2%);
+                                border-bottom: 1px solid lighten($t2-color-gray-concrete, 13.2%);
+                            }
+                        }
+                        &:before {
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            margin: -8px 0 0 16px;
+                            font-size: rem-calc(14);
+                            color: $t2-color-gray-concrete;
+                        }
+                    }
+                }
+            }
+        }
+        @media #{$small-only} {
+            .t2-nav-dropdownlist{
+                margin:0;
+                width: 100%;
+                > .row > .columns{
+                    padding:0;
+                    margin:0;
+                }
+            }
+        }
+    }
+    @media #{$medium-up} {
+        padding: $t2-size-medium*2 0;
+        //margin-top: -($t2-size-small);
+    }
+    @media #{$large-up} {
+        padding: $t2-size-large*2 0;
+        //margin-top: -($t2-size-medium);
+    }
+}

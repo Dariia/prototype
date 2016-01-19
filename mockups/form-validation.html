@@ -1,0 +1,57 @@
+<section class="t2-page-account t2-page-account-settings wide">
+	
+	<!-- form: validation -->
+	<div class="t2-partial-change-password wide">
+		<div class="row">
+			<div class="large-24 medium-24 small-24 columns t2-relative">
+				<div class="row">
+					<!-- form: change-password -->
+					<div class="large-10 medium-10 small-24 columns t2-form t2-change-password">
+						<!-- form -->
+						<form>
+							<div>
+								<div class="row">
+								    <div class="large-24 medium-24 small-24 columns t2-heading">
+										<h3>Ändra ditt lösenord</h3>  
+								    </div>
+								</div>
+								<!-- current password -->
+								<div class="row">
+								    <div class="large-24 medium-24 small-24 columns">
+										<label for="currentPass">Nuvarande lösenord : valid</label>
+										<input class="text-box single-line valid" data-val="true" data-val-required="The Password field is required." id="currentPass" name="Password" type="password" value="" aria-required="true" aria-invalid="false">
+										<span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="false">Du måste fylla i ditt lösenord</span>
+								    </div>
+								</div>
+								<!-- new password -->
+								<div class="row">
+								    <div class="large-24 medium-24 small-24 columns">
+										<label for="newPass">Nytt lösenord : invalid</label>
+										<input class="text-box single-line input-validation-error" data-val="true" data-val-required="The Password field is required." id="newPass" name="Password" type="password" value="" aria-required="true" aria-invalid="true">
+										<span class="field-validation-error" data-valmsg-for="Password" data-valmsg-replace="false">Du måste fylla i ditt lösenord</span>
+								    </div>
+								</div>
+								<!-- repeat password -->
+								<div class="row">
+								    <div class="large-24 medium-24 small-24 columns">
+										<label for="repeatPass">Bekräfta lösenord : invalid</label>
+										<input class="text-box single-line input-validation-error" data-val="true" data-val-required="The Password field is required." id="repeatPass" name="Password" type="password" value="" aria-required="true" aria-invalid="true">
+										<span class="field-validation-error" data-valmsg-for="Password" data-valmsg-replace="false">Du måste fylla i ditt lösenord</span>
+								    </div>
+								</div>
+								<!-- SUBMIT -->
+								<div class="row">
+								    <div class="large-24 medium-24 small-24 columns">
+										<input type="submit" value="Ändra lösenord" class="t2-button t2-button-type-solid t2-button-color-cyan">
+										<span class="field-validation-error" data-valmsg-for="LoginFail" data-valmsg-replace="true">Failed to login</span>
+								    </div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+</section>

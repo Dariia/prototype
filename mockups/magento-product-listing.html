@@ -1,0 +1,571 @@
+<h1 class="t2-magento-mobile-visible t2-magento-shop-text">Shop</h1>
+<div class="t2-block-wide  t2-magento-promo-block">
+    <figure class="t2-magento-promo-block-figure">
+    <img class="t2-magento-promo-image" alt="top-promo"
+         src="../Content/img/magento-listing-top-promo.jpg"/>
+        <figcaption class="t2-magento-promo-block-content">ALLA VARA <strong>MOBILTELEFONER</strong></figcaption>
+    </figure>
+</div>
+
+<aside class="t2-magento-filter-wrapper wide" id="filters" data-role="filter">
+    <div class="t2-magento-filter">
+        <div class="t2-magento-filter-short">
+            <div class="row">
+                <div class="large-11 medium-12 small-24 columns col-1">
+                    <div class="filter-buttons-set large-15 medium-24 small-24">
+                        <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">Alla</button>
+                        <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">Sensate</button>
+                        <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">Kampanger</button>
+                        <!--button class="t2-button t2-button-type-outline t2-button-color-light">Kampanger</button>
+                        <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">Kampanger</button-->
+                    </div>
+                    <div class="filter-labels-set large-8 medium-24 small-24">
+                        <span class="t2-magento-link t2-magento-icon-bookmarks"
+                              data-role="drodown-button">Visa filter</span>
+                        <span class="t2-magento-link t2-magento-link-grey t2-magento-icon-ccw">Aterställ</span>
+                    </div>
+                </div>
+                <div class="large-13 medium-12 small-24 columns col-2">
+                    <div class="filter-labels-set large-6 medium-12 small-24">
+                        <label>Pris med:</label>
+                    </div>
+                    <div class="filter-buttons-set large-18 medium-24 small-24">
+                        <div class="t2-magento-select medium" id="delbetalning-select">
+                            <select>
+                                <option>Delbetalning 24 man</option>
+                                <option>12GB</option>
+                                <option>delbetalning-select</option>
+                            </select>
+                        </div>
+                        <div class="t2-magento-select medium t2-magento-filter-popular">
+                            <select>
+                                <option>Populärast först</option>
+                                <option>Populärast först4545453543543</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- block with small dropdowns for accessory listing . Please remove display none to sse and implement the block. -->
+                <div class="large-13 medium-12 small-24 columns col-2" style="display:none !important;">
+                    <div class="filter-labels-set large-6 medium-12 small-24">
+                        <label>Pris med abonenmang::</label>
+                    </div>
+                    <div class="filter-buttons-set large-18 medium-24 small-24">
+                        <div class="t2-magento-select small">
+                            <select>
+                                <option>Volym</option>
+                                <option>Compas</option>
+                            </select>
+                        </div>
+                        <div class="t2-magento-select small">
+                            <select>
+                                <option>10GB</option>
+                                <option>12GB</option>
+                            </select>
+                        </div>
+                        <div class="t2-magento-select medium t2-magento-filter-popular">
+                            <select>
+                                <option>Populärast först</option>
+                                <option>Populärast först4545453543543</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of block with small dropdowns for accessory listing -->
+                <!-- Small medium dropdowns. Please remove display none to sse and implement the block. -->
+                <div class="large-13 medium-12 small-24 columns col-2">
+                    <div class="filter-labels-set large-3 medium-12 small-24">
+                        <label>Passar till:</label>
+                    </div>
+                    <div class="filter-buttons-set large-21 medium-24 small-24">
+                        <div class="t2-magento-select small small-medium disabled">
+                            <select>
+                                <option>Passar till:</option>
+                                <option>Compas</option>
+                            </select>
+                        </div>
+                        <div class="t2-magento-select small small-medium">
+                            <select>
+                                <option>Passar till:</option>
+                                <option>12GB</option>
+                            </select>
+                        </div>
+                        <div class="t2-magento-select medium t2-magento-filter-popular">
+                            <select>
+                                <option>Populärast först</option>
+                                <option>Populärast först4545453543543</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- Small medium dropdowns  -->
+            </div>
+        </div>
+        <div class="t2-columns-container t2-magento-filter-full wide" data-role="dropdown" ng-show="ShowFilter">
+            <div class="row">
+                <div class="large-24 medium-24 small-24 columns">
+                    <h2>Tillverkare</h2>
+
+                    <div class="t2-columns-container filter-options">
+                        <div class="large-6 medium-6 small-24 t2-item">
+                            <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light active">Apple</button>
+                            <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light active">Sony</button>
+                        </div>
+                        <div class="large-6 medium-6 small-24 t2-item">
+                            <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">Samsung</button>
+                            <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">Nokia</button>
+                        </div>
+                        <div class="large-6 medium-6 small-24 t2-item">
+                            <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">HTC</button>
+                            <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">Doro</button>
+                        </div>
+                        <div class="large-6 medium-6 small-24  t2-item">
+                            <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">LG</button>
+                            <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">Kazam</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-24 medium-24 small-24 columns">
+                    <h2>Tillverkare</h2>
+
+                    <div class="t2-columns-container filter-options">
+                        <div class="large-6 medium-6 small-24 t2-item">
+                            <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">Apple</button>
+                            <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">Sony</button>
+                        </div>
+                        <div class="large-6 medium-6 small-24 t2-item">
+                            <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">Samsung</button>
+                            <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">Nokia</button>
+                        </div>
+                        <div class="large-6 medium-6 small-24 t2-item">
+                            <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">HTC</button>
+                            <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">Doro</button>
+                        </div>
+                        <div class="large-6 medium-6 small-24 t2-item">
+                            <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">LG</button>
+                            <button type="button"  class="t2-button t2-button-type-outline t2-button-color-light">Kazam</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="t2-magento-icon-down-dir"></span>
+
+            <div class="t2-magento-close-dropdown"></div>
+        </div>
+    </div>
+    <div class="t2-magento-small-visible">
+        <label>Pris med:</label>
+
+        <div class="filter-buttons-set large-18 medium-24 small-24">
+            <div class="t2-magento-select medium">
+                <select>
+                    <option>Delbetalning 24 man</option>
+                    <option>12GB</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- block with small dropdowns for mobile accessory listing . Please remove display none to sse and implement the block. -->
+    <div class="t2-magento-small-visible" style="display:none !important;">
+        <label>Pris med abonenmang:</label>
+
+        <div class="filter-buttons-set large-18 medium-24 small-24">
+            <div class="t2-magento-select small">
+                <select>
+                    <option>Volym</option>
+                    <option></option>
+                </select>
+            </div>
+            <div class="t2-magento-select small">
+                <select>
+                    <option>10GB</option>
+                    <option>12GB</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <!-- End of block with small dropdowns for mobile accessory listing -->
+
+    <!-- Small medium dropdowns. Please remove display none to sse and implement the block. -->
+    <div class="t2-magento-small-visible" style="display:none !important;">
+        <label>Passar till:</label>
+
+        <div class="filter-buttons-set large-18 medium-24 small-24">
+            <div class="t2-magento-select small">
+                <select>
+                    <option>Passar till:</option>
+                    <option></option>
+                </select>
+            </div>
+            <div class="t2-magento-select small">
+                <select>
+                    <option>Passar till:</option>
+                    <option>12GB</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <!-- Small medium dropdowns -->
+</aside>
+<section class="t2-columns-narrow wide t2-magento-lisling-page">
+<div class="row">
+    <div class="large-24 medium-24 small-24 columns t2-columns-container t2-block-discover-columns">
+        <ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-4 t2-items t2-magento-product-listing">
+            <!-- item, start -->
+            <li>
+                <div class="t2-item">
+                    <div class="t2-magento-image-wrapper">
+                        <img class="t2-magento-listing-splash"
+                             src="http://dummyimage.com/76x76/e4002b/ffffff.jpg&text=Splash!"/>
+                        <img class="t2-listing-image" src="http://dummyimage.com/217x415/bbbbbb/ffffff.jpg"
+                             alt="product title"/>
+
+                        <div class="t2-magento-listing-item-desc">
+                            <p>Supertunn surfplatta med knivskarp bild, blixtsnabb 4G surf och stort ljud.</p>
+
+                            <p>Prissänkt! Just nu betalar du bara 100 kr per månad för surfplattan med abonnemanget
+                                Surf.</p>
+                        </div>
+                    </div>
+                    <div class="t2-magento-listing-desc">
+                        <div class="t2-magento-listing-colors">
+                            <button type="button"  class="t2-button-type-circle active"><span class="yellow"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="white"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="blue"></span></button>
+                        </div>
+                        <div class="t2-magento-listing-brand">Apple</div>
+                        <div class="t2-magento-listing-title" data-t2-equalize-watch='{"set":2}'>
+                            <h2 class="t2-title"><a href="#">iPhone 5s</a></h2>
+                        </div>
+                        <div class="t2-magento-listing-price">
+                            <span class="t2-magento-listing-old-price">399 kr</span>
+                            <span class="t2-magento-listing-new-price">185 kr</span>
+                        </div>
+                        <div class="t2-magento-listing-payment">Betalas nu: 299 kr/män</div>
+                    </div>
+                    <div class="t2-button-center">
+                        <a href="/upptack/" class="t2-button t2-button-type-outline t2-button-color-light">Välj</a>
+                    </div>
+                    <div class="t2-magento-item-promo-tip">
+                        <div class="t2-magento-arrow t2-magento-arrow-up"></div>
+                        Just nu får du hörlurar pa köpet
+                    </div>
+                </div>
+            </li>
+            <!-- item, start -->
+            <li>
+                <div class="t2-item">
+                    <div class="t2-magento-image-wrapper">
+                        <img class="t2-magento-listing-splash"
+                             src="http://dummyimage.com/76x76/e6007e/ffffff.jpg&text=Splash!"/>
+                        <img class="t2-listing-image" src="http://dummyimage.com/217x415/bbbbbb/ffffff.jpg"
+                             alt="product title"/>
+
+                        <div class="t2-magento-listing-item-desc">
+                            <p>Supertunn surfplatta med knivskarp bild, blixtsnabb 4G surf och stort ljud.</p>
+
+                            <p>Prissänkt! Just nu betalar du bara 100 kr per månad för surfplattan med abonnemanget
+                                Surf.</p>
+                        </div>
+                    </div>
+                    <div class="t2-magento-listing-desc">
+                        <div class="t2-magento-listing-colors">
+                            <button type="button"  class="t2-button-type-circle"><span class="yellow"></span></button>
+                            <button type="button"  class="t2-button-type-circle active"><span class="white"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="blue"></span></button>
+                        </div>
+                        <div class="t2-magento-listing-brand">Apple</div>
+                        <div class="t2-magento-listing-title" data-t2-equalize-watch='{"set":2}'>
+                            <h2 class="t2-title"><a href="#">iPhone 5s</a></h2>
+                        </div>
+                        <div class="t2-magento-listing-price">299 kr/män</div>
+                        <div class="t2-magento-listing-payment">Betalas nu: 299 kr/män</div>
+                    </div>
+                    <div class="t2-button-wrapper t2-button-center">
+                        <a href="/upptack/" class="t2-button t2-button-type-outline t2-button-color-light">Välj</a>
+                    </div>
+                    <div class="t2-magento-item-promo-tip">
+                        <div class="t2-magento-arrow t2-magento-arrow-up"></div>
+                        Just nu får du hörlurar pa köpet
+                    </div>
+                </div>
+            </li>
+            <!-- item, start -->
+            <li>
+                <div class="t2-item">
+                    <div class="t2-magento-image-wrapper">
+                        <img class="t2-magento-listing-splash"
+                             src="http://dummyimage.com/76x76/005eb8/ffffff.jpg&text=Splash!"/>
+                        <img class="t2-listing-image" src="http://dummyimage.com/217x415/bbbbbb/ffffff.jpg"
+                             alt="product title"/>
+                    </div>
+                    <div class="t2-magento-listing-desc">
+                        <div class="t2-magento-listing-colors">
+                            <button type="button"  class="t2-button-type-circle"><span class="yellow"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="white"></span></button>
+                            <button type="button"  class="t2-button-type-circle active"><span class="blue"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="yellow"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="white"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="blue"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="yellow"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="white"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="blue"></span></button>
+                        </div>
+                        <div class="t2-magento-listing-brand">Apple</div>
+                        <div class="t2-magento-listing-title" data-t2-equalize-watch='{"set":2}'>
+                            <h2 class="t2-title"><a href="#">iPhone 5s</a></h2>
+                        </div>
+                        <div class="t2-magento-listing-price">299 kr/män</div>
+                        <div class="t2-magento-listing-payment">Betalas nu: 299 kr/män</div>
+                    </div>
+                    <div class="t2-button-wrapper t2-button-center">
+                        <a href="/upptack/" class="t2-button t2-button-type-outline t2-button-color-light">Välj</a>
+                    </div>
+                    <div class="t2-magento-item-promo-tip">
+                        <div class="t2-magento-arrow t2-magento-arrow-up"></div>
+                        Just nu får du hörlurar pa köpet
+                    </div>
+                </div>
+            </li>
+            <!-- item, start -->
+            <li>
+                <div class="t2-item">
+                    <div class="t2-magento-image-wrapper">
+                        <img class="t2-magento-listing-splash"
+                             src="http://dummyimage.com/76x76/ff7d00/ffffff.jpg&text=Splash!"/>
+                        <img class="t2-listing-image" src="http://dummyimage.com/217x415/bbbbbb/ffffff.jpg"
+                             alt="product title"/>
+                    </div>
+                    <div class="t2-magento-listing-desc">
+                        <div class="t2-magento-listing-colors">
+                            <button type="button"  class="t2-button-type-circle"><span class="yellow"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="white"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="blue"></span></button>
+                        </div>
+                        <div class="t2-magento-listing-brand">Apple</div>
+                        <div class="t2-magento-listing-title" data-t2-equalize-watch='{"set":2}'>
+                            <h2 class="t2-title"><a href="#">iPhone 5s</a></h2>
+                        </div>
+                        <div class="t2-magento-listing-price">299 kr/män</div>
+                        <div class="t2-magento-listing-payment">Betalas nu: 299 kr/män</div>
+                    </div>
+                    <div class="t2-button-wrapper t2-button-center">
+                        <a href="/upptack/" class="t2-button t2-button-type-outline t2-button-color-light">Välj</a>
+                    </div>
+                    <div class="t2-magento-item-promo-tip">
+                        <div class="t2-magento-arrow t2-magento-arrow-up"></div>
+                        Just nu får du hörlurar pa köpet
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="t2-block-wide  t2-magento-promo-block">
+    <img class="t2-magento-promo-image" alt="top-promo"
+         src="http://dummyimage.com/1400x345/bbbbbb/ffffff.jpg&text=Top+Promo"/>
+</div>
+<div class="row">
+    <div class="large-24 medium-24 small-24 columns t2-columns-container">
+        <ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-4 t2-items t2-magento-product-listing">
+            <!-- item, start -->
+            <li>
+                <div class="t2-item">
+                    <div class="t2-magento-image-wrapper">
+                        <img class="t2-magento-listing-splash"
+                             src="http://dummyimage.com/76x76/e4002b/ffffff.jpg&text=Splash!"/>
+                        <img class="t2-listing-image" src="http://dummyimage.com/217x415/bbbbbb/ffffff.jpg"
+                             alt="product title"/>
+                    </div>
+                    <div class="t2-magento-listing-desc">
+                        <div class="t2-magento-listing-colors">
+                            <button type="button"  class="t2-button-type-circle active"><span class="yellow"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="white"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="blue"></span></button>
+                        </div>
+                        <div class="t2-magento-listing-brand">Apple</div>
+                        <div class="t2-magento-listing-title" data-t2-equalize-watch='{"set":2}'>
+                            <h2 class="t2-title">iPhone 5s</h2>
+                        </div>
+                        <div class="t2-magento-listing-price">299 kr/män</div>
+                        <div class="t2-magento-listing-payment">Betalas nu: 299 kr/män</div>
+                    </div>
+                    <div class="t2-button-center">
+                        <a href="/upptack/" class="t2-button t2-button-type-outline t2-button-color-light">Välj</a>
+                    </div>
+                    <div class="t2-magento-item-promo-tip">
+                        <div class="t2-magento-arrow t2-magento-arrow-up"></div>
+                        Just nu får du hörlurar pa köpet
+                        Just nu får du hörlurar pa köpet
+                        Just nu får du hörlurar pa köpet
+                    </div>
+                </div>
+            </li>
+            <!-- item, start -->
+            <li>
+                <div class="t2-item">
+                    <div class="t2-magento-image-wrapper">
+                        <img class="t2-magento-listing-splash"
+                             src="http://dummyimage.com/76x76/e6007e/ffffff.jpg&text=Splash!"/>
+                        <img class="t2-listing-image" src="http://dummyimage.com/217x415/bbbbbb/ffffff.jpg"
+                             alt="product title"/>
+                    </div>
+                    <div class="t2-magento-listing-desc">
+                        <div class="t2-magento-listing-colors">
+                            <button type="button"  class="t2-button-type-circle"><span class="yellow"></span></button>
+                            <button type="button"  class="t2-button-type-circle active"><span class="white"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="blue"></span></button>
+                        </div>
+                        <div class="t2-magento-listing-brand">Apple</div>
+                        <div class="t2-magento-listing-title" data-t2-equalize-watch='{"set":2}'>
+                            <h2 class="t2-title">iPhone 5s</h2>
+                        </div>
+                        <div class="t2-magento-listing-price">299 kr/män</div>
+                        <div class="t2-magento-listing-payment">Betalas nu: 299 kr/män</div>
+                    </div>
+                    <div class="t2-button-wrapper t2-button-center">
+                        <a href="/upptack/" class="t2-button t2-button-type-outline t2-button-color-light">Välj</a>
+                    </div>
+                </div>
+            </li>
+            <!-- item, start -->
+            <li>
+                <div class="t2-item">
+                    <div class="t2-magento-image-wrapper">
+                        <img class="t2-magento-listing-splash"
+                             src="http://dummyimage.com/76x76/005eb8/ffffff.jpg&text=Splash!"/>
+                        <img class="t2-listing-image" src="http://dummyimage.com/217x415/bbbbbb/ffffff.jpg"
+                             alt="product title"/>
+                    </div>
+                    <div class="t2-magento-listing-desc">
+                        <div class="t2-magento-listing-colors">
+                            <button type="button"  class="t2-button-type-circle"><span class="yellow"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="white"></span></button>
+                            <button type="button"  class="t2-button-type-circle active"><span class="blue"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="yellow"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="white"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="blue"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="yellow"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="white"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="blue"></span></button>
+                        </div>
+                        <div class="t2-magento-listing-brand">Apple</div>
+                        <div class="t2-magento-listing-title" data-t2-equalize-watch='{"set":2}'>
+                            <h2 class="t2-title">iPhone 5s</h2>
+                        </div>
+                        <div class="t2-magento-listing-price">299 kr/män</div>
+                        <div class="t2-magento-listing-payment">Betalas nu: 299 kr/män</div>
+                    </div>
+                    <div class="t2-button-wrapper t2-button-center">
+                        <a href="#" class="t2-button t2-button-type-outline t2-button-color-light">Välj</a>
+                    </div>
+                    <div class="t2-magento-item-promo-tip">
+                        <div class="t2-magento-arrow t2-magento-arrow-up"></div>
+                        Just nu får du hörlurar pa köpet
+                    </div>
+                </div>
+            </li>
+            <!-- item, start -->
+            <li>
+                <div class="t2-item">
+                    <div class="t2-magento-image-wrapper">
+                        <img class="t2-magento-listing-splash"
+                             src="http://dummyimage.com/76x76/ff7d00/ffffff.jpg&text=Splash!"/>
+                        <img class="t2-listing-image" src="http://dummyimage.com/217x415/bbbbbb/ffffff.jpg"
+                             alt="product title"/>
+                    </div>
+                    <div class="t2-magento-listing-desc">
+                        <div class="t2-magento-listing-colors">
+                            <button type="button"  class="t2-button-type-circle"><span class="yellow"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="white"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="blue"></span></button>
+                        </div>
+                        <div class="t2-magento-listing-brand">Apple</div>
+                        <div class="t2-magento-listing-title" data-t2-equalize-watch='{"set":2}'>
+                            <h2 class="t2-title">iPhone 5s</h2>
+                        </div>
+                        <div class="t2-magento-listing-price">299 kr/män</div>
+                        <div class="t2-magento-listing-payment">Betalas nu: 299 kr/män</div>
+                    </div>
+                    <div class="t2-button-wrapper t2-button-center">
+                        <a href="/upptack/" class="t2-button t2-button-type-outline t2-button-color-light">Välj</a>
+                    </div>
+                    <div class="t2-magento-item-promo-tip">
+                        <div class="t2-magento-arrow t2-magento-arrow-up"></div>
+                        Just nu får du hörlurar pa köpet
+                    </div>
+                </div>
+            </li>
+            <!-- item, start -->
+            <li>
+                            <div class="t2-item">
+                                <div class="t2-magento-image-wrapper">
+                                    <img class="t2-magento-listing-splash"
+                                         src="http://dummyimage.com/76x76/e4002b/ffffff.jpg&text=Splash!"/>
+                                    <img class="t2-listing-image" src="http://dummyimage.com/217x415/bbbbbb/ffffff.jpg"
+                                         alt="product title"/>
+                                </div>
+                                <div class="t2-magento-listing-desc">
+                                    <div class="t2-magento-listing-colors">
+                                        <button type="button"  class="t2-button-type-circle active"><span class="yellow"></span></button>
+                                        <button type="button"  class="t2-button-type-circle"><span class="white"></span></button>
+                                        <button type="button"  class="t2-button-type-circle"><span class="blue"></span></button>
+                                    </div>
+                                    <div class="t2-magento-listing-brand">Apple</div>
+                                    <div class="t2-magento-listing-title" data-t2-equalize-watch='{"set":2}'>
+                                        <h2 class="t2-title">iPhone 5s</h2>
+                                    </div>
+                                    <div class="t2-magento-listing-price">299 kr/män</div>
+                                    <div class="t2-magento-listing-payment">Betalas nu: 299 kr/män</div>
+                                </div>
+                                <div class="t2-button-center">
+                                    <a href="/upptack/" class="t2-button t2-button-type-outline t2-button-color-light">Välj</a>
+                                </div>
+                                <div class="t2-magento-item-promo-tip">
+                                    <div class="t2-magento-arrow t2-magento-arrow-up"></div>
+                                    Just nu får du hörlurar pa köpet
+                                    Just nu får du hörlurar pa köpet
+                                    Just nu får du hörlurar pa köpet
+                                </div>
+                            </div>
+                        </li>
+            <!-- item, start -->
+            <li>
+                <div class="t2-item">
+                    <div class="t2-magento-image-wrapper">
+                        <img class="t2-magento-listing-splash"
+                             src="http://dummyimage.com/76x76/e4002b/ffffff.jpg&text=Splash!"/>
+                        <img class="t2-listing-image" src="http://dummyimage.com/217x415/bbbbbb/ffffff.jpg"
+                             alt="product title"/>
+                    </div>
+                    <div class="t2-magento-listing-desc">
+                        <div class="t2-magento-listing-colors">
+                            <button type="button"  class="t2-button-type-circle active"><span class="yellow"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="white"></span></button>
+                            <button type="button"  class="t2-button-type-circle"><span class="blue"></span></button>
+                        </div>
+                        <div class="t2-magento-listing-brand">Apple</div>
+                        <div class="t2-magento-listing-title" data-t2-equalize-watch='{"set":2}'>
+                            <h2 class="t2-title">iPhone 5s</h2>
+                        </div>
+                        <div class="t2-magento-listing-price">299 kr/män</div>
+                        <div class="t2-magento-listing-payment">Betalas nu: 299 kr/män</div>
+                    </div>
+                    <div class="t2-button-center">
+                        <a href="/upptack/" class="t2-button t2-button-type-outline t2-button-color-light">Välj</a>
+                    </div>
+                    <div class="t2-magento-item-promo-tip">
+                        <div class="t2-magento-arrow t2-magento-arrow-up"></div>
+                        Just nu får du hörlurar pa köpet
+                        Just nu får du hörlurar pa köpet
+                        Just nu får du hörlurar pa köpet
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</section>

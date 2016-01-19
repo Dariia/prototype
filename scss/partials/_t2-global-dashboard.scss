@@ -1,0 +1,338 @@
+$t2-dashboard-color: lighten($t2-color-pantone-cyan, 0%);
+.t2-dashboard {
+    border-color: darken($t2-dashboard-color, 2%);
+    position: relative;
+    z-index: 1000;
+    .t2-nav-submenu {
+        background-color: $t2-dashboard-color;
+        .t2-nav-nestedlist {
+            border-bottom: 0px solid darken($t2-dashboard-color, 2%);
+            background-color: $t2-dashboard-color;
+            > a.title {
+                &:hover { background-color: inherit; }
+            }
+        }
+        .t2-left-col {
+        	min-height: 65px;
+            background-color: lighten($t2-dashboard-color, 2%);
+            > .t2-icon {
+                display: block;
+                line-height: 68px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 30px;
+                text-align: center;
+                color: $t2-color-white;
+                height: 68px;
+                //border-right: 1px solid darken($t2-dashboard-color, 4%);
+            }
+            .t2-about {
+                color: $t2-color-white;
+                background-color: $t2-dashboard-color;
+                padding: 10px $t2-size-xsmall;
+                margin-left: 30px;
+                border-top: 1px solid darken($t2-dashboard-color, 4%);
+                border-left: 1px solid darken($t2-dashboard-color, 4%);
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        font-size: rem-calc(14);
+                        display: block;
+                        border-bottom: 1px solid darken($t2-dashboard-color, 4%);
+                        padding: 3px 0;
+                        .t2-icon {
+                            margin-right: 6px;
+                            display: inline-block;
+                            bottom: -1px;
+                            position: relative;
+                        }
+                        .t2-data {
+                            float: right;
+                            font-weight: bold;
+                        }
+                        &:after {
+                            padding-left: 3px;
+                            content: "";
+                        }
+                        &:last-child {
+                            border-bottom: 0;
+                            &:after { content: ""; }
+                        }
+                    }
+                }
+            }
+            .t2-nav-nestedlist.t2-nav-dropdownlist {
+                background-color: $t2-dashboard-color;
+                border: 0;
+                margin-left: 30px;
+                border-bottom: 0px solid darken($t2-dashboard-color, 2%);
+                border-left: 1px solid darken($t2-dashboard-color, 4%);
+                border-color: darken($t2-dashboard-color, 4%);
+                > a.title {
+                    @extend .t2-sans-serif;
+                    min-height: 65px;
+                    color: $t2-color-white;
+                    font-size: rem-calc(14);
+                    //border-bottom: 1px solid darken($t2-dashboard-color, 4%);
+                    padding-top: 18px;
+                    > .t2-text {
+                        @extend .t2-truncate;
+                        color: $t2-color-white;
+                        padding-right: $t2-size-medium;
+                    }
+                    .t2-special { font-weight: bold; }
+                    .t2-icon { padding-top: rem-calc(2); }
+                }
+                ul li a.title {
+                    background-color: lighten($t2-dashboard-color, 5%);
+                    color: $t2-color-white;
+                    font-size: rem-calc(14);
+                    border-bottom: 0;
+                    border-top: 1px solid darken($t2-dashboard-color, 2%);
+                    margin-top: 0;
+                    border-color: darken($t2-dashboard-color, 2%);
+                }
+                > ul {
+                    border: 0;
+                    > li {
+                        &:last-child { border-bottom: 0; }
+                    }
+                }
+            }
+        }
+        .t2-right-col {
+            background-color: lighten($t2-dashboard-color, 2%);
+            > .t2-wrapper {
+                width: 100%;
+                border-top: 1px solid darken($t2-dashboard-color, 5%);
+                background-color: lighten($t2-dashboard-color, 2%);
+                > a {
+                    width: 50%;
+                    text-align: center;
+                    display: inline-block;
+                    float: left;
+                    height: 65px;
+                    background-color: darken($t2-dashboard-color, 2%);
+                    color: $t2-color-white;
+                    > span {
+                        font-size: rem-calc(14);
+                        height: 20px;
+                        line-height: 65px;
+                        position: relative;
+                        display: inline-block;
+                    }
+                    .t2-icon {
+                        &:before {
+                            margin-right: 10px;
+                            position: relative;
+                            bottom: -4px;
+                            font-size: rem-calc(20);
+                        }
+                    }
+                    &.t2-mt2-button {
+                        .t2-icon:before {
+                            font-size: 10px;
+                            bottom: 0px;
+                            margin-left: 10px;
+                            margin-right: 0;
+                        }
+                    }
+                    &:last-child { border-left: 1px solid darken($t2-dashboard-color, 6%); }
+                }
+            }
+        }
+    }
+    @media #{$medium-up} {
+        background-color: $t2-dashboard-color;
+        .t2-nav-submenu {
+            .t2-left-col {
+            	min-height: 0;
+            	background-color: $t2-dashboard-color;
+                > .t2-icon {
+                    background-color: $t2-dashboard-color;
+                    height: 65px;
+                    width: 50px;
+                    border-left: 1px solid darken($t2-dashboard-color, 4%);
+                    border-bottom: 0px solid darken($t2-dashboard-color, 5%);
+                    border-right: 0;
+                    font-size: 22px;
+                    &:hover { background-color: darken($t2-dashboard-color, 3%); }
+                }
+                .t2-about {
+                    width: 60%;
+                    position: absolute;
+                    top: 0;
+                    border-top: 0;
+                    left: 40%;
+                    padding: 0;
+                    margin: 0;
+                    border-left: 1px solid darken($t2-dashboard-color, 4%);
+                    border-right: 1px solid darken($t2-dashboard-color, 4%);
+                    ul {
+                        display: block;
+                        border-left: 0;
+                        margin: 0;
+                        padding: 0;
+                        height: 65px;
+                        table-layout: fixed;
+                        width: 100%;
+                        border-collapse: collapse;
+                        li {
+                            display: inline-block;
+                            vertical-align: middle;
+                            height: 100%;
+                            width: auto;
+                            border-left: 0;
+                            font-size: rem-calc(12);
+                            line-height: 1.2em;
+                            position: relative;
+                            padding: 14px 0 0 16px;
+                            border-bottom: 0px solid darken($t2-dashboard-color, 5%);
+                            text-align: center;
+                            > .t2-wrapper {
+                                display: block;
+                                position: relative;
+                                text-align: left;
+                                padding-left: 30px;
+                                padding-right: 4px;
+                                margin-top: 4px;
+                            }
+                            .t2-data {
+                                display: block;
+                                float: none;
+                                margin: 0;
+                                line-height: 1.2em;
+                            }
+                            .t2-icon {
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                height: 30px;
+                                margin-top: -15px;
+                                font-size: 22px;
+                                line-height: 30px;
+                                &:before { line-height: 30px; }
+                            }
+                            &:after { display: none; }
+                            &:last-child { border-bottom:0; }
+                        }
+                    }
+                }
+                .t2-nav-nestedlist.t2-nav-dropdownlist {
+                	border-right: 1px solid darken($t2-dashboard-color, 4%);
+                    width: auto;
+                    margin-right: 60%;
+                    margin-left: 50px;
+                    a.title {
+                        &:hover { background-color: lighten($t2-dashboard-color, 2%); }
+                    }
+                    > ul {
+                        //border-top: 1px solid darken($t2-dashboard-color, 4%);
+                        //margin-right: 1px;
+                    }
+                    > a.title {
+                        background-color: $t2-dashboard-color;
+                        border-color: darken($t2-dashboard-color, 5%);
+                        border-right: 0px solid darken($t2-dashboard-color, 5%);
+                        //border-bottom: 1px solid $t2-dashboard-color;
+                        &:hover { background-color: darken($t2-dashboard-color, 2%); }
+                    }
+                }
+            }
+            .t2-right-col {
+                .t2-wrapper {
+                    > a {
+                        &:hover { background-color: darken($t2-dashboard-color, 4%); }
+                    }
+                }
+            }
+        }
+    }
+    @media #{$large-up} {
+        .t2-nav-submenu {
+	        .t2-nav-nestedlist {
+	            > a.title {
+	            	font-size:rem-calc(12);
+	                &:hover { background-color: inherit; }
+	            }
+	        }
+            .t2-left-col {
+            	height: auto;
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: block;
+                right: 238px;
+                //background-color: #456;
+                > .t2-icon {
+                    background-color: $t2-dashboard-color;
+                    border-bottom: 0;
+                }
+                .t2-about {
+                    width: auto;
+                    display: block;
+                    border-right: 0;
+                    border-left: 0;
+                    left: 370px;
+                    ul {
+                        li {
+                            border-bottom: 0;
+                            &:last-child { border-bottom: 0; }
+                        }
+                    }
+                }
+                .t2-nav-nestedlist.t2-nav-dropdownlist {
+                    width: 320px;
+                    > ul {
+                    	margin-top: -1px;
+                        margin-left: -1px;
+                        margin-right: -1px;
+                        border-left: 1px solid $t2-dashboard-color;
+                        border-right: 1px solid $t2-dashboard-color;
+                        //border-top: 1px solid darken($t2-dashboard-color, 4%);
+                        border-top: 0;
+                        border-bottom: 1px solid darken($t2-dashboard-color, 2%);
+                    }
+                    > a.title {
+                        //border-bottom: 1px solid $t2-dashboard-color;
+                        &.expanded { 
+                        	//border-bottom: 1px solid darken($t2-dashboard-color, 2%);
+                        }
+                    }
+                }
+            }
+            .t2-right-col {
+                float: right;
+                height: 65px;
+                border-left: 1px solid darken($t2-dashboard-color, 6%);
+                &, .t2-wrapper { width: 238px; }
+                .t2-wrapper {
+                    > a {
+                        height: 64px;
+                        width: 80px;
+                        &:hover {}
+                        &:first-child { width: 157px; }
+                        &:last-child {
+                            border-right: 1px solid darken($t2-dashboard-color, 6%);
+                            > span {
+                                display: block;
+                                margin-top: -8px;
+                                font-size: 11px;
+                                &.t2-icon {
+                                    display: block;
+                                    margin: 0;
+                                    &:before {
+                                        margin: 0;
+	                                    bottom: 2px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

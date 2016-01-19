@@ -1,0 +1,136 @@
+.t2-magento-product-listing {
+  +.t2-magento-view-all{
+    .hidden-state {
+      display:inline;
+    }
+    .opened-state {
+      display:none;
+    }
+  }
+    &.opened {
+      +.t2-magento-view-all{
+        .hidden-state {
+          display:none;
+        }
+        .opened-state{
+          display:inline;
+        }
+    }
+  }
+}
+.t2-magento-promo-block p {
+  font-size:(16);
+  @extend .t2-font-regular;
+}
+.t2-magento-brandpage-middle-block {
+  padding:50px 0 0;
+  >.row {
+      @media #{$large-up}{
+            min-height:497px;
+        }
+      @media #{$medium-only}{
+        margin-right:20px !important;
+        overflow:hidden;
+        width:auto;
+      }
+    }
+  p {
+    @extend .t2-sans-serif;
+    font-size:rem-calc(16);
+    line-height:1.4em;
+    color:$t2-color-gray-concrete;
+  }
+  h2 {
+    @extend .t2-font-heavy;
+    font-size:rem-calc(42);
+    color:$t2-color-gray-graphite;
+    padding-bottom:10px;
+
+    strong {
+      color:$t2-color-skyblue;
+    }
+  }
+  .columns {
+    &:first-child {
+      padding-bottom:60px;
+    }
+  }
+  @media #{$small-only}{
+    >.row{
+      background: none;
+    }
+  }
+}
+.t2-magento-brandpage-bottom-columns-block,
+.t2-magento-padding-columns {
+  position:relative !important;
+  .columns {
+    padding:70px 0;
+    width:26%;
+    margin: 0 5.5%;
+    color:$t2-color-gray-graphite;
+    &:first-child {
+      margin-left:0;
+      &:after {
+        display:none;
+      }
+    }
+    p {
+      @extend .t2-sans-serif;
+      color:$t2-color-gray-graphite;
+      line-height:1.6em;
+    }
+    img {
+      margin-bottom:30px;
+    }
+    h3 {
+      @extend .t2-font-bold;
+      padding-bottom:20px;
+      font-size:rem-calc(24);
+      margin:0;
+      color:$t2-color-gray-graphite;
+      word-break: break-all;
+    }
+    &.last {
+      margin-right:0;
+    }
+  }
+  &.four-cols {
+      .columns {
+        width:20%;
+        margin: 0 3.3%;;
+        &:first-child {
+          margin-left:0;
+        }
+        &.last {
+          margin-right:0;
+        }
+    }
+  }
+  .line {
+    display:block;
+    background:$t2-color-gray-light;
+    top:0;
+    bottom:0;
+    left:32%;
+    width:1px;
+    position:absolute;
+    &.first {
+      left:68%;
+    }
+  }
+  @media #{$small-only}{
+    .columns,
+    &.four-cols .columns {
+      width:auto;
+      margin:0;
+      padding:40px 0 0;
+      img {
+        width:100%;
+      }
+    }
+    .line {
+      display:none;
+    }
+  }
+}

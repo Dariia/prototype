@@ -1,0 +1,153 @@
+<article class="t2-block-video t2-block-discover wide scope-video">
+	<div class="t2-background" style="background-color: #000; background-image:url(http://2.bp.blogspot.com/-2c0VIq45L9A/UHcegJ_t4_I/AAAAAAAABEQ/psZAgopLMPw/s1600/wallpaper-386785.jpg);"></div>
+	<div class="t2-content container-content">
+		<a href="#" class="t2-anchor button-play"></a>
+		<div class="row">
+			<div class="columns">
+				<div class="">
+				<div class="t2-editorial large-18 columns large-centered">
+					<h2 class="t2-title">Välkommen till vårt 4g-nät</h2>
+					<div class="t2-button-wrapper">
+						<a href="#" class="button-play t2-button t2-button-type-outline t2-button-color-white">Spela film</a>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="t2-video container-video">
+		<div class="t2-fader"></div>
+		<div class="row">
+			<div class="columns">
+				<div class="t2-close button-close"><span class="t2-icon t2-icon-close-circle"></span></div>
+				<div class="t2-video-wrapper">
+					<div class="flex-video widescreen wrapper-video" data-video-id="QaNk116b2kw"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
+
+<script>
+	var scope = $(".scope-video");
+	scope.each(function(){
+	
+		var scope = $(this);
+		var containerContent = $(".container-content",scope);
+		var buttonPlay = $(".button-play",containerContent);
+		
+		var containerVideo = $(".container-video",scope);
+		var buttonClose = $(".button-close",containerVideo);
+		var wrapperVideo = $(".wrapper-video",containerVideo);
+		var containerContentHeight = 0
+		var containerVideoHeight = 0;
+		
+		
+		
+		buttonPlay.on("click", function(){
+			
+			containerContentHeight = containerContent.outerHeight(true);
+			containerVideoHeight = containerVideo.show().outerHeight(true);
+			containerVideo.hide();
+			
+			scope.height(containerContentHeight);
+			var videoID = wrapperVideo.data("video-id");
+			wrapperVideo.html('<iframe width="560" height="315" src="//www.youtube.com/embed/'+videoID+'?autoplay=1&autohide=1&rel=0&showinfo=0" frameborder="0" allowfullscreen=""></iframe>');
+				
+			containerContent.fadeOut(400, function(){
+				scope.animate({ height: containerVideoHeight }, 800, function(){
+					setTimeout(function() {
+						containerVideo.fadeIn(2000,function(){
+						      scope.css('height', 'auto');
+					    });
+				    }, 400);
+				});
+			});
+		});
+		
+		buttonClose.on("click", function(){
+			
+			containerContentHeight = containerContent.show().outerHeight(true);
+			containerContent.hide();
+			containerVideoHeight = containerVideo.outerHeight(true);
+			
+			scope.height(containerVideoHeight);
+			containerVideo.stop( true, false ).fadeOut(600, function(){
+				
+				scope.animate({ height: containerContentHeight }, 800, function(){
+					scope.css('height', 'auto');
+				});
+				
+				containerContent.fadeIn(600,function(){
+					wrapperVideo.html("");
+				});
+			});
+		});
+	});
+
+	
+</script>
+
+
+
+<!--<section>		
+	<article class="t2-block-video">
+
+	    <div class="row">
+	        <div class="columns">
+	        	<h2>Videosida</h2>
+	            <a data-ng-href="http://www.youtube.com/watch?v=WcjC00J8FaM" width="900" height="506" embed-video="" controls="0" class="ng-isolate-scope" href="http://www.youtube.com/watch?v=WcjC00J8FaM">
+	            	<iframe width="900" height="506" data-ng-src="http://www.youtube.com/embed/WcjC00J8FaM?autoplay=0&amp;controls=1&amp;loop=0" frameborder="0" src="http://www.youtube.com/embed/WcjC00J8FaM?autoplay=0&amp;controls=1&amp;loop=0"></iframe>
+	            </a>
+	            
+	        </div>
+	    </div>
+		
+		<div class="wide" style="background-color:#000;">
+		<div class="row">
+			<div class="columns">
+				<div class="flex-video widescreen">
+	            	<iframe width="560" height="315" src="//www.youtube.com/embed/MV-BQwlG2NM" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+		</div>
+		
+		
+	    <div class="row">
+	        <div class="columns">
+	            <div class="t2-editorial t2-block-discover-editorial" style="text-align:center;">
+	                <p>Bodytext? Vad ska man skriva här tro?</p>
+	            </div>
+	        </div>
+	    </div>
+	    <a class="t2-anchor" href="#"></a>
+	</article>
+</section>
+
+
+
+
+
+
+
+
+
+
+<div>
+				<article class="t2-block-discover t2-block-wide">
+					<div class="t2-background" style="background-color: #000; background-image:url(http://2.bp.blogspot.com/-2c0VIq45L9A/UHcegJ_t4_I/AAAAAAAABEQ/psZAgopLMPw/s1600/wallpaper-386785.jpg);"></div>
+					<div class="row">
+						<div class="columns">
+							<div class="t2-editorial">
+								<p class="t2-pre-title">Hej</p>
+								<h1 class="t2-title">GALAXY S5<span class="t2-break">ÄR SNART HÄR</span></h1>
+								<a href="" class="t2-link">Jag vill göra intresseanmälan</a>
+							</div>
+						</div>
+					</div>
+					<a class="t2-anchor" href="#"></a>
+				</article>
+			</div>
+-->
+

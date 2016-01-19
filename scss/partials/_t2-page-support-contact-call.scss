@@ -1,0 +1,187 @@
+//page: support - contact - call
+//parent page: support
+
+.t2-page-support-contact-call {	
+	.t2-block {
+		> .row > .columns { padding: 0 $t2-size-xsmall; }
+	}
+	@media #{$medium-up} {
+		.t2-partial {
+			> .row > .columns { padding: 0 $t2-size-small; }
+		}
+	}
+}
+
+//block: call section
+.t2-block-contact-call-parent {
+	@media #{$small-up} {
+		& + .t2-block-contact-call-parent {
+			.t2-block-contact-call {  border-top: 1px solid $t2-color-gray-fog; }
+		}
+	}
+	@media #{$large-up} {
+		& + .t2-block-contact-call-parent {
+			.t2-block-contact-call {
+				margin-top: (-$t2-size-large*2);
+				border-top: none;
+			}
+		}
+	}
+}
+.t2-block-contact-call {
+	$scope-background-color: $t2-color-gray-steam;
+	background-color: $scope-background-color;
+	padding: $t2-size-medium 0 $t2-size-large 0;
+	.t2-call-container {
+		//col: all and by size & order
+		.t2-col {
+			
+			.t2-title-container {
+				margin: 0 0 $t2-size-xsmall 0;
+				padding: $t2-size-medium 0 $t2-size-xsmall 0;
+				border-bottom: 1px solid $t2-color-gray-fog;
+				.t2-title {
+					@extend .t2-font-regular;
+					font-size: rem-calc(20);
+					//line-height: rem-calc(22);
+					color: $t2-color-gray-concrete;
+					margin: 0;
+					&.t2-title-main {
+						@extend .t2-font-bold;
+						color: $t2-color-gray-graphite;
+					}
+				}
+			}
+			.t2-content-container {
+				table {
+					width: 100%!important;
+					height: auto!important;
+					table-layout: auto;
+					border-collapse: collapse;
+					tr {
+						td {
+							white-space: nowrap;
+							font-size: rem-calc(14);
+							line-height: rem-calc(18);
+							text-align: right;
+								font-weight: bold;
+								width: auto;
+							&:first-child {	
+								text-align: left;
+								font-weight: normal;
+								white-space: normal;
+							}
+						}
+						& + tr {
+							td { padding-top: rem-calc(6); }
+						}
+					}
+				}
+				> * {
+					font-size: rem-calc(14);
+					line-height: rem-calc(18);
+					color: $t2-color-gray-graphite;
+					margin-bottom: 0;
+					& + * {  margin-top: $t2-size-small; }
+				} 
+			}
+			//col: large & small
+			&.t2-col-large {
+				.t2-title-container { padding: 0 0 $t2-size-small 0; }
+			}
+			&.t2-col-small {
+				.t2-title-container {
+					border-bottom: none;
+					padding-bottom: 0;
+				}
+			}		
+			//col: 1-3
+			&.t2-col-one {}
+			&.t2-col-two {}
+			&.t2-col-three {}
+		}
+	}
+	& + .t2-block-contact-call { border-top: 1px solid $t2-color-gray-fog; }
+	@media #{$medium-only} {}
+	@media #{$medium-up} {
+		padding: $t2-size-medium*2 0;
+		.t2-call-container {
+			//col: all and by size & order
+			.t2-col {
+				.t2-title-container {
+					margin: 0 0 $t2-size-medium 0;
+					padding: 0 0 $t2-size-small 0;
+					border-bottom: 1px solid $t2-color-gray-fog;
+					.t2-title {
+						font-size: rem-calc(20);
+						//line-height: rem-calc(22);
+						color: $t2-color-gray-concrete;
+						margin: 0;
+						&.t2-title-main { color: $t2-color-gray-graphite; }
+					}
+				}
+				.t2-content-container {
+					table {
+						tr {
+							td {
+								font-size: rem-calc(14);
+								line-height: rem-calc(18);
+								vertical-align: top;
+							}
+							& + tr {
+								td { padding-top: rem-calc(6); }
+							}
+						}
+					}
+					> * {
+						font-size: rem-calc(14);
+						line-height: rem-calc(18);
+						margin-bottom: 0;
+						& + * { margin-top: $t2-size-small; }
+					} 
+				}
+				&.t2-col-small {
+					.t2-title-container {
+						border-bottom: 1px solid $t2-color-gray-fog;
+						padding-bottom: $t2-size-small;
+					}					
+				}
+			}
+		}
+	}
+	@media #{$large-up} {
+		padding: $t2-size-xlarge 0;
+		.t2-call-container {
+			.t2-col {
+				&.t2-col-large {					
+					.t2-content-container {
+						table {
+							tr {
+								td {
+									vertical-align: middle;
+									&:last-child {	
+										font-size: rem-calc(22);
+										line-height: rem-calc(22);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		& + .t2-block-contact-call {
+			margin-top: (-$t2-size-large*2);
+			border-top: none;
+		}
+	}	
+}
+
+p.t2-block-color{
+	text-align: center;
+	font-weight: bold;
+	background-color: $t2-color-pantone-361;
+	color: $t2-color-pantone-white !important;
+	margin:0 5px !important;
+	display: block;
+}

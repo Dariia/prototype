@@ -1,0 +1,94 @@
+.t2b-magento-product.t2-magento-product {
+    .t2-magento-product-color-area {
+        margin-bottom:20px;
+    }
+    .t2-magento-product-description-wrapper {
+        .t2-magento-product-subscription-items-heading {
+        min-height:60px;
+        h2 {
+            display:table-row;
+        }
+        @media #{$small-only}{
+            span {
+                margin-left:20px;
+            }
+        }
+        b {
+            padding-bottom: 10px;
+            display:table-cell;
+        }
+    }
+    }
+    .t2-magento-product-addons {
+        > ul {
+            @media #{$large-up}{
+                left:-4.4%;
+                width:104.4%;
+            }
+            @media #{$small-only}{
+                left:0;
+                width:100%;
+            }
+            > li {
+                @media #{$large-up}{
+                    margin-left:4.16%;
+                }
+            }
+        }
+        &.wide-block {
+            @media #{$small-only}{
+                > ul {
+                    > li{
+                        margin-left:0;
+                        float:none;
+                    }
+                }
+            }
+            strong.t2-magento-product-addons-name {
+                font-size:rem-calc(15);
+            }
+        }
+    }
+    .t2-magento-product-upsells {
+        padding-bottom:0;
+    }
+    .bundle-items-configurator {
+        .t2b-magento-product-subscription-list-wrapper {
+            @extend .row;
+            .t2-magento-product-subscription-items-heading {
+                @extend .row;
+                margin-bottom:25px;
+                margin-left:20px !important;
+                @media #{$small-only}{
+                    margin-left: 0 !important;
+                    margin-right: 0 !important;
+                }
+                dl {
+                    display:block !important;
+                }
+            }
+            .t2-magento-product-subscription-list.t2b-magento-product-subscription-list {
+                padding:0 20px;
+                margin-left:-3%;
+                ul {
+                    @media #{$small-only}{
+                        margin-left: 0 !important;
+                        margin-right: 0 !important;
+                    }
+                }
+            }
+            .t2-item {
+                padding-left:3%;
+                @extend .large-6;
+                @extend .medium-6;
+                @extend .small-12;
+            }
+        }
+        .t2-magento-product-addons.wide-block > ul > li {
+            @media #{$small-only}{
+                float:left;
+                margin-right:0 !important;
+            }
+        }
+    }
+}

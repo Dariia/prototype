@@ -1,0 +1,595 @@
+<!-- GRAPH SCRIPT SECTION, START -->		
+<script type="text/javascript" src="http://code.angularjs.org/1.1.0/angular.min.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi?ext.js"></script>
+<script type='text/javascript'>
+	var app = angular.module('t2', []);
+
+	//line - graph
+	app.controller('lineChartCtrl', function($scope) {
+	  $scope.name = "Name"
+	});
+	app.directive('linechart', function() {
+	    return {
+	      restrict: 'A',
+	      link: function($scope, $elm, $attr) {
+	        // Create the data table.
+	        //var data = google.visualization.arrayToDataTable([
+	         var dataTable = new google.visualization.DataTable();
+		      //dataTable.addColumn('number', 'Period');
+		      dataTable.addColumn('number', 'Data');
+		      dataTable.addColumn('number', 'Call');
+		      dataTable.addColumn('number', 'Message');
+		      
+		      var dataView = new google.visualization.DataView(dataTable);
+			  dataView.setColumns([{calc: function(data, row) { return ''; }, type:'string'}, 0, 1, 2]);
+		            		      
+		      dataTable.addRows([
+	          //['week', 'data', 'call', 'message'],
+	          [300, 200, 100],
+	          [250, 150, 300],
+	          [400, 0, 	 50],
+	          [150, 50,  150],	          
+	          [200, 150, 400],
+	          [300, 100, 100],
+	          [250, 50,  200],
+	          [0, 	100, 100],
+	          [50, 	50,  150],	          
+	          [150, 100, 100],
+	          [300, 200, 100],
+	          [250, 150, 300],
+	          [300, 200, 100],
+	          [250, 150, 300],
+	          [400, 0,   50],
+	          [150, 50,  150],	          
+	          [200, 150, 400],
+	          [300, 100, 100],
+	          [250, 50,  200],
+	          [0, 	100, 100],
+	          [50, 	50,  150],	          
+	          [150, 100, 100],
+	          [300, 200, 100],
+	          [250, 150, 300]
+	        ]);
+	
+			//data: [300, 250, 400, 150, 200, 300, 250, 0, 50, 150]
+			//call: [200, 150, 0, 50, 150, 100, 50, 100, 50, 100]
+			//message: [100, 300, 50, 150, 400, 100, 200, 100, 150, 100]
+			 console.log('vidd: ' + $('[t2-timeline]').outerWidth(true)); 
+	        // Set chart options
+	        var options = {
+	            width: $('[t2-timeline]').outerWidth(true),
+	            height: 491,
+	            colors: ['#009fdf', '#e6007e', '#ff7d00'],
+	            chartArea:{
+	            	left: 0,
+	            	top: 20,
+	            	width: '100%',
+	            	height: 451
+	            },
+	            vAxis: {
+	              count: 0,
+	              textPosition: 'none',
+	              //viewWindowMode: 'pretty'
+	              /*viewWindow: {
+		              min: -10,
+		              max: 410
+	              },*/
+	              viewWindow: {
+		              min: 0,
+		              max: 400
+	              },	              
+	              gridlines: {
+	              	color: 'transparent'
+	              },
+	              baselineColor: 'transparent'   
+	            },
+	            hAxis: {
+		          viewWindowMode: 'maximized',
+	              textPosition: 'none',
+	            },
+	            pointSize: 8,
+	            animation: {
+	                duration: '1000',
+	                easing: 'in'
+	            },
+	            tooltip: {
+	           		isHtml: true,
+	           		trigger: 'selection'	
+	            },
+	            backgroundColor: 'none',
+				titlePosition: 'none',
+				axisTitlesPosition: 'none',
+	            legend: {position: 'none'}
+	        };
+	
+	        // Instantiate and draw our chart, passing in some options.
+	        var chart = new google.visualization.LineChart($elm[0]);
+	        chart.draw(dataView, options);
+	        
+	        //custom scrollbar
+			var scrollSettings = {
+				autoReinitialise: true,
+		        autoReinitialiseDelay: 500,
+		        hideFocus: true
+			};
+	        var scrollContainer = $('[t2-overflow]');
+	        
+	        $(window).on('t2-responsive', function(e ,dmq) {
+	    		if(dmq == "small") {
+					options.height = 291;
+					options.chartArea.height = 251;
+				}
+				else {
+					options.height = 491;
+					options.chartArea.height = 451;
+				}
+		    	chart.draw(dataView, options);
+		    	scrollContainer.jScrollPane(scrollSettings);
+		    });
+	      }
+	  }
+	});
+
+	google.setOnLoadCallback(function() {
+	    angular.bootstrap(document.body, ['t2']);
+	});
+	google.load('visualization', '1', {packages: ['corechart']});
+	
+	//datepicker
+	app.controller('DatepickerCtrl', function($scope) {
+	  $scope.date = '2013/03/19';
+	});
+	
+	app.directive('datepicker', function() {
+	    return {
+	        restrict: 'A',
+	        require : 'ngModel',
+	        link : function (scope, element, attrs, ngModelCtrl) {
+	            $(function () {
+	            	if(!Modernizr.touch) {
+		                $(element).each(function () {
+			                var currentElement = $(this);
+			                currentElement.attr('readonly', true).datepicker({
+			                    dateFormat:'yyyy/mm/dd',
+			                    onSelect:function (date) {
+			                        ngModelCtrl.$setViewValue(date);
+			                        scope.$apply();
+			                    }
+			                });
+							$(window).on('t2-responsive', function(e ,dmq) {
+								currentElement.datepicker("refresh");
+							});
+		                });
+					}
+	            });
+	        }
+	    }
+	});
+	
+</script>
+<!-- GRAPH SCRIPT SECTION, END -->
+<section class="t2-page-account t2-page-account-expenditure t2-form wide">
+	
+	<!-- partial: content -->
+	<div class="t2-partial-content wide">	
+		<div class="row">
+			<div class="large-24 medium-24 small-24 columns t2-content-wrapper">
+				<div class="t2-content">
+					<h2 class="t2-title">Aktuell förbrukning</h2>
+					<div class="t2-ingress">
+						<p>Du har ringt, skickat meddelanden och surfat för 4.33 kr sedan den senaste fakturan utöver dina
+fasta kostnader. Nästa faktura sammanställs 2014-05-15</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- partial : expenditure history -->
+	<div class="t2-partial-expenditure-history wide">
+		<!-- history - view -->		
+		<div class="t2-history-view t2-view-type-graph wide">
+			<!-- partial: content -->
+			<div class="t2-partial-content wide">	
+				<div class="row">
+					<div class="large-24 medium-24 small-24 columns t2-content-wrapper">
+						<div class="t2-content">
+							<h2 class="t2-title">Dina specifikationer</h2>
+							<div class="t2-ingress">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- view: heading -->
+			<div class="t2-view-heading wide">
+				<div class="row">
+					<div class="large-24 medium-24 small-24 columns">
+						<h3 class="t2-title">Förbrukning senaste 6 månaderna</h3>
+						<h4 class="t2-title t2-subtitle">Abonnemang: 0730740436</h4>
+					</div>
+				</div>
+			</div>
+			<!-- view: tools source -->
+			<div class="t2-view-tools-source wide">
+				<div class="row">
+					<div class="large-24 medium-24 small-24 columns t2-heading">
+						<span>Tidsperiod</span>
+					</div>
+				</div>			
+				<div class="row">
+					<div class="large-24 medium-24 small-24 columns">
+						<div class="t2-button-wrapper t2-button-center">
+							<a href="#" class="t2-source-item t2-button t2-button-type-outline t2-button-color-dark">Veckor</a>
+							<a href="#" class="t2-source-item t2-button t2-button-type-outline t2-button-color-light">Månader</a>
+						</div>
+					</div>
+				</div>			
+			</div>
+			<!-- view: tools summary -->
+			<div class="t2-view-tools-summary wide">
+				<div class="row">
+					<div class="large-24 medium-24 small-24 columns t2-tools-summary">
+						<!--<div class="row">-->
+						    <!--<div class="large-14 medium-24 small-24 columns t2-summary-wrapper">-->
+						    <div class="t2-summary-wrapper">
+								<span class="t2-summary">
+									<span class="t2-item t2-item-type-title">Total användning:</span>
+									<span class="t2-item t2-item-type-data t2-icon t2-icon-database">
+										<span class="t2-val">23,2 MB</span>
+										<span class="t2-key">Data</span>
+									</span>
+									<span class="t2-item t2-item-type-call t2-icon t2-icon-phone">
+										<span class="t2-val">166</span>
+										<span class="t2-key">Samtal</span>
+										<span class="t2-sum">(899 min)</span>
+									</span>
+									<span class="t2-item t2-item-type-message t2-icon t2-icon-chat">
+										<span class="t2-val">9 st</span>
+										<span class="t2-key">SMS/MMS</span>								
+									</span>								
+								</span>
+						    </div>
+						    <!--<div class="large-10 medium-24 small-24 columns t2-filter-wrapper">-->
+						    <div class="t2-filter-wrapper">
+								<span class="t2-label">Visa:</span>
+								<div class="t2-button-wrapper t2-button-left">
+									<a href="#" class="t2-item t2-button t2-button-type-outline t2-button-color-dark">Samtal<span class="t2-icon t2-active t2-icon-ok"></span></a>
+									<a href="#" class="t2-item t2-button t2-button-type-outline t2-button-color-dark">SMS/MMS<span class="t2-icon t2-icon-ok"></span></a>
+									<a href="#" class="t2-item t2-button t2-button-type-outline t2-button-color-dark">Data<span class="t2-icon t2-active t2-icon-ok"></span></a>
+								</div>
+						    </div>					    
+						<!--</div>-->
+					</div>
+				</div>
+			</div>
+			<!-- view: graph -->		
+			<div class="t2-view-graph wide">
+				<div class="row">
+					<div class="large-24 medium-24 small-24 columns t2-overflow-container">
+						<div class="row">
+			
+							<!-- temp position, tooltip, start -->
+							<div class="t2-tooltip">
+								<ul class="t2-item-list">
+									<li class="t2-item t2-item-type-heading">
+										<span class="t2-title t2-icon t2-icon-database">
+											<span>v.27, 18 mars-23 mars</span>
+										</span>
+									</li>
+									<li class="t2-item t2-item-type-content">
+										<span class="t2-content">123,1 MB</span>
+									</li>
+								</ul>
+							</div>
+							<!-- temp position, tooltip, end -->
+							
+							<div class="large-24 medium-24 small-24 columns">
+								<div class="t2-overflow" t2-overflow>
+
+									<!-- graph -->
+									<div class="t2-graph-wrapper">
+										<div>
+											<div class="t2-graph" ng-controller='lineChartCtrl'>
+												<div linechart></div>
+											</div>
+										</div>
+									</div>
+									
+									<!-- tools: timeline -->
+									<div class="t2-tools-timeline wide">
+										<div class="row">
+											<div class="large-24 medium-24 small-24 columns">
+												<div class="t2-timeline">
+													<ul class="t2-item-list" t2-timeline>
+														<li class="t2-item"><span>1</span></li>
+														<li class="t2-item"><span>2</span></li>
+														<li class="t2-item"><span>3</span></li>
+														<li class="t2-item"><span>4</span></li>
+														<li class="t2-item"><span>5</span></li>
+														<li class="t2-item"><span>6</span></li>	
+														<li class="t2-item"><span>7</span></li>
+														<li class="t2-item"><span>8</span></li>
+														<li class="t2-item"><span>9</span></li>
+														<li class="t2-item"><span>10</span></li>
+														<li class="t2-item"><span>11</span></li>
+														<li class="t2-item"><span>12</span></li>
+														<li class="t2-item"><span>13</span></li>
+														<li class="t2-item"><span>14</span></li>
+														<li class="t2-item"><span>15</span></li>
+														<li class="t2-item"><span>16</span></li>
+														<li class="t2-item"><span>17</span></li>
+														<li class="t2-item"><span>18</span></li>	
+														<li class="t2-item"><span>19</span></li>
+														<li class="t2-item"><span>20</span></li>
+														<li class="t2-item"><span>21</span></li>
+														<li class="t2-item"><span>22</span></li>
+														<li class="t2-item"><span>23</span></li>
+														<li class="t2-item"><span>24</span></li>							
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- history - view -->
+		<div class="t2-history-view t2-view-type-table wide">
+			<!-- partial: content -->
+			<div class="t2-partial-content wide">	
+				<div class="row">
+					<div class="large-24 medium-24 small-24 columns t2-content-wrapper">
+						<div class="t2-content">
+							<h2 class="t2-title">Dina specifikationer</h2>
+							<div class="t2-ingress">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+			<!-- view: heading -->
+			<div class="t2-view-heading wide">
+				<div class="row">
+					<div class="large-24 medium-24 small-24 columns">
+						<h3 class="t2-title">Tidigare förbrukning</h3>
+						<h4 class="t2-title t2-subtitle">Abonnemang: 0730740436</h4>
+					</div>
+				</div>
+			</div>
+			<!-- view: tools source -->
+			<div class="t2-view-tools-source wide">
+				<div class="row">
+					<div class="large-24 medium-24 small-24 columns t2-heading">
+						<span>Tidsperiod</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-24 medium-24 small-24 columns t2-form">
+						<!-- date source -->
+						<div class="row t2-form-section" ng-controller="DatepickerCtrl">
+						    <div class="large-12 medium-12 small-24 columns t2-source-item">
+						    	<div class="t2-item-wrapper">
+									<span class="t2-before">Från:</span>
+									<input id="startDate" name="startDate" type="date" value="" class="t2-item t2-tall" ng-model="date" datepicker t2-input-startdate/>
+									<span class="t2-icon t2-icon-calendar"></span>
+						    	</div>
+						    </div>
+						    <div class="large-12 medium-12 small-24 columns t2-source-item">
+						    	<div class="t2-item-wrapper">
+									<span class="t2-before">Till:</span>
+									<input id="endDate" name="endDate" type="date" value="" class="t2-item t2-tall" ng-model="date" datepicker t2-input-enddate/>
+									<span class="t2-icon t2-icon-calendar"></span>
+						    	</div>
+						    </div>					    
+						</div>
+						<span class="t2-decoration-hyphen"></span>
+					</div>
+				</div>			
+			</div>
+			<!-- view: tools summary -->
+			<div class="t2-view-tools-summary wide">
+				<div class="row">
+					<div class="large-24 medium-24 small-24 columns t2-tools-summary">
+						<div class="row">
+						    <div class="large-16 medium-24 small-24 columns t2-summary-wrapper">
+								<span class="t2-summary">
+									<span class="t2-item t2-item-type-title">Total användning:</span>
+									<span class="t2-item t2-item-type-data t2-icon t2-icon-database">
+										<span class="t2-val">23,2 MB</span>
+										<span class="t2-key">Data</span>
+									</span>
+									<span class="t2-item t2-item-type-call t2-icon t2-icon-phone">
+										<span class="t2-val">166</span>
+										<span class="t2-key">Samtal</span>
+										<span class="t2-sum">(899 min)</span>
+									</span>
+									<span class="t2-item t2-item-type-message t2-icon t2-icon-chat">
+										<span class="t2-val">9 st</span>
+										<span class="t2-key">SMS/MMS</span>								
+									</span>								
+								</span>
+						    </div>
+						    <div class="large-8 medium-24 small-24 columns t2-filter-wrapper">
+								<span class="t2-label">Visa:</span>
+								<div class="t2-button-wrapper t2-button-left">
+									<a href="#" class="t2-item t2-button t2-button-type-outline t2-button-color-dark">Samtal<span class="t2-icon t2-active t2-icon-ok"></span></a>
+									<a href="#" class="t2-item t2-button t2-button-type-outline t2-button-color-dark">SMS/MMS<span class="t2-icon t2-icon-ok"></span></a>
+									<a href="#" class="t2-item t2-button t2-button-type-outline t2-button-color-dark">Data<span class="t2-icon t2-active t2-icon-ok"></span></a>
+								</div>
+						    </div>					    
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- view: table -->		
+			<div class="t2-view-table wide">
+				<div class="row">
+					<div class="large-24 medium-24 small-24 columns t2-table">
+						<!-- row: heading -->
+						<ul class="t2-table-head-row">
+							<!-- heading: datum/tid -->
+							<li class="t2-table-head">
+								<span class="t2-item">Datum/tid</span>
+							</li>
+							<!-- heading: typ -->
+							<li class="t2-table-head">
+								<span class="t2-item">Typ</span>					
+							</li>
+							<!-- heading: samtalstid -->
+							<li class="t2-table-head">
+								<span class="t2-item">Samtalstid</span>					
+							</li>
+							<!-- heading: till -->
+							<li class="t2-table-head">
+								<span class="t2-item">Till</span>					
+							</li>																			
+						</ul>				
+						<!-- row: content, type: call -->
+						<ul class="t2-table-item t2-table-row">
+							<!-- cell: datum/tid -->
+							<li class="t2-table-cell">
+								<span class="t2-key t2-item">Datum/tid</span>
+								<span class="t2-val t2-item">2012-12-12</span>
+							</li>
+							<!-- cell: typ -->
+							<li class="t2-table-cell">
+								<span class="t2-key t2-item">Typ</span>
+								<span class="t2-val t2-item t2-item-type-call">Samtal</span>						
+							</li>
+							<!-- cell: samtalstid -->
+							<li class="t2-table-cell">
+								<span class="t2-key t2-item">Samtalstid</span>
+								<span class="t2-val t2-item">01:32:05</span>						
+							</li>
+							<!-- cell: till -->
+							<li class="t2-table-cell">
+								<span class="t2-key t2-item">Till</span>
+								<span class="t2-val t2-item">46234567897</span>						
+							</li>																				
+						</ul>
+						<!-- row: content, type: message -->
+						<ul class="t2-table-item t2-table-row">
+							<!-- cell: datum/tid -->
+							<li class="t2-table-cell">
+								<span class="t2-key t2-item">Datum/tid</span>
+								<span class="t2-val t2-item">2012-12-16</span>
+							</li>
+							<!-- cell: typ -->
+							<li class="t2-table-cell">
+								<span class="t2-key t2-item">Typ</span>
+								<span class="t2-val t2-item t2-item-type-message">MMS</span>						
+							</li>
+							<!-- cell: samtalstid -->
+							<li class="t2-table-cell">
+								<span class="t2-key t2-item">Samtalstid</span>
+								<span class="t2-val t2-item">-</span>						
+							</li>
+							<!-- cell: till -->
+							<li class="t2-table-cell">
+								<span class="t2-key t2-item">Till</span>
+								<span class="t2-val t2-item">46233515452</span>						
+							</li>																				
+						</ul>
+						<!-- row: content, type: data -->
+						<ul class="t2-table-item t2-table-row">
+							<!-- cell: datum/tid -->
+							<li class="t2-table-cell">
+								<span class="t2-key t2-item">Datum/tid</span>
+								<span class="t2-val t2-item">2012-12-18</span>
+							</li>
+							<!-- cell: typ -->
+							<li class="t2-table-cell">
+								<span class="t2-key t2-item">Typ</span>
+								<span class="t2-val t2-item t2-item-type-data">Data</span>						
+							</li>
+							<!-- cell: samtalstid -->
+							<li class="t2-table-cell">
+								<span class="t2-key t2-item">Samtalstid</span>
+								<span class="t2-val t2-item">-</span>						
+							</li>
+							<!-- cell: till -->
+							<li class="t2-table-cell">
+								<span class="t2-key t2-item">Till</span>
+								<span class="t2-val t2-item">-</span>						
+							</li>																				
+						</ul>								
+					</div>
+				</div>
+			</div>
+			<!-- view: load more -->
+			<div class="t2-view-load-more t2-button-wrapper wide">
+				<div class="row">
+					<div class="large-24 medium-24 small-24 columns">
+						<a href="#" class="t2-load-more t2-button t2-button-type-outline t2-button-color-light"><span class="t2-icon t2-icon-cw"></span>Ladda fler</a>
+					</div>
+				</div>			
+			</div>
+		</div>
+	</div>
+	
+	<!-- partial : purchase history-->
+	<div class="t2-partial-purchase-history wide">
+		<!-- purchase heading -->
+		<div class="row">
+			<div class="large-24 medium-24 small-24 columns t2-purchase-heading">
+				<h3 class="t2-title">Köphistorik för data</h3>
+			</div>
+		</div>
+		<!-- purchase collection -->
+		<div class="row">
+			<div class="large-24 medium-24 small-24 columns t2-purchase-collection t2-table">
+				<!-- row: heading -->
+				<ul class="t2-table-head-row">
+					<!-- heading: namn -->
+					<li class="t2-table-head">
+						<span class="t2-item">Namn</span>
+					</li>
+					<!-- heading: Datum -->
+					<li class="t2-table-head">
+						<span class="t2-item">Datum</span>					
+					</li>
+					<!-- heading: Köp datamängd -->
+					<li class="t2-table-head">
+						<span class="t2-item">Köp datamängd</span>					
+					</li>
+					<!-- heading: Förbrukade -->
+					<li class="t2-table-head">
+						<span class="t2-item">Förbrukade</span>					
+					</li>																			
+				</ul>				
+				<!-- row: content -->
+				<ul class="t2-purchase-item t2-table-row">
+					<!-- cell: namn -->
+					<li class="t2-table-cell">
+						<span class="t2-key t2-item">Namn</span>
+						<span class="t2-val t2-item">Surf Europa</span>
+					</li>
+					<!-- cell: datum -->
+					<li class="t2-table-cell">
+						<span class="t2-key t2-item">Datum</span>
+						<span class="t2-val t2-item">20121212-20121213</span>						
+					</li>
+					<!-- cell: köp datamängd -->
+					<li class="t2-table-cell">
+						<span class="t2-key t2-item">Köp datamängd</span>
+						<span class="t2-val t2-item">50 MB</span>						
+					</li>
+					<!-- cell: förbrukade -->
+					<li class="t2-table-cell">
+						<span class="t2-key t2-item">Förbrukade</span>
+						<span class="t2-val t2-item">27,21 MB</span>						
+					</li>																				
+				</ul>
+			</div>
+		</div>
+	</div>
+		
+</section>

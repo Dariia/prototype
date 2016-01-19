@@ -1,0 +1,133 @@
+#t2-magento-cart-step-person {
+    .t2-magento-select {
+        width:100%;
+        select {
+            width:100% !important;
+            z-index:10;
+        }
+    }
+    b {
+        color:$t2-color-gray-graphite;
+    }
+    .t2-magento-cart-address-list {
+        padding-bottom:15px;
+        overflow:hidden;
+        .columns {
+            float:left !important;
+            margin-bottom:10px;
+            .t2-magento-bordered-block {
+                word-break: break-all;
+                font-size:rem-calc(14);
+                font-weight:bold;
+            }
+        }
+    }
+}
+.t2-global-site-business {
+    #buy.green {
+        @extend .t2-color-green-light;
+    }
+     .multiple-configurators-view {
+        .t2-magento-product-existing-wrapper #existing_number + #getSmsCode,
+        .t2-magento-product-existing-wrapper #existing_number + #getActivationType,
+        .t2-magento-product-existing-wrapper .t2-magento-checkbox-wrapper + #getActivationType {
+            display:inline-block !important;
+            float:right;
+            padding:9px 4px;
+
+            &.green {
+                @extend .t2-color-green-light;
+            }
+            &.correct {
+                background-color:transparent !important;
+                color:transparent;
+                width:70px;
+                height:20px;
+                &:after {
+                    color:$t2-color-green-light;
+                    font-weight: normal;
+                    font-size:rem-calc(25);
+                    speak: none;
+                    display: inline-block;
+                    width: 1em;
+                    margin-right: .5em;
+                    font-variant: normal;
+                    text-transform: none;
+                    line-height: 1em;
+                    margin-left: .5em;
+                    font-family: 't2-magento-iconic';
+                    content: '\e81f';
+                    position: relative;
+                    top: -25px;
+                    left:-17px;
+                    zoom: 1;
+                }
+            }
+        }
+        .t2-magento-product-mobiles.t2-magento-configurator-td.t2-magento-product-existing-wrapper #getActivationType {
+             display:none !important;
+         }
+         .t2-magento-product-existing-wrapper .t2-magento-checkbox-wrapper + #getActivationType {
+             position:absolute;
+             top:20px;
+             right:0;
+         }
+        .t2-magento-configurator-td {
+            padding-right:5px !important;
+            input {
+                width:64% !important;
+            }
+        }
+    }
+    #multiple-ssn-btn {
+        -webkit-transition: 0;
+        -moz-transition: 0;
+        transition: 0;
+        &.correct:disabled {
+            color:#fff !important;
+            &:after {
+                font-weight: normal;
+                color:$t2-color-green-light;
+            }
+        }
+        &.correct {
+            background:transparent !important;
+            width:20px;
+            padding-left:20px;
+            padding-right:10px;
+            color:#fff !important;
+            text-indent:100%;
+            overflow:hidden;
+            &:after {
+                font-weight: normal;
+                color:$t2-color-green-light;
+                font-size:rem-calc(25);
+                speak: none;
+                display: inline-block;
+                width: 1em;
+                margin-right: .5em;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1em;
+                margin-left: .5em;
+                font-family: 't2-magento-iconic';
+                content: '\e81f';
+                position: relative;
+                top: -27px;
+                left:-32px;
+                zoom: 1;
+            }
+        }
+    }
+    #t2-org-info-container {
+        padding:20px;
+        strong {
+            display: block;
+            padding-bottom:10px;
+        }
+        p {
+            color:$t2-color-pantone-black;
+            margin-bottom:5px;
+        }
+    }
+}

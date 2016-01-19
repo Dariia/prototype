@@ -1,0 +1,170 @@
+//ALL GREY YEY:
+//Steam
+$t2-color-gray-steam:#f4f4f4;
+.t2-background-color-gray-steam { background-color: $t2-color-gray-steam!important; }
+$t2-color-gray-ultralight: $t2-color-gray-steam;
+
+//Haze
+$t2-color-gray-haze:#f0f0f0;
+.t2-background-color-gray-haze { background-color: $t2-color-gray-haze!important; }
+$t2-color-gray-light: $t2-color-gray-haze;
+
+//Fog
+$t2-color-gray-fog: #eeeeee;
+.t2-background-color-gray-fog { background-color: $t2-color-gray-fog!important; }
+$t2-color-gray-medium: $t2-color-gray-fog;
+
+//Dark
+$t2-color-gray-ash:#cccccc;
+.t2-background-color-gray-ash { background-color: $t2-color-gray-ash!important; }
+$t2-color-gray-dark:$t2-color-gray-ash;
+
+//Carbon
+$t2-color-gray-carbon:#111111;
+.t2-background-color-gray-carbon { background-color: $t2-color-gray-carbon!important; }
+
+//Gravle
+$t2-color-gray-gravle:#A9A9A9;
+.t2-background-color-gray-gravle { background-color: $t2-color-gray-gravle!important; }
+
+//DDD
+$t2-color-gray-ddd:#dddddd;
+.t2-background-color-gray-ddd { background-color: $t2-color-gray-ddd!important; }
+//Graphite
+$t2-color-gray-graphite:#222222;
+.t2-background-color-gray-graphite { background-color: $t2-color-gray-graphite!important; }
+
+//Concrete
+$t2-color-gray-concrete:#777777;
+.t2-background-color-gray-concrete { background-color: $t2-color-gray-concrete!important; }
+
+//Dark Concrete
+$t2-color-gray-dark-concrete:#979797;
+
+//Silver
+$t2-color-gray-silver:#c9c9c9;
+
+//Dark Silver
+$t2-color-gray-dark-silver:#afafaf;
+
+//Light Gray
+$t2-color-gray-light:#e7e7e7;
+
+//Antracit
+//Light Gray
+$t2-color-gray-antracit:#dcdcdc;
+//Ash
+
+//LINKS:
+$t2-color-linkblue:#009EE0;
+.t2-text-color-linkblue{
+	color: $t2-color-linkblue !important;
+	@media #{$medium-up} {
+		&:hover{ color: darken($t2-color-linkblue, 15%); }
+	}
+}
+
+
+//VENDOR:
+$t2-color-facebookblue:#4B63A7;
+$t2-color-googlered:#DC2400;
+$t2-color-red:#e4002b;
+$t2-color-dark-red:#d50022;
+$t2-color-skyblue:#009fe3;
+$t2-color-red-dark:#e3002b;
+
+//CID-COLORS:
+//1 Pantone Black
+$t2-color-pantone-black:#000000;
+.t2-background-color-pantone-black{background-color: $t2-color-pantone-black !important;}
+.t2-text-color-pantone-black{color: $t2-color-pantone-black !important;}
+.t2-textwrapper-color-pantone-black *{color: $t2-color-pantone-black !important;}
+.t2-scope-color-pantone-black {label, legend, span, p, a, h1, h2, h3, h4{color: $t2-color-pantone-black !important;}}
+
+//2 Pantone White
+$t2-color-pantone-white:#FFFFFF;
+.t2-background-color-pantone-white{background-color: $t2-color-pantone-white !important;}
+.t2-text-color-pantone-white{color: $t2-color-pantone-white !important;}
+.t2-textwrapper-color-pantone-white *{color: $t2-color-pantone-white !important;}
+.t2-scope-color-pantone-white {label, legend, span, p, a, h1, h2, h3, h4{color: $t2-color-pantone-white !important;}}
+
+//3 Pantone 185
+$t2-color-pantone-185:#e4002b;
+.t2-background-color-pantone-185{background-color: $t2-color-pantone-185 !important;}
+.t2-text-color-pantone-185{color: $t2-color-pantone-185 !important;}
+.t2-textwrapper-color-pantone-185 *{color: $t2-color-pantone-185 !important;}
+.t2-scope-color-pantone-185 {label, legend, span, p, a, h1, h2, h3, h4{color: $t2-color-pantone-185 !important;}}
+
+//4 Pantone 151 
+$t2-color-pantone-151:#ff7d00;
+.t2-background-color-pantone-151{background-color: $t2-color-pantone-151 !important;}
+.t2-text-color-pantone-151{color: $t2-color-pantone-151 !important;}
+.t2-textwrapper-color-pantone-151 *{color: $t2-color-pantone-151 !important;}
+.t2-scope-color-pantone-151 {label, legend, span, p, a, h1, h2, h3, h4{color: $t2-color-pantone-151 !important;}}
+
+//5 Pantone Yellow 
+$t2-color-pantone-yellow:#ffe600;
+.t2-background-color-pantone-yellow{background-color: $t2-color-pantone-yellow !important;}
+.t2-text-color-pantone-yellow{color: $t2-color-pantone-yellow !important;}
+.t2-textwrapper-color-pantone-yellow *{color: $t2-color-pantone-yellow !important;}
+.t2-scope-color-pantone-yellow {label, legend, span, p, a, h1, h2, h3, h4{color: $t2-color-pantone-yellow !important;}}
+
+//6 Pantone 375
+$t2-color-pantone-375:#97d700;
+.t2-background-color-pantone-375{background-color: $t2-color-pantone-375 !important;}
+.t2-text-color-pantone-375{color: $t2-color-pantone-375 !important;}
+.t2-textwrapper-color-pantone-375 *{color: $t2-color-pantone-375 !important;}
+.t2-scope-color-pantone-375 {label, legend, span, p, a, h1, h2, h3, h4{color: $t2-color-pantone-375 !important;}}
+
+//7 Pantone 361 
+$t2-color-pantone-361:#43b02a;
+.t2-background-color-pantone-361{background-color: $t2-color-pantone-361 !important;}
+.t2-text-color-pantone-361{color: $t2-color-pantone-361 !important;}
+.t2-textwrapper-color-pantone-361 *{color: $t2-color-pantone-361 !important;}
+.t2-scope-color-pantone-361 {label, legend, span, p, a, h1, h2, h3, h4{color: $t2-color-pantone-361 !important;}}
+
+//8 Pantone Cyan
+$t2-color-pantone-cyan:#009fdf;
+.t2-background-color-pantone-cyan{background-color: $t2-color-pantone-cyan !important;}
+.t2-text-color-pantone-cyan{color: $t2-color-pantone-cyan !important;}
+.t2-textwrapper-color-pantone-cyan *{color: $t2-color-pantone-cyan !important;}
+.t2-scope-color-pantone-cyan {label, legend, span, p, a, h1, h2, h3, h4{color: $t2-color-pantone-cyan !important;}}
+
+//9 Pantone 300 
+$t2-color-pantone-300:#005eb8;
+.t2-background-color-pantone-300{background-color: $t2-color-pantone-300 !important;}
+.t2-text-color-pantone-300{color: $t2-color-pantone-300 !important;}
+.t2-textwrapper-color-pantone-300 *{color: $t2-color-pantone-300 !important;}
+.t2-scope-color-pantone-300 {label, legend, span, p, a, h1, h2, h3, h4{color: $t2-color-pantone-300 !important;}}
+
+//10 Pantone 2603 
+$t2-color-pantone-2603:#6a1b89;
+.t2-background-color-pantone-2603{background-color: $t2-color-pantone-2603 !important;}
+.t2-text-color-pantone-2603{color: $t2-color-pantone-2603 !important;}
+.t2-textwrapper-color-pantone-2603 *{color: $t2-color-pantone-2603 !important;}
+.t2-scope-color-pantone-2603 {label, legend, span, p, a, h1, h2, h3, h4{color: $t2-color-pantone-2603 !important;}}
+
+//11 Pantone Magenta
+$t2-color-pantone-magenta:#e6007e;
+.t2-background-color-pantone-magenta{background-color: $t2-color-pantone-magenta !important;}
+.t2-text-color-pantone-magenta{color: $t2-color-pantone-magenta !important;}
+.t2-textwrapper-color-pantone-magenta *{color: $t2-color-pantone-magenta !important;}
+.t2-scope-color-pantone-magenta {label, legend, span, p, a, h1, h2, h3, h4{color: $t2-color-pantone-magenta !important;}}
+
+//Color Green
+$t2-color-green-dark:#32841f;
+.t2-color-green-dark{background-color: $t2-color-green-dark !important;}
+$t2-color-green:#368d22;
+.t2-color-green{background-color: $t2-color-green !important;}
+$t2-color-green-light:#3c9e26;
+.t2-color-green-light{background-color: $t2-color-green-light !important;}
+$t2-color-green-middle-light:#42b029;
+.t2-color-green-middle-light {background-color:$t2-color-green-middle-light !important;}
+$t2-color-green-lightest:#7bc86a;
+.t2-color-green-lightest {background-color:$t2-color-green-lightest !important;}
+$t2-color-green-grass:#93ce00;
+$t2-color-green-field:#8ac006;
+
+//SOLID COLORS
+$t2-color-black:$t2-color-pantone-black;
+$t2-color-white:$t2-color-pantone-white;

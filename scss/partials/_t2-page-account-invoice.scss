@@ -1,0 +1,272 @@
+//page: account - invoice
+//parent page: account
+
+.t2-page-account-invoice {
+	.t2-partial-content {
+		//if no unpayed invoices exists, remove blank space, white partial after white.
+		& + .t2-partial-invoice-collection.t2-invoice-future {
+			padding-top: 0;
+		}
+	}
+}
+
+//invoice - partial: invoice collection
+.t2-partial-invoice-collection {	
+	background-color: $t2-color-pantone-white;
+	//invoice heading
+	.t2-invoice-heading {
+		padding: $t2-size-medium $t2-size-xsmall $t2-size-small $t2-size-xsmall;
+		.t2-title {
+			@extend .t2-font-bold;
+			font-size: rem-calc(20);
+			color: $t2-color-gray-graphite;
+			margin: 0;			
+		}
+	}
+	
+	//invoice summary
+	.t2-invoice-summary {
+		padding: $t2-size-small $t2-size-xsmall;
+		background-color: $t2-color-pantone-white;
+		border-top: 1px solid $t2-color-gray-dark;
+		border-bottom: 1px solid $t2-color-gray-dark;
+		.t2-summary {
+			font-size: rem-calc(14);
+			line-height: rem-calc(22);
+			color: $t2-color-gray-graphite;
+			.t2-ingress{
+				margin-top: $t2-size-small;
+			}
+			.t2-icon {
+				&:before {
+					font-size: rem-calc(16);
+					margin-right: rem-calc(8);
+					vertical-align: -1px;
+				}
+			} 
+		}
+	}
+	
+	//invoice collection.
+	.t2-invoice-collection {
+		padding: 0;
+		.t2-table-head-row { display: none; }
+		//row
+		.t2-invoice-item {
+			display: block;
+			margin: 0;
+			padding: $t2-size-medium $t2-size-xsmall $t2-size-small/2 $t2-size-xsmall;
+			border-bottom: 1px solid $t2-color-gray-dark;
+			//cell
+			li {
+				display: block;
+				overflow: auto;
+				padding-bottom: $t2-size-small;
+				.t2-button {
+					text-align: center;
+					padding-left: $t2-size-small/2;
+					padding-right: $t2-size-small/2;
+					.t2-icon {
+						&:before {
+							font-size: rem-calc(15);
+							margin-left: rem-calc(8);
+							vertical-align: -1px;
+						}
+					}
+				}
+			}
+			//items
+			.t2-item {
+				font-size: rem-calc(14);
+			}
+			.t2-key {
+				float: left;
+				font-weight: bold;
+			}
+			.t2-val { float: right; }
+		}
+	}
+	
+	//load more button
+	.t2-load-more-wrapper {
+		margin: 0;
+		padding: 0;
+		.t2-button {
+			margin: 0;
+			@media #{$small-only} {
+				padding: rem-calc(27) $t2-size-xsmall;
+				line-height: rem-calc(16);
+				border: none;
+				border-radius: 0;
+				-webkit-border-radius: 0;
+				&:hover, &:active {
+					background-color: darken($t2-color-gray-steam, 0%);
+					color: $t2-color-gray-graphite;
+				}	
+			}
+			.t2-icon {
+				&:before {
+					font-size: rem-calc(16);
+					margin-left: rem-calc(8);
+					vertical-align: -2px;
+				}
+			}
+		}
+	}
+	
+	//invoice - collection - types
+	//history - invoice
+	&.t2-invoice-history {
+		background-color: $t2-color-gray-steam;
+		.t2-invoice-summary { background-color: darken($t2-color-gray-steam, 3%); }
+		//load more button
+		.t2-load-more-wrapper {
+			.t2-button {
+				@media #{$small-only} {
+					&:hover, &:active { background-color: darken($t2-color-gray-steam, 10%); }	
+				}
+			}
+		}
+	}
+	//future - invoice
+	&.t2-invoice-future {}		
+	//remaining - invoice
+	&.t2-invoice-remaining {
+		background-color: $t2-color-pantone-2603;
+		color: $t2-color-pantone-white;
+		//heading
+		.t2-invoice-heading {
+			.t2-title { color: $t2-color-pantone-white; }
+		}
+		//summary
+		.t2-invoice-summary {
+			border-top: 1px solid darken($t2-color-pantone-2603, 20%);
+			border-bottom: 1px solid darken($t2-color-pantone-2603, 20%);	
+			background-color: darken($t2-color-pantone-2603, 10%);
+			.t2-summary { color: $t2-color-pantone-white; }
+		}
+		//collection
+		.t2-invoice-collection {
+			.t2-invoice-item { border-bottom: 1px solid darken($t2-color-pantone-2603, 20%); }
+		}
+		//load more button
+		.t2-load-more-wrapper {
+			.t2-button {
+				@media #{$small-only} {
+					&:hover, &:active {
+						color: $t2-color-white;
+						background-color: darken($t2-color-pantone-2603, 10%);
+					}	
+				}
+			}
+		}		
+	}	
+	
+	@media #{$medium-up} {
+		padding: $t2-size-large*2 $t2-size-small;
+		//invoice heading
+		.t2-invoice-heading {
+			text-align: center;
+			padding: 0 $t2-size-small $t2-size-medium $t2-size-small;
+			.t2-title {
+				font-size: rem-calc(22);
+				line-height: $t2-heading-lineheight;
+			}
+		}
+		//invoice summary
+		.t2-invoice-summary {
+			padding: 0 $t2-size-small;
+			background-color: transparent;
+			text-align: center;
+			margin-bottom: 0;
+			border: none;
+			.t2-summary {
+				font-size: rem-calc(16);
+				line-height: rem-calc(24);
+				display: inline-block;
+				padding: $t2-size-small $t2-size-large*2;
+				border-top: 1px solid $t2-color-gray-dark;
+				border-bottom: 1px solid $t2-color-gray-dark;
+			}
+		}
+
+		//invoice collection
+		.t2-invoice-collection {
+			padding: 0 $t2-size-small;
+			margin-top: $t2-size-medium;
+			display: table;
+			//row: heading
+			.t2-table-head-row {
+				display: table-row;
+				.t2-table-head {
+					display: table-cell;
+					padding: $t2-size-xsmall $t2-size-small;
+					font-size: rem-calc(14);
+					color: $t2-color-gray-concrete;
+					font-weight: bold;
+					border-bottom: 1px solid $t2-color-gray-dark; 
+					&:last-child { text-align: right; }
+				}
+			}
+			//row
+			.t2-invoice-item {
+				display: table-row;
+				margin: 0;
+				padding: 0;
+				border: none;
+				//cell
+				li.t2-table-cell {
+					display: table-cell;
+					overflow: auto;
+					padding: $t2-size-small;
+					vertical-align: middle;
+					border-bottom: 1px solid $t2-color-gray-dark;
+					&:last-child { text-align: right; }
+				}
+				//items
+				.t2-item { font-size: rem-calc(16); }
+				.t2-key { display: none; }
+				.t2-val { float: left; }
+			}
+		}
+		
+		//load more button
+		.t2-load-more-wrapper { padding: $t2-size-xxlarge 0 0 0; }
+		
+		//invoice - collection - types
+		//history - invoice
+		&.t2-invoice-history {
+			//summary
+			.t2-invoice-summary { background-color: transparent; }			
+		}
+		//future - invoice
+		&.t2-invoice-future {
+			//summary
+			.t2-invoice-summary { background-color: transparent; }			
+		}		
+		//remaining - invoice
+		&.t2-invoice-remaining {
+			//summary
+			.t2-invoice-summary {
+				background-color: transparent;
+				border: none;
+				.t2-summary {
+					border-top: 1px solid $t2-color-white;
+					border-bottom: 1px solid $t2-color-white;
+				}
+			}
+			//collection
+			.t2-invoice-collection {
+				.t2-table-head-row {
+					.t2-table-head {
+						color: $t2-color-pantone-white;
+						border-bottom: 1px solid $t2-color-white;
+					}
+				}
+				.t2-invoice-item {
+					li.t2-table-cell { border-bottom: 1px solid $t2-color-white; }
+				}
+			}			
+		}
+	}
+}

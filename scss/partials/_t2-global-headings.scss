@@ -1,0 +1,237 @@
+.t2-editorial.t2-block-discover-editorial{
+	h1, h2, h3{
+		@extend .t2-font-heavy;
+		color: lighten($t2-color-gray-carbon, 6.8%);
+		font-weight: normal;
+		margin-bottom: $t2-size-medium;
+		text-transform: uppercase;
+		font-size:rem-calc(32);
+		@media #{$medium-up} {
+			font-size:rem-calc(100);
+		}
+		span, p{
+		    line-height: 0.88em;
+	    }
+	    line-height: 0.88em;
+		
+	}
+	.t2-subtitle {
+		@extend .t2-font-bold;
+		color: lighten($t2-color-gray-carbon, 6.8%);
+		font-weight: normal;
+		margin-bottom: $t2-size-xsmall;
+		font-size:rem-calc(26);
+		@media #{$medium-up} {
+			font-size: rem-calc(50);
+			margin-bottom: $t2-size-small;
+		}
+		//@media #{$large-up} {
+		//	margin-bottom: $t2-size-small;
+		//}
+		span, p{
+		    line-height: 1.06em;
+	    }
+	    line-height: 1.06em;
+	}
+	p.t2-subtitle{
+		overflow: visible;
+	}
+	h2 + .t2-subtitle, h2 + h3{
+		margin-top: -20px;
+	}
+	.t2-subtitle + h2{
+		margin-top: -10px;
+	}
+}
+
+
+.t2-editorial, #tinymce, .mce-content-body, .mceContentBody {
+	
+	$hsize-min-small: 24;
+	$hsize-max-small: 36;
+	
+	$hsize-min-medium: 26;
+	$hsize-max-medium: 60;
+	
+	$hsize-min-large: 26;
+	$hsize-max-large: 80;
+	
+	$hsize-increment-small: ($hsize-max-small - $hsize-min-small) / 6;
+	$hsize-increment-medium: ($hsize-max-medium - $hsize-min-medium) / 6;
+	$hsize-increment-large: ($hsize-max-large - $hsize-min-large) / 6;
+	
+	h1, h2, h3{
+		
+		&, span, div, p, a{
+		
+			&.t2-xxs{
+				font-size: rem-calc($hsize-min-small + ($hsize-increment-small * 0));
+			}
+			&.t2-xs{
+				font-size: rem-calc($hsize-min-small + ($hsize-increment-small * 1));
+			}
+			&.t2-s{
+				font-size: rem-calc($hsize-min-small + ($hsize-increment-small * 2));
+			}
+			&.t2-m{
+				font-size: rem-calc($hsize-min-small + ($hsize-increment-small * 3));
+			}
+			&.t2-l{
+				font-size: rem-calc($hsize-min-small + ($hsize-increment-small * 4));
+			}
+			&.t2-xl{
+				font-size: rem-calc($hsize-min-small + ($hsize-increment-small * 5));
+			}
+			&.t2-xxl{
+				font-size: rem-calc($hsize-min-small + ($hsize-increment-small * 6));
+			}
+			@media #{$medium-up} {
+				&.t2-xxs{
+					font-size: rem-calc($hsize-min-medium + ($hsize-increment-medium * 0));
+				}
+				&.t2-xs{
+					font-size: rem-calc($hsize-min-medium + ($hsize-increment-medium * 1));
+				}
+				&.t2-s{
+					font-size: rem-calc($hsize-min-medium + ($hsize-increment-medium * 2));
+				}
+				&.t2-m{
+					font-size: rem-calc($hsize-min-medium + ($hsize-increment-medium * 3));
+				}
+				&.t2-l{
+					font-size: rem-calc($hsize-min-medium + ($hsize-increment-medium * 4));
+				}
+				&.t2-xl{
+					font-size: rem-calc($hsize-min-medium + ($hsize-increment-medium * 5));
+				}
+				&.t2-xxl{
+					font-size: rem-calc($hsize-min-medium + ($hsize-increment-medium * 6));
+				}
+				
+			}
+			@media #{$large-up} {
+				&.t2-xxs{
+					font-size: rem-calc($hsize-min-large + ($hsize-increment-large * 0));
+				}
+				&.t2-xs{
+					font-size: rem-calc($hsize-min-large + ($hsize-increment-large * 1));
+				}
+				&.t2-s{
+					font-size: rem-calc($hsize-min-large + ($hsize-increment-large * 2));
+				}
+				&.t2-m{
+					font-size: rem-calc($hsize-min-large + ($hsize-increment-large * 3));
+				}
+				&.t2-l{
+					font-size: rem-calc($hsize-min-large + ($hsize-increment-large * 4));
+				}
+				&.t2-xl{
+					font-size: rem-calc($hsize-min-large + ($hsize-increment-large * 5));
+				}
+				&.t2-xxl{
+					font-size: rem-calc($hsize-min-large + ($hsize-increment-large * 6));
+				}
+			}
+		}
+	}
+}
+.t2-editorial, #tinymce, .mce-content-body, .mceContentBody {
+	
+	$subtitlescale: 0.5;
+	
+	$hsize-min-small: 26*$subtitlescale;
+	$hsize-max-small: 40*$subtitlescale;
+	
+	$hsize-min-medium: 26*$subtitlescale;
+	$hsize-max-medium: 60*$subtitlescale;
+	
+	$hsize-min-large: 26*$subtitlescale;
+	$hsize-max-large: 80*$subtitlescale;
+	
+	$hsize-increment-small: ($hsize-max-small - $hsize-min-small) / 6;
+	$hsize-increment-medium: ($hsize-max-medium - $hsize-min-medium) / 6;
+	$hsize-increment-large: ($hsize-max-large - $hsize-min-large) / 6;
+		
+	.t2-subtitle{
+		
+		&, span, div, a, p{
+		
+			&.t2-xxs{
+				font-size: rem-calc($hsize-min-small + ($hsize-increment-small * 0));
+			}
+			&.t2-xs{
+				font-size: rem-calc($hsize-min-small + ($hsize-increment-small * 1));
+			}
+			&.t2-s{
+				font-size: rem-calc($hsize-min-small + ($hsize-increment-small * 2));
+			}
+			&.t2-m{
+				font-size: rem-calc($hsize-min-small + ($hsize-increment-small * 3));
+			}
+			&.t2-l{
+				font-size: rem-calc($hsize-min-small + ($hsize-increment-small * 4));
+			}
+			&.t2-xl{
+				font-size: rem-calc($hsize-min-small + ($hsize-increment-small * 5));
+			}
+			&.t2-xxl{
+				font-size: rem-calc($hsize-min-small + ($hsize-increment-small * 6));
+			}
+			&.t2-temporarysize{
+				font-size: rem-calc(18);
+			}
+			@media #{$medium-up} {
+				&.t2-xxs{
+					font-size: rem-calc($hsize-min-medium + ($hsize-increment-medium * 0));
+				}
+				&.t2-xs{
+					font-size: rem-calc($hsize-min-medium + ($hsize-increment-medium * 1));
+				}
+				&.t2-s{
+					font-size: rem-calc($hsize-min-medium + ($hsize-increment-medium * 2));
+				}
+				&.t2-m{
+					font-size: rem-calc($hsize-min-medium + ($hsize-increment-medium * 3));
+				}
+				&.t2-l{
+					font-size: rem-calc($hsize-min-medium + ($hsize-increment-medium * 4));
+				}
+				&.t2-xl{
+					font-size: rem-calc($hsize-min-medium + ($hsize-increment-medium * 5));
+				}
+				&.t2-xxl{
+					font-size: rem-calc($hsize-min-medium + ($hsize-increment-medium * 6));
+				}
+				&.t2-temporarysize{
+					font-size: rem-calc(23);
+				}
+			}
+			@media #{$large-up} {
+				&.t2-xxs{
+					font-size: rem-calc($hsize-min-large + ($hsize-increment-large * 0));
+				}
+				&.t2-xs{
+					font-size: rem-calc($hsize-min-large + ($hsize-increment-large * 1));
+				}
+				&.t2-s{
+					font-size: rem-calc($hsize-min-large + ($hsize-increment-large * 2));
+				}
+				&.t2-m{
+					font-size: rem-calc($hsize-min-large + ($hsize-increment-large * 3));
+				}
+				&.t2-l{
+					font-size: rem-calc($hsize-min-large + ($hsize-increment-large * 4));
+				}
+				&.t2-xl{
+					font-size: rem-calc($hsize-min-large + ($hsize-increment-large * 5));
+				}
+				&.t2-xxl{
+					font-size: rem-calc($hsize-min-large + ($hsize-increment-large * 6));
+				}
+				&.t2-temporarysize{
+					font-size: rem-calc(26);
+				}
+			}
+		}
+	}
+}

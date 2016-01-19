@@ -1,0 +1,207 @@
+//page: account - services
+//parent page: account
+.t2-row-dialog{
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right: 0;
+	z-index: 999;
+
+	background-color: #222;
+	background-color: rgba(#222, 0.92);
+	padding: 16px 0px;
+	text-align: center;
+	.t2-text{
+		color:#fff;
+		padding:20px 30px;
+		line-height: 1.2em;
+		font-size: rem-calc(14);
+	}
+
+}
+.t2-partial-account{
+	position: relative;
+}
+.t2-page-account-services {
+
+	.t2-partial-account-services {
+		padding: $t2-size-medium 0;
+		> .row > .columns {
+			padding: 0 $t2-size-xsmall;
+		}
+		.t2-part-left {}
+		.t2-part-right { padding-top: $t2-size-small; }
+
+	}
+	//explanation container
+	.t2-explanation-container {
+		padding-top: $t2-size-small;
+		.t2-content {
+			font-size: rem-calc(12);
+			line-height: rem-calc(20);
+			font-weight: normal;
+			color: $t2-color-gray-concrete;
+			margin-bottom: 0;
+		}
+		@media #{$medium-up} {
+    		padding-top: $t2-size-medium;
+    		.t2-content {
+				font-size: rem-calc(14);
+				line-height: rem-calc(22);
+			}
+		}    	
+	}
+	
+	//override: button
+	.t2-button-wrapper {
+		margin-bottom: 0;
+	}
+	.t2-button {
+		font-size: rem-calc(14);
+		line-height: rem-calc(16);
+		padding-top: rem-calc(17);
+		padding-bottom: rem-calc(17);
+	}
+	//override: text
+	.t2-heading { margin-bottom: $t2-size-small; }
+	.t2-editorial {
+		&, * { color: $t2-color-gray-graphite; }
+		p { margin-bottom: $t2-size-small; }
+	}
+	//override: form
+	.t2-form-section { padding: 0; }
+	
+	//general: list type: line list
+	.t2-line-list-wrapper { padding: 0; }
+	.t2-line-list {
+		margin: 0 0 0 0;
+		padding: 0 0 $t2-size-small 0;
+		li {
+			padding: $t2-size-xsmall $t2-size-small;
+			border-top: 1px solid $account-services-border-color;
+			border-bottom: 1px solid $account-services-border-color;
+			& + li {
+				border-top: none;
+			}
+			&, .t2-content {
+				font-size: rem-calc(14);
+				line-height: rem-calc(22);
+				font-weight: normal;
+				color: $t2-color-gray-graphite;
+			}
+			&.t2-item-type-text {}
+		}
+		//ol
+		&.t2-list-type-step {
+			list-style-position: inside;
+			li {
+				font-weight: bold;
+				.t2-content { font-weight: normal; }
+			}
+		}
+		//ul
+		&.t2-list-type-text {
+			
+		}
+		&.t2-list-type-bold {
+			li {
+				&, .t2-content { font-weight: bold; }
+			}
+			
+		}
+	}
+	.t2-list-explanation {
+		padding: 0 $t2-size-small;
+		.t2-content {
+			font-size: rem-calc(12);
+			line-height: rem-calc(20);
+			font-weight: normal;
+			color: $t2-color-gray-concrete;
+			margin-bottom: 0;
+		}
+	}
+	
+	@media #{$small-only} {
+		.t2-partial-account-services {
+			.t2-form-section {
+				.t2-button-wrapper { padding-top: 0; }
+			}
+		}
+			
+	}
+	@media #{$medium-up} {
+		.t2-partial-account-services {
+			padding: $t2-size-xlarge 0;
+			> .row > .columns { padding: 0 $t2-size-small; }				
+			.t2-part-left {}
+			.t2-part-right { padding-top: 0; }
+		}
+		.t2-button { margin-bottom: 0; }
+		//text	
+		.t2-heading { margin-bottom: $t2-size-medium; }
+		.t2-editorial {
+			p { margin-bottom: $t2-size-medium; }
+		}
+		//general: list type: line list
+		.t2-line-list-wrapper { padding: 0 $t2-size-small; }
+		.t2-line-list {
+			padding: 0 0 $t2-size-medium 0;
+			li {
+				padding: $t2-size-xsmall 0;
+				&, .t2-content {
+					font-size: rem-calc(16);
+					line-height: rem-calc(24);
+				}
+			}
+			//ol
+			&.t2-list-type-step {
+				li { padding: $t2-size-xsmall $t2-size-xsmall/2; }
+			}
+			//ul
+			&.t2-list-type-text {}
+			&.t2-list-type-bold {}
+		}
+		.t2-list-explanation {
+			padding: 0;
+			.t2-content {
+				font-size: rem-calc(14);
+				line-height: rem-calc(22);
+			}
+		}		
+	}
+	
+}
+
+//services - partial: activate sim number
+.t2-partial-activate-sim-number {
+	.t2-activate-sim-container {}
+	.t2-howto-container {}
+	@media #{$medium-up} {}
+}
+
+//services - partial: order sim
+.t2-partial-order-sim {
+	@media #{$medium-up} {
+		.t2-editorial { padding: 0 $t2-size-large*2; }
+		.t2-button-wrapper { padding-top: $t2-size-small/2; }
+	}
+	@media #{$large-up} {
+		.t2-editorial { padding: 0 $t2-size-large*3; }
+	}
+}
+
+//services - partial: activate sim radio
+.t2-partial-activate-sim-radio {
+	.t2-activate-sim-container {}
+	.t2-howto-container {}
+	@media #{$medium-up} {}
+}
+
+//services - partial: lock services
+.t2-partial-lock-services {
+	//background: $t2-color-gray-steam;
+	.t2-part-left {}
+	.t2-part-right {}
+	@media #{$medium-up} {}
+}

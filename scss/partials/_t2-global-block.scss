@@ -1,0 +1,13 @@
+//Global: Block styling.
+.t2-global-block {}
+
+//Global: Block areas
+.t2-global-block-area {
+    //Area: Column
+    &.t2-area-type-column {
+        //Type: Narrow
+        &.t2-column-type-narrow {}
+    }
+    //Area: Startpage
+    &.t2-area-type-startpage {}
+}

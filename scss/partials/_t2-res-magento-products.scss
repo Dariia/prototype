@@ -1,0 +1,769 @@
+.t2-global-site-res {
+    .t2-magento-product {
+        .t2-magento-promo-block {
+            margin-top:20px;
+            padding-left:0;
+            img {
+                width:272px;
+            }
+            p {
+                font-size:rem-calc(14);
+                margin-bottom:3px;
+            }
+            .col-2 {
+                padding:20px;
+            }
+            strong {
+                @extend .t2-font-bold;
+                color:$t2-color-gray-concrete;
+            }
+        }
+        .t2-magento-product-wrapper {
+            padding-top:70px;
+        }
+        .t2-magento-product-desc-heading-h1 {
+            background: $t2-color-pantone-white;
+            padding:15px;
+            margin-bottom:15px;
+            h1 {
+                @extend .t2-font-bold;
+                font-size:rem-calc(24);
+            }
+        }
+        .t2-magento-product-description-wrapper {
+            padding-bottom:50px;
+            .t2-magento-product-heading {
+                margin:auto;
+                padding:0;
+                @media #{$medium-only}{
+                    padding-left:0;
+                }
+                h2 {
+                    @media #{$medium-only}{
+                        padding-left:0;
+                    }
+                }
+            }
+            @media #{$small-only}{
+                .t2-magento-product-color-heading {
+                    margin-left:20px;
+                }
+            }
+            .t2-magento-product-upsells {
+                padding:0;
+            }
+            ul {
+                margin:0;
+            }
+            @media #{$medium-only}{
+                .t2-magento-product-upsells ul > li,
+                .t2-magento-product-upsells .collapsing-elem > li {
+                    width:30.68%;
+                }
+            }
+            @media #{$small-only}{
+                .t2-magento-product-subscription-variants li {
+                    margin:0px 20px 10px 30px;
+                    width:auto;
+                }
+            }
+        }
+        div.t2-magento-product-heading {
+            border-bottom:0;
+            padding-bottom:0;
+            h2 {
+                margin-bottom:0;
+                font-size:rem-calc(16);
+            }
+            h2 > span {
+                display:none;
+            }
+        }
+        /* Colors ============================ */
+        .t2-magento-product-colors-wrapper {
+            background:$t2-color-pantone-white;
+            padding:10px;
+            margin-bottom:15px;
+            .t2-magento-product-colors {
+                width:auto;
+                margin-right:25px;
+                li {
+                    margin-bottom:0;
+                }
+            }
+            .t2-magento-product-colors-msg {
+                width:auto;
+                font-size:rem-calc(14);
+                color:$t2-color-pantone-black;
+                line-height:22px;
+                strong {
+                    display:inline-block;
+                    margin-left:5px;
+                }
+            }
+        }
+        /* Short description ==================*/
+        .t2-magento-product-description {
+            padding: 25px;
+        }
+        .t2-magento-product-description {
+            h2 {
+                @extend .t2-font-bold;
+                font-size:rem-calc(24);
+            }
+        }
+
+        .t2-magento-slider-arrow {
+            display:block;
+            opacity:0;
+            position:absolute;
+            z-index: 100;
+            top: 50%;
+            height: 40px;
+            width: 40px;
+            margin-top: -80px;
+            font-family: 't2-iconic';
+            background: transparent url(/Content/img/slider-btn-sprite.png) 0 0;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            font-size: 60px;
+            color: $t2-color-gray-ddd;
+            outline: none;
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            cursor:pointer;
+        }
+        .t2-magento-arrow-left {
+            left: 10px;
+            background-position: -2px 100%;
+        }
+        .t2-magento-arrow-right {
+            right: 10px;
+            background-position: 100% 100%;
+        }
+        .thumbnails {
+            border-left:1px solid $t2-color-gray-haze;
+        }
+        /* Slider =============================*/
+        .t2-magento-product-slider {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom:0;
+
+            .t2-magento-slider-container {
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 522px;
+                overflow: hidden;
+            }
+            .loading {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+            .slides {
+                cursor: move;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 385px;
+                height: 364px;
+                overflow: hidden;
+                margin:25px;
+                .thumbnails-slides {
+                    cursor:default;
+                }
+            }
+            .thumbnails {
+                left: 0px;
+                bottom: 0px;
+                position: absolute;
+                width: 470px;
+                height: 113px;
+                border-top:1px solid $t2-color-gray-haze;
+            }
+            .thumbnails-item {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 94px;
+                height: 113px;
+                border-left:1px solid $t2-color-gray-haze;
+            }
+            .thumbnail-template {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+            .thumbnails-item-container {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+
+            &:hover .t2-magento-slider-arrow {
+                opacity:1;
+            }
+        }
+
+
+        /* Qty ===============================*/
+        .t2-magento-product-qty {
+            margin-bottom:15px;
+            width:50%;
+            @media #{$medium-only}{
+                width:auto;
+            }
+            @media#{$small-only}{
+                width:auto;
+            }
+        }
+
+        /* product installment subscription variant configurator ===============*/
+        .t2-magento-product-installment-subscription-variant-configurator {
+            > div.row {
+                margin-left:0;
+                margin-right:0;
+                padding-left:0;
+                padding-right:0;
+                margin-bottom:5px;
+            }
+            .t2-magento-bordered-block.active {
+                background: $t2-color-green-grass;
+            }
+        }
+
+        /* Subscription ==============================*/
+        .t2-magento-product-subscriptions ul,
+        .t2-magento-product-subscription-variants ul {
+            margin-left:-13px;
+            .t2-magento-bordered-block {
+                padding:15px;
+            }
+        }
+        .t2-magento-product-subscription-variants {
+            li {
+                margin-left:2.3%;
+                width:31%;
+            }
+        }
+        /* Installment =============================*/
+        .t2-magento-product-installment {
+            ul {
+                margin-left:-15px;
+            }
+            li {
+                padding-left:15px;
+                margin-bottom:15px;
+            }
+            .t2-magento-bordered-block {
+                padding:15px;
+                > strong {
+                    line-height:1.1em;
+                }
+                .t2-magento-product-installment-price-wrapper {
+                    padding-top:5px;
+                    span {
+                        font-weight:normal;
+                    }
+                }
+            }
+        }
+
+        /* Addons =================================*/
+        .t2-magento-product-addons {
+            margin:0;
+            padding:0;
+            ul {
+                left:-2.85%;
+                width:102.8%;
+                @media #{$small-only}{
+                    left:0;
+                }
+                li {
+                    .t2-magento-product-addons-name {
+                        @extend .t2-sans-serif;
+                        font-weight:bold !important;
+                    }
+                    margin-left:3.335%;
+                    @media #{$small-only}{
+                        margin-left:0;
+                    }
+                    margin-bottom:15px;
+                }
+            }
+            .t2-magento-bordered-block {
+                padding:15px;
+            }
+            .t2-magento-product-addons-price {
+                @extend .t2-sans-serif;
+                font-size:rem-calc(13);
+                font-weight:normal !important;
+            }
+            @media #{$medium-only}{
+                ul {
+                    li {
+                        width:21.66%;
+                    }
+                }
+            }
+        }
+
+    /* Price Line =================================*/
+        .t2-magento-add-cart-error {
+            clear:both;
+            margin-bottom:20px;
+            background:$t2-color-pantone-black;
+            top:-30px;
+            position:relative;
+            padding:20px;
+            text-align:right;
+            @media #{$small-only}{
+               top:0;
+            }
+            .t2-magento-item-promo-tip.error {
+                @extend .row;
+                margin:0 auto !important;
+                padding:0;
+                color:$t2-color-pantone-white !important;
+                border:0;
+                text-align:right !important;
+                display:table !important;
+                &:before {
+                    content:'';
+                    display: block;
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 0 7px 7px 7px;
+                    border-color: transparent transparent $t2-color-pantone-black transparent;
+                    position: absolute;
+                    top: -25px;
+                    left: 100%;
+                    margin-left: -150px;
+                    @media #{$medium-only}{
+                        margin-left: -100px;
+                    }
+                    @media #{$small-only}{
+                        margin-left:-60px;
+                    }
+                }
+                .t2-magento-item-promo-tip-content {
+                    display:inline-block !important;
+                    padding-left:30px;
+                    position:relative;
+                    &:before {
+                        font-weight:normal;
+                        font-size:rem-calc(18);
+                        font-family: 't2-magento-iconic';
+                        content:'\e80f';
+                        color:$t2-color-pantone-white;
+                        position:absolute;
+                        left:0;
+                        top:0;
+                    }
+                }
+                a {
+                    color:$t2-color-pantone-white;
+                }
+            }
+        }
+        .show-for-small-only.t2-magento-buy {
+            margin:20px;
+            float:right;
+        }
+        .t2-magento-prices-line {
+            margin-bottom:30px;
+            background: $t2-color-green-grass;
+            width:auto;
+            text-align:right;
+            > .row > div {
+                padding:0 30px;
+            }
+            .t2-magento-prices-line-item {
+                display:inline-block;
+                border-left:0;
+                padding:20px 1%;
+                width:auto;
+                vertical-align:top;
+                @media #{$medium-only}{
+                    max-width:200px;
+                }
+                &:before {
+                    display:none;
+                }
+
+            }
+            .t2-magento-prices-line-label {
+                color:$t2-color-pantone-black;
+                font-size: rem-calc(13);
+                padding-bottom:3px;
+                border-bottom:1px solid $t2-color-green-field;
+                margin-bottom:3px;
+
+            }
+            .t2-magento-prices-line-price {
+                font-size:rem-calc(36);
+                @extend .t2-font-heavy;
+                color:$t2-color-pantone-white;
+                @media #{$medium-only}{
+                    font-size:rem-calc(20);
+                    @include t2-font-heavy();
+                    padding-top:5px;
+                }
+            }
+
+            .t2-magento-prices-line-item-full {
+                width:auto;
+                text-align:left;
+                padding:17px 1%;
+                > .row {
+                    padding-bottom:0;
+                    border-top:1px solid $t2-color-green-field;
+                    margin:0;
+                    margin-bottom:3px;
+                    padding-right:0;
+                    padding-top:3px;
+                }
+                > .row:first-child {
+                    border-top:0;
+                }
+
+                .t2-magento-prices-line-label {
+                    display:inline-block;
+                    padding-right:20px;
+                    padding-bottom:0;
+                    border-bottom:0;
+                    margin-bottom:0;
+                }
+                .t2-magento-prices-line-price {
+                    font-size:rem-calc(14);
+                    float:right;
+                    padding-top:3px;
+                    text-transform: none;
+                    @extend .t2-font-bold;
+                    @media #{$medium-only}{
+                        float:left;
+                    }
+                }
+            }
+
+            .t2-button-color-black {
+                margin-top:20px;
+                padding:20px 40px;
+                display: inline-block;
+                font-size:rem-calc(23);
+                @extend .t2-font-bold;
+
+                @media #{$medium-only}{
+                    padding:10px;
+                    font-size:rem-calc(16);
+                }
+            }
+
+            #go-to-cart {
+                margin-top:20px;
+                width:100px;
+                overflow:visible;
+                display:block;
+                float:left;
+                text-align:left;
+                color:$t2-color-pantone-black;
+                font-size:rem-calc(20);
+                @media #{$medium-only}{
+                    width:100px;
+                    font-size:rem-calc(16);
+                }
+                span {
+                    display:table-cell;
+                }
+                .text {
+                    @extend .t2-font-bold;
+                    padding-left:20px;
+                    vertical-align:top;
+                }
+                .t2-icon {
+                    font-size:rem-calc(50);
+                    position:relative;
+                    top:-5px;
+                }
+            }
+        }
+        .t2-magento-product-desc-heading.t2-magento-dropdown {
+            border:0;
+            clear:both;
+            ul.dropdown-links {
+                float:none;
+                display:block;
+                text-align:center;
+                margin:0;
+                padding-bottom:20px;
+                max-width:100%;
+                @include clearfix();
+                @media #{$small-only}{
+                    padding-bottom:10px;
+                }
+                .t2-magento-dropdown-link {
+                    @extend .t2-font-bold;
+                    display:inline-block;
+                    float:none;
+                    padding-right:40px;
+                    font-size:rem-calc(20);
+                    color:$t2-color-gray-concrete;
+                    @media #{$small-only}{
+                        padding-right:0;
+                        margin-bottom:10px;
+                        display:block;
+                    }
+                }
+            }
+           .t2-magento-dropdown-content {
+               border-top:0;
+               background:transparent;
+               > div {
+                   padding-top:40px;
+                   @media #{$small-only}{
+                       padding:0;
+                       padding-top:15px;
+                   }
+               }
+           }
+            .t2-magento-product-mobilen {
+                h3 {
+                    @extend .t2-font-heavy;
+                    font-size:rem-calc(24);
+                    line-height:normal;
+                    margin-bottom:15px;
+                    text-transform: uppercase;
+                }
+                .t2-background-color-gray-haze {
+                    margin-bottom:0;
+                    padding:20px 40px;
+                    @media #{$small-only}{
+                       position:relative;
+                       margin-left:-40px;
+                       margin-right:-40px;
+                    }
+                }
+                .t2-product-image {
+                    float:right;
+                    @media #{$small-only}{
+                       float:none;
+                    }
+                }
+                .row {
+                    @media #{$small-only}{
+                       text-align:center;
+                    }
+                }
+                .col {
+                    @media #{$small-only}{
+                       text-align:left;
+                    }
+                }
+                .left-aligned {
+                    .col {
+                        float:right;
+                        @media #{$small-only}{
+                           float:none;
+                        }
+                    }
+                    .t2-product-image {
+                        float:left;
+                        @media #{$small-only}{
+                           float:none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.t2-magento-product-installment-bringback .t2-magento-product-installment-item-bringback.t2-magento-bordered-block {
+    padding:15px !important;
+    .t2-magento-select {
+        padding-top:10px;
+        width:100%;
+        select {
+            width:100%;
+            height:40px !important;
+        }
+        span {
+            width:100%;
+            padding-top:3px;
+            padding-bottom:3px;
+            height: 30px;
+            min-height:30px;
+            text-align:left;
+            line-height:15px;
+            color: $t2-color-gray-concrete;
+        }
+    }
+}
+
+/* Bringback ============================================================= */
+
+.t2-magento-product-installment-heading {
+    h2 {
+        display:inline-block;
+        float:left;
+        padding-right:30px;
+    }
+    .t2-magento-dropdown {
+        clear:both;
+    }
+}
+.bringback-switcher-container {
+    @media #{$small-only}{
+        clear:both;
+        display:block;
+        float:none;
+        padding-bottom:20px;
+        border-bottom:1px solid $t2-color-gray-haze;
+    }
+    .t2-magento-checkbox {
+        position:relative;
+        top:3px;
+        border-color: $t2-color-gray-graphite;
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        border-radius:4px;
+        cursor:pointer;
+        &.checked {
+            &:before {
+                color:$t2-color-gray-graphite;
+                font-size:rem-calc(18);
+                top:-3px;
+                font-weight: bold;
+            }
+        }
+    }
+    .t2-magento-checkbox-label {
+        position:relative;
+        color:$t2-color-gray-graphite;
+        padding-bottom:10px;
+        @media #{$medium-up}{
+           left:-20px;
+        }
+        @media #{$small-only}{
+           left:17px;
+        }
+        b {
+            position:relative;
+            top:-3px;
+            display:inline-block;
+            padding-left:5px;
+        }
+    }
+}
+.t2-magento-dropdown-content {
+    .bringback-switcher-container {
+        display: none !important;
+    }
+}
+.t2-magento-dropdown-content.bringback-dropdown-content {
+    background:$t2-color-gray-steam !important;
+    padding:30px;
+    padding-bottom:0;
+    color:$t2-color-pantone-black;
+    article,
+    .article {
+        padding:0 50px;
+        @media #{$small-only}{
+            padding:0;
+            text-align:center;
+        }
+        overflow:hidden;
+        > div {
+            float:left;
+            img {
+                width:100%;
+            }
+            h3, p {
+                line-height:normal;
+                text-align:left;
+            }
+            p {
+                color:$t2-color-pantone-black;
+            }
+            h3 {
+                @extend .t2-font-heavy;
+                padding-bottom:10px;
+                font-size:rem-calc(35);
+                line-height:normal;
+                margin:0;
+                color:$t2-color-pantone-2603;
+                span {
+                    color:$t2-color-red;
+                }
+                @media #{$small-only}{
+                    font-size:rem-calc(21px);
+                }
+            }
+        }
+        .t2-button.t2-button-type-outline.t2-button-color-white {
+            border-color:$t2-color-pantone-2603 !important;
+            color:$t2-color-pantone-2603 !important;
+            font-weight:bold;
+        }
+        @media #{$small-only}{
+            button, .t2-button.t2-button-type-outline {
+                margin-bottom:40px;
+            }
+        }
+        @media #{$medium-only}{
+            button, .t2-button.t2-button-type-outline {
+                margin-bottom:40px;
+            }
+        }
+    }
+    .t2-magento-close-dropdown {
+        color:$t2-color-pantone-2603;
+        border-color:$t2-color-pantone-2603;;
+        height:40px;
+        width:40px;
+        bottom:-22px;
+        font-size:15px;
+        background:$t2-color-pantone-white;
+        &:after {
+            left:12px;
+            font-size:12px;
+            top:6px;
+        }
+    }
+}
+
+.t2-magento-dropdown-content.bringback-dropdown-content.show-for-small-only {
+    padding-top:15px;
+    .article, article {
+        padding:0;
+        padding-bottom:15px;
+        img {
+            display:none;
+        }
+        p {
+            font-size: rem-calc(12);
+        }
+        > div h3 {
+            font-size:rem-calc(15);
+        }
+        a {
+            color:$t2-color-pantone-2603;
+            display:inline-block;
+            font-size: rem-calc(13);
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,277 @@
+.t2-twitter {
+	background: $t2-color-gray-ash;
+	padding: rem-calc(50px 0 0);
+
+	.t2-twitter-post {
+
+	}
+	li.ng-move,
+	li.ng-enter,
+	li.ng-leave {
+  		transition:opacity linear 0.5s;
+	}
+	li.ng-leave.ng-leave-active,
+	li.ng-move,
+	li.ng-enter {
+	  	opacity:0;
+	}
+	li.ng-leave,
+	li.ng-move.ng-move-active,
+	li.ng-enter.ng-enter-active {
+	  opacity:1;
+	}
+	
+	.t2-twitter-post-content {
+		padding: rem-calc(20px);
+		line-height: 1.4;
+		background: $t2-color-pantone-white;
+		position: relative;
+		display: table;
+		width: 100%;
+		a {
+			color: $t2-color-linkblue;
+		}
+		&:after {
+			content: " ";
+			width: 0;
+			height: 0;
+			display: block;
+			border: 15px solid transparent;
+			border-top-color: $t2-color-pantone-white;
+			position: absolute;
+			left: rem-calc(105px);
+			bottom: rem-calc(-30px);
+		}
+
+		@media #{$medium-up} {
+			min-height: 180px;
+		}
+	}
+
+	.t2-twitter-post-content-inner {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.t2-twitter-author {
+		padding: rem-calc(10px 10px);
+		background: $t2-color-pantone-black;
+		@include clearfix();
+
+	}
+
+	.t2-twitter-author-image {
+		margin: 0;
+		width: 72px;
+		height: 72px;
+		float: left;
+		margin-right: 30px;
+		overflow: hidden;
+		img {
+			width: 100%;
+			min-height: 100%;
+		}
+	}
+
+	.t2-twitter-author-name {
+		float: left;
+		color: $t2-color-pantone-white;
+		height: 72px;
+		display: table;
+
+		div {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		span.t2-twitter-name {
+			font-size: rem-calc(20px);
+			@extend .t2-font-bold;
+			display: block;
+		}
+
+		span.t2-twitter-date {
+			display: block;
+			font-size: rem-calc(13px);
+			padding-top: 5px;
+		}
+		
+	}
+
+
+	.t2-twitter-feed-load {
+
+		padding-top: rem-calc(30px);
+		padding-bottom: rem-calc(50px);
+
+		.t2-twitter-feed-load-button {
+			width: 100%;
+			outline: none;
+		}
+	}
+
+	.small-centered[class*="column"]+[class*="column"].end {
+		float: none;
+		margin: 0 auto;
+	}
+
+
+	@mixin twittercolors($first, $second, $third, $fourth:"") {
+		@if($fourth == "") {
+			li:nth-child(6n+1)  {
+				.t2-twitter-author {
+					background: $first;
+				}
+			}
+			li:nth-child(6n+2) {
+				.t2-twitter-author {
+					background: $second;
+				}
+			}
+			li:nth-child(6n+3),
+			li:nth-child(6n+4) {
+				.t2-twitter-author {
+					background: $third;
+				}
+			}
+			li:nth-child(6n+5) {
+				.t2-twitter-author {
+					background: $first;
+				}
+			}
+			li:nth-child(6n+6) {
+				.t2-twitter-author {
+					background: $second;
+				}
+			}
+		}
+
+		@if($fourth != "") {
+
+			li:nth-child(4n+1) {
+				.t2-twitter-author {
+					background: $first;
+				}
+			}
+			li:nth-child(4n+2) {
+				.t2-twitter-author {
+					background: $second;
+				}
+			}
+			li:nth-child(4n+3) {
+				.t2-twitter-author {
+					background: $third;
+				}
+			}
+			li:nth-child(4n+4) {
+				.t2-twitter-author {
+					background: $fourth;
+				}
+			}
+
+		}
+		
+	}
+
+
+	&.t2-twitter-colors- {
+
+		&1 {
+
+			@include twittercolors(
+				$t2-color-pantone-black,
+				$t2-color-pantone-375,
+				$t2-color-pantone-2603
+			);
+
+		}
+
+		&2 {
+
+			@include twittercolors(
+				$t2-color-pantone-black,
+				$t2-color-pantone-151,
+				$t2-color-pantone-cyan
+			);
+
+		}
+
+		&3 {
+
+			@include twittercolors(
+				$t2-color-pantone-magenta,
+				$t2-color-pantone-151,
+				$t2-color-pantone-cyan
+			);
+
+		}
+
+		&4 {
+
+			@include twittercolors(
+				$t2-color-pantone-375,
+				$t2-color-pantone-361,
+				$t2-color-pantone-cyan
+			);
+
+		}
+
+		&5 {
+
+			@include twittercolors(
+				$t2-color-pantone-yellow,
+				$t2-color-pantone-375,
+				$t2-color-pantone-151
+			);
+
+		}
+
+		&6 {
+
+			@include twittercolors(
+				$t2-color-pantone-300,
+				$t2-color-pantone-2603,
+				$t2-color-pantone-magenta
+			);
+
+		}
+
+		&7 {
+
+			@include twittercolors(
+				$t2-color-pantone-300,
+				$t2-color-pantone-2603,
+				$t2-color-pantone-magenta,
+				$t2-color-pantone-black
+			);
+
+		}
+		
+	}
+
+	.t2-twitter-post {
+		position: relative;
+		a.t2-twitter-block {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			@include transform(translate(-50%, -50%));
+			display: none;
+			z-index: 999;
+		}
+		&:hover a.t2-twitter-block {
+			display: block;
+		}
+
+		&.t2-twitter-post-blocked {
+			$blockedOp : 0.4;
+			box-shadow: inset 0 0 0 2px $t2-color-pantone-185;
+			.t2-twitter-post-content,
+			.t2-twitter-author {
+				opacity: $blockedOp;
+			}
+		}
+
+	}
+
+}

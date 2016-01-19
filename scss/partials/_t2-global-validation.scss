@@ -1,0 +1,86 @@
+//Global: Validation.
+//jQuery validation - clientside validation.
+
+//input: types
+//input[type="text"].input-validation-error,
+//input[type="password"].input-validation-error,
+//input[type="date"].input-validation-error,
+//input[type="datetime"].input-validation-error,
+//input[type="datetime-local"].input-validation-error,
+//input[type="month"].input-validation-error,
+//input[type="week"].input-validation-error,
+//input[type="email"].input-validation-error,
+//input[type="number"].input-validation-error,
+//input[type="search"].input-validation-error,
+//input[type="tel"].input-validation-error,
+//input[type="time"].input-validation-error,
+//input[type="url"].input-validation-error,
+//textarea.input-validation-error {
+input.input-validation-error,
+textarea.input-validation-error,
+.t2-form .t2-form-section input.input-validation-error,
+.t2-form .t2-form-section textarea.input-validation-error {
+	margin-bottom: 0;
+	position: relative;
+	z-index: 2;
+	border-color: $t2-color-pantone-185;
+}
+
+//span: validation - error message.
+[data-valmsg-for],
+.field-validation-valid,
+.field-validation-error,
+.field-validation-success {
+	@extend small.error;
+	display: none;
+	position: relative;
+	z-index: 1;
+	margin: -2px 0 rem-calc(18) 0;
+	padding: $t2-size-xsmall/2;
+	background: $t2-color-pantone-185;
+	color:  $t2-color-pantone-white;
+	font-size: rem-calc(14);
+	line-height: rem-calc(21);
+	border-radius: 0 0 4px 4px;
+	-webkit-border-radius: 0 0 4px 4px;
+}
+
+.field-validation-error {
+	display: block;
+}
+
+.field-validation-success {
+	display: block;
+	margin: rem-calc(18) 0;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background: $t2-color-pantone-361;	
+}
+
+//span: validation - message, after radiobutton/checkbox
+input[type="checkbox"].input-validation-error,
+input[type="checkbox"].input-validation-error + *,
+input[type="checkbox"].input-validation-error + * + *,
+input[type="radio"].input-validation-error,
+input[type="radio"].input-validation-error + *,
+input[type="radio"].input-validation-error + * + * {
+	& + .field-validation-error {
+		margin: rem-calc(18) 0;
+		border-radius: 4px;
+		-webkit-border-radius: 4px;		
+	}
+}
+
+//span: validation - message, collection/after submit
+//or inside wrapper: t2-field-validation-wrapper
+input[type="submit"],
+.t2-button,
+.t2-button-wrapper,
+.t2-field-validation-wrapper {
+	& + .field-validation-error,
+	.field-validation-error {
+		margin: rem-calc(18) 0;
+		border-radius: 4px;
+		-webkit-border-radius: 4px;
+	}
+}

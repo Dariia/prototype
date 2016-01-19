@@ -1,0 +1,109 @@
+//global: lists
+$lists-border-color: lighten($t2-color-gray-ash, 10%);
+
+.t2-global-lists {}
+
+//global list type: howto
+.t2-global-list-type-howto-wrapper,
+.t2-global-list-type-lines-wrapper { overflow: auto; }
+.t2-global-list-type-howto,
+.t2-global-list-type-lines {
+	.t2-editorial.t2-partial-account-editorial,
+	#tinymce,
+	.mce-content-body,
+	.mceContentBody,
+	.t2-editorial {
+		> * {
+			margin-bottom: $t2-size-small;
+			&:last-child { margin-bottom: 0; }
+		}
+		&, * { color: $t2-color-gray-graphite; }
+		p {
+			&.t2-list-explanation {
+				font-size: rem-calc(12);
+				line-height: rem-calc(20);
+				font-weight: normal;
+				color: $t2-color-gray-concrete;
+				padding: 0;
+			}
+		}
+		ul, ol {
+			margin-left: 0;
+			margin-right: 0;
+			padding: 0 0 0 0;
+			list-style-type: none;
+			border-top: none;
+			li {
+				padding: $t2-size-xsmall 0;
+				border-top: 1px solid $lists-border-color;
+				border-bottom: 1px solid $lists-border-color;
+				position: relative;
+				font-size: rem-calc(14);
+				line-height: rem-calc(22);
+				font-weight: bold;
+				& + li { border-top: none; }
+				&:before { display: none; }
+			}
+		}
+		ol {
+			counter-reset:li;
+			li {
+				position: relative;
+				padding-left: $t2-size-small;
+				font-weight: normal;
+				&:before {
+					content:counter(li)".";
+					counter-increment:li;
+					position: absolute;
+					left: 0;
+					margin-left: 0;
+					font-weight: bold;
+				}
+			}
+		}
+		@media #{$medium-up} {
+			p {
+				&.t2-list-explanation {
+					font-size: rem-calc(14);
+					line-height: rem-calc(22);
+				}
+			}
+			ul, ol {
+				li {
+					font-size: rem-calc(16);
+					line-height: rem-calc(24);
+				}
+			}
+		}
+	}
+	//&.type-checked, two-col-product-push version.
+	&.t2-list-type-checked {
+		ul, ol {
+			li {
+				padding: rem-calc(6) 0;
+				padding-left: $t2-size-small;
+				font-size: rem-calc(12);
+				line-height: rem-calc(14);
+				font-weight: normal;
+				&:before {
+					@extend [class^="t2-icon-"]:before;
+					@extend .t2-icon-ok:before;
+					position: absolute;
+					left: 0;
+					margin-left: 0;
+				}
+				& + li {}
+			}
+		}
+		@media #{$medium-up} {
+			ul, ol {
+				li {
+					padding: rem-calc(12) 0;
+					padding-left: $t2-size-small;
+					font-size: rem-calc(14);
+					line-height: rem-calc(16);
+				}
+			}
+		}
+	} 	
+}

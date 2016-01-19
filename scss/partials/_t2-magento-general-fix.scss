@@ -1,0 +1,101 @@
+::-ms-clear {
+    display: none;
+}
+.no-opacity {
+    .t2-columns-container {
+        .t2-magento-product-listing.t2-items li {
+            border-width: 0 0 0 0 !important;
+            @media #{$small-only} {
+                border-style: solid;
+                border-color: $t2-color-gray-light;
+                border-width: 1px 0 0 1px !important;
+            }
+            .t2-item .t2-magento-image-wrapper {
+                display: block;
+                .t2-magento-listing-item-desc {
+                    background: #000;
+                }
+            }
+        }
+    }
+    .t2-nav-header-menu {
+        .t2-mainmenu {
+            .t2-col-right > a {
+                .t2-icon {
+                    &:before {
+                        display: block;
+                        text-align: center;
+                    }
+                }
+            }
+            .t2-col-left.t2-nav-links a {
+                .t2-icon {
+                    padding-left: 5px;
+                    display: inline;
+                }
+                &.expanded {
+                    .t2-icon-down-open-1 {
+                        &:before {
+                            content: '\e8b2' !important;
+                        }
+                    }
+                }
+            }
+            .t2-col-flex {
+                input.search {
+                    padding-top: 30px;
+                    font-size: 14px;
+                }
+                .t2-text {
+                    display: none;
+                }
+                .t2-icon-search {
+                    right: 5px;
+                }
+            }
+        }
+    }
+    .t2-no-overflow {
+        .t2-magento-product-listing {
+            .t2-item {
+                .t2-magento-item-promo-tip {
+                    margin-left: 0 !important;
+                    margin-right: 0 !important;
+                }
+            }
+        }
+    }
+
+    //breadcrumbs
+    .t2-nav-breadcrumbs li.last span {
+        color: $t2-color-gray-concrete !important;
+    }
+    .t2-no-overflow .t2-magento-product-listing .t2-item .t2-magento-item-promo-tip {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .t2-icon-right-open-1:before {
+        font-family: 't2-iconic';
+    }
+    .t2-icon:before {
+        font-family: 't2-iconic';
+    }
+    .t2-icon-tele2-logo:before {
+        font-family: 't2-iconic';
+        font-size: 32px !important;
+    }
+    .t2-nav-breadcrumbs li.last span {
+        color: #777777 !important;
+    }
+    .t2-magento-cart-steps {
+        .t2-magento-cart-step-container {
+            .t2-magento-cart-step-lock {
+                background: transparent url(/Content/img/bg-white-0.7.png) repeat 0 0;
+            }
+        }
+    }
+}
+
+.t2-nav-breadcrumbs li.last:after {
+    display: none !important;
+}

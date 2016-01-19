@@ -1,0 +1,209 @@
+.t2-button-wrapper {
+	display: block;
+	margin: rem-calc(5)*-1 rem-calc(5)*-1 $t2-size-large rem-calc(5)*-1;
+	position: relative;
+	z-index: 10;
+	text-align: center;
+	&.t2-button-left { text-align: left; }
+	&.t2-button-center { text-align: center; }
+	&.t2-button-right { text-align: right; }	
+	.t2-button { margin: rem-calc(5); }
+}
+
+input.t2-button {
+	border: none;
+	-webkit-appearance: none;
+	@extend .t2-sans-serif;
+}
+a.t2-button {}
+
+.t2-button {
+	width: auto;
+	min-height: rem-calc(40);
+	display: inline-block;
+	margin: 0;
+	padding: rem-calc(8) rem-calc(22);
+	font-size: rem-calc(14);
+	font-weight: bold;
+	line-height: rem-calc(24);
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	cursor: pointer;
+	-webkit-transition: all 150ms ease;
+	-moz-transition: all 150ms ease;
+	transition: all 150ms ease;
+	&.disabled {
+		position: relative;
+		pointer-events: none;
+		cursor: default;
+	}
+	&.t2-button-type-solid {
+		background-color: $t2-color-pantone-white;
+		color: lighten($t2-color-gray-carbon,6.8%);
+		&:hover, &:active { background-color: darken($t2-color-pantone-white, 10%); color: lighten($t2-color-gray-carbon,6.8%); }
+		&.disabled {background-color: lighten($t2-color-pantone-white, 15%); color: rgba( $t2-color-gray-carbon, 0.25); }
+		
+		//2 Pantone White
+		&.t2-button-color-white {
+			background-color: $t2-color-pantone-white;
+			color: lighten($t2-color-gray-carbon,6.8%);
+			&:hover, &:active { background-color: darken($t2-color-pantone-white, 10%); color: lighten($t2-color-gray-carbon,6.8%); }
+			&.disabled {background-color: lighten($t2-color-pantone-white, 15%); color: rgba($t2-color-gray-carbon, 0.25); }
+		}
+        &.t2-button-color-black {
+            background-color: $t2-color-pantone-black;
+            color: lighten($t2-color-pantone-white,6.8%);
+            &:hover, &:active { background-color: darken($t2-color-pantone-black, 10%); color: lighten($t2-color-pantone-white,6.8%); }
+            &.disabled {background-color: lighten($t2-color-pantone-black, 15%); color: rgba($t2-color-pantone-white, 0.25); }
+        }
+		//3 Pantone 185
+		&.t2-button-color-185 {
+			background-color: $t2-color-pantone-185;
+			color: $t2-color-pantone-white;
+			&:hover, &:active { background-color: darken($t2-color-pantone-185, 10%); color: $t2-color-pantone-white; }
+			&.disabled {background-color: lighten($t2-color-pantone-185, 15%); color: rgba($t2-color-pantone-white,0.6); }
+		}
+		//4 Pantone 151 
+		&.t2-button-color-151 {
+			background-color: $t2-color-pantone-151;
+			color: $t2-color-pantone-white;
+			&:hover, &:active { background-color: darken($t2-color-pantone-151, 10%); color: $t2-color-pantone-white; }
+			&.disabled {background-color: lighten($t2-color-pantone-151, 15%); color: rgba($t2-color-pantone-white,0.6); }
+		}
+		//5 Pantone Yellow 
+		&.t2-button-color-yellow {
+			background-color: $t2-color-pantone-yellow;
+			color: lighten($t2-color-gray-carbon,6.8%);
+			&:hover, &:active { background-color: darken($t2-color-pantone-yellow, 10%); color: lighten($t2-color-gray-carbon,6.8%); }
+			&.disabled {background-color: lighten($t2-color-pantone-yellow, 15%); color: rgba($t2-color-gray-carbon,0.5); }
+		}
+		//6 Pantone 375
+		&.t2-button-color-375 {
+			background-color: $t2-color-pantone-375;
+			color: lighten($t2-color-gray-carbon,6.8%);
+			&:hover, &:active { background-color: darken($t2-color-pantone-375, 10%); color: lighten($t2-color-gray-carbon,6.8%); }
+			&.disabled {background-color: lighten($t2-color-pantone-375, 15%); color: rgba($t2-color-gray-carbon,0.4); }
+		}
+		//7 Pantone 361 
+		&.t2-button-color-361 {
+			background-color: $t2-color-pantone-361;
+			color: $t2-color-pantone-white;
+			&:hover, &:active { background-color: darken($t2-color-pantone-361, 10%); color: $t2-color-pantone-white; }
+            &.disabled {background-color: lighten($t2-color-pantone-361, 15%); color: rgba($t2-color-pantone-white,0.7); }
+		}
+		//8 Pantone Cyan
+		&.t2-button-color-cyan {
+			background-color: $t2-color-pantone-cyan;
+			color: $t2-color-pantone-white;
+			&:hover, &:active { background-color: darken($t2-color-pantone-cyan, 10%); color: $t2-color-pantone-white; }
+			&.disabled {background-color: lighten($t2-color-pantone-cyan, 15%); color: rgba($t2-color-pantone-white,0.7); }
+		}
+		//9 Pantone 300 
+		&.t2-button-color-300 {
+			background-color: $t2-color-pantone-300;
+			color: $t2-color-pantone-white;
+			&:hover, &:active { background-color: darken($t2-color-pantone-300, 10%); color: $t2-color-pantone-white; }
+			&.disabled {background-color: lighten($t2-color-pantone-300, 15%); color: rgba($t2-color-pantone-white,0.6); }
+		}
+		//10 Pantone 2603 
+		&.t2-button-color-2603 {
+			background-color: $t2-color-pantone-2603;
+			color: $t2-color-pantone-white;
+			&:hover, &:active { background-color: darken($t2-color-pantone-2603, 10%); color: $t2-color-pantone-white; }
+			&.disabled {background-color: lighten($t2-color-pantone-2603, 15%); color: rgba($t2-color-pantone-white,0.5); }
+		}
+		//11 Pantone Magenta
+		&.t2-button-color-magenta {
+			background-color: $t2-color-pantone-magenta;
+			color: $t2-color-pantone-white;
+			&:hover, &:active { background-color: darken($t2-color-pantone-magenta, 10%); color: $t2-color-pantone-white; }
+			&.disabled {background-color: lighten($t2-color-pantone-magenta, 15%); color: rgba($t2-color-pantone-white,0.5); }
+		}
+        //Blue
+        &.t2-button-color-blue {
+            background-color: $t2-color-skyblue;
+            color: $t2-color-pantone-white;
+            &:hover, &:active { background-color: darken($t2-color-skyblue, 10%); color: $t2-color-pantone-white; }
+            &.disabled {background-color: lighten($t2-color-skyblue, 15%); color: rgba($t2-color-pantone-white,0.6); }
+        }
+        //White-gray
+        &.t2-button-color-white-gray {
+            background-color: $t2-color-pantone-white;
+            border-color:$t2-color-gray-silver;
+            color: $t2-color-gray-concrete;
+            &:hover, &:active,&.active { background-color: darken($t2-color-pantone-white, 0); color: $t2-color-black; border-color:$t2-color-black; outline:none; }
+            &.disabled {background-color: lighten($t2-color-pantone-white, 15%); color: rgba($t2-color-gray-concrete,0.4); }
+        }
+        //Red
+        &.t2-button-color-red {
+            background-color: $t2-color-red;
+            color: $t2-color-pantone-white;
+            &:hover, &:active { background-color: darken($t2-color-red, 20%); color: $t2-color-pantone-white; }
+            &.disabled {background-color: lighten($t2-color-red, 15%); color: rgba($t2-color-pantone-white,0.6); }
+        }
+        //Dark red
+        &.t2-button-color-dark-red {
+            background-color: darken($t2-color-red, 10%);
+            color: $t2-color-pantone-white;
+            &:hover, &:active { background-color: darken($t2-color-red, 20%); color: $t2-color-pantone-white; }
+            &.disabled {background-color: darken($t2-color-dark-red, 5%); color: rgba($t2-color-pantone-white,0.6); }
+        }
+        //Size: large
+        &.t2-button-size-large { padding: rem-calc(14) rem-calc(22); }
+	}
+	&.t2-button-type-outline {
+		background-color: transparent;
+		color: lighten($t2-color-gray-carbon,6.8%);
+		border: 2px solid lighten($t2-color-gray-carbon,6.8%);
+		padding:rem-calc(6) rem-calc(20);	
+		&:hover, &:active {
+			border-color: $t2-color-pantone-black;
+			color: $t2-color-pantone-black;
+		}
+		&.disabled { border-color: rgba($t2-color-gray-carbon,0.4); color: rgba($t2-color-gray-carbon,0.3); }
+		//dark
+		&.t2-button-color-dark,
+        &.t2-button-color-light.t2-active,
+        &.t2-button-color-light.t2-active {
+			border-color: lighten($t2-color-gray-carbon,6.8%);
+			color: lighten($t2-color-gray-carbon,6.8%);
+			&:hover, &:active {
+				border-color: $t2-color-pantone-black;
+				color: $t2-color-pantone-black;
+			}
+			&.disabled { border-color: rgba($t2-color-gray-carbon,0.4); color: rgba($t2-color-gray-carbon,0.3); }
+		}
+		//light
+		&.t2-button-color-light {
+			border-color: lighten($t2-color-gray-concrete, 13.2%);
+			color: $t2-color-gray-concrete;
+			&:hover, &:active {
+				border-color: darken($t2-color-gray-concrete, 10%);
+				color: darken($t2-color-gray-concrete, 10%);
+			}
+			&.disabled { border-color: rgba($t2-color-gray-concrete,0.4); color: rgba($t2-color-gray-concrete,0.35); }
+		}
+		//white
+		&.t2-button-color-white {
+			border-color: $t2-color-pantone-white;
+			color: $t2-color-pantone-white;
+			&:hover, &:active {
+				border-color: darken($t2-color-pantone-white, 10%);
+				color: darken($t2-color-pantone-white, 10%);
+			}
+			&.disabled { border-color: rgba($t2-color-white,0.6); color: rgba($t2-color-white, 0.5); }
+		}
+		&.t2-button-size-large {
+			padding: rem-calc(13) rem-calc(22); //NY
+		}
+	}
+
+}
+@media #{$medium-up} {
+	.t2-button-wrapper {}
+	.t2-button {}
+}
+@media #{$large-up} {
+	.t2-button-wrapper {}
+	.t2-button {}
+}

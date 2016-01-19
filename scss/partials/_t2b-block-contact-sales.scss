@@ -1,0 +1,201 @@
+//Business Block: Contact Sales/Leads
+
+.t2b-form-contact-sales,
+.t2b-block-contact-sales {
+	.t2-static { position: static; }
+	//banner
+	.t2-banner-area {
+		padding-top: $t2-size-xsmall;
+		padding-bottom: rem-calc(26);
+		.t2-banner-content {
+			.t2-content-container {
+				padding-top: $t2-size-small/2;
+				padding-bottom: $t2-size-small/2; 
+				.t2-content {
+					@extend .t2-font-regular;
+					color: $t2-color-pantone-white;
+					font-size: rem-calc(14);
+					//line-height: rem-calc(18);
+					position: relative;
+					padding-left: rem-calc(46);
+					display: block;
+					&:before {
+						position: absolute;
+						left: 0;
+						top: 50%;
+						margin-top: -($t2-size-small);
+						font-size: rem-calc(34);
+					}
+				}
+			}
+			.t2-custom-button-wrapper {
+				padding-top: $t2-size-small/2;
+				text-align: center;
+			}
+		}
+	}
+	//form
+	.t2-form-area {
+		@include clearfix();
+		display: inline-block;
+		padding: $t2-size-small 0 $t2-size-large 0;
+		.t2-form-section { padding: 0; }
+		.t2-heading-container {
+			margin-bottom: $t2-size-small/2;
+			margin-top: $t2-size-small;
+		}
+		.t2-heading {
+			@extend .t2-font-bold;
+			font-size: rem-calc(20);
+			//line-height: rem-calc(20);
+			margin-top: 0;
+		}
+		.t2-part-left {
+			.t2-heading-container {}
+		}
+		.t2-part-right {
+			.t2-col-two {}
+			label {
+				color: $t2-color-gray-concrete;
+				margin-bottom: $t2-size-xsmall;
+			}
+		}
+	}
+	@media #{$small-only} {
+		.t2-form-area {
+			.t2-custom-button-wrapper { margin-top: $t2-size-xsmall; }
+		}
+	}
+	@media #{$medium-up} {
+		.t2-banner-area {
+			.t2-banner-content {
+				.t2-content-container {
+					.t2-content {
+						font-size: rem-calc(16);
+						line-height: rem-calc(20);
+						padding-left: $t2-size-xlarge;
+						&:before {
+							margin-top: -(rem-calc(23));
+							font-size: rem-calc(40);							
+						}
+					}
+				}
+				.t2-custom-button-wrapper { padding-top: $t2-size-xsmall; }
+			}
+		}
+		.t2-form-area {
+			padding: $t2-size-medium*2 0 $t2-size-large 0;
+			> .row {
+				&:after { margin-top: -($t2-size-medium*2); }
+			}
+			.t2-heading-container {
+				margin-top: 0;
+				margin-bottom: $t2-size-xsmall;
+			}
+			.t2-heading {
+				font-size: rem-calc(20);
+				//line-height: rem-calc(20);
+			}
+			.t2-part-left {}
+			.t2-part-right {			
+				.t2-col-two {
+					.t2-radiobutton-container { padding-bottom: $t2-size-medium*2; }
+					.t2-custom-button-wrapper {
+						position: absolute;
+						bottom: 0;
+						left: initial;
+					}
+				}
+			}
+		}		
+	}
+	@media #{$medium-only} {
+		.t2-form-area {
+			.t2-part-right {			
+				.t2-heading-container { margin-top: $t2-size-small; }
+				> .row {
+					position: relative;
+					.row, .columns { position: static; }
+				}
+			}
+		}		
+	}
+	@media #{$large-up} {
+		.t2-banner-area {
+			padding-bottom: $t2-size-xsmall;
+			.t2-banner-content {
+				padding-right: 192px;
+				.t2-content-container {}
+				.t2-custom-button-wrapper {
+					width: 160px;
+					padding: 0;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin-top: -20px;
+					margin-right: 16px;
+				}				
+			}
+		}
+		.t2-form-area {
+			padding: $t2-size-large*2 0 $t2-size-large 0;
+			.t2-part-left {
+				.t2-heading-container { margin-bottom: rem-calc(13); }
+			}
+			.t2-part-right {
+				.t2-heading-container { margin-bottom: rem-calc(18); }
+				.t2-col-two {
+					.t2-custom-button-wrapper { margin-bottom: $t2-size-xsmall; }
+				}
+			}
+		}		
+	}	
+}
+.t2b-form-contact-sales {
+	.t2-form-area { background-color: $t2-color-gray-light; }
+}
+.t2b-block-contact-sales {
+	.t2-form-area {
+		background: $t2-color-gray-steam;
+		visibility: hidden;
+		position: absolute;
+		display: inline-block;
+		> .row {
+			position: relative;
+			&:after {
+				position: absolute;
+				top: 0;
+				right: 50%;
+				margin: -($t2-size-small) -7px 0 0; 
+				content: "";
+				border-top: 7px solid $t2-color-pantone-cyan;
+				border-right: 7px solid transparent;
+				border-bottom: 0;
+				border-left: 7px solid transparent;
+				
+			}
+		}
+	}
+	.t2-active {
+		visibility: visible!important;
+		position: relative!important;
+	}
+	@media #{$medium-up} {
+		.t2-form-area {
+			> .row {
+				&:after { margin-top: -($t2-size-medium*2); }
+			}
+		}		
+	}
+	@media #{$large-up} {
+		.t2-form-area {
+			> .row {
+				&:after {
+					right: 0;
+					margin-right: 88px;
+					margin-top: -($t2-size-large*2);
+				}
+			}
+		}		
+	}
+}

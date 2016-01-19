@@ -1,0 +1,195 @@
+.t2-page-account-overview{
+	padding: $t2-size-large 0 $t2-size-small;
+	background-color: $t2-color-gray-steam;
+	@media #{$medium}{
+		padding: $t2-size-xlarge 0 $t2-size-medium;
+	}
+	h1.t2-title, h2.t2-title {
+		@extend .t2-font-bold;
+		text-align: center;
+		font-size: rem-calc(26);
+	}
+	p.t2-preamble{	
+		text-align: center;
+		margin-bottom: $t2-size-xlarge;
+	}
+	.t2-confirm-delete{
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		left: 0px;
+		bottom: 0;
+		background-color: rgba(#222, 0.92);
+		padding: 16px 0px;
+		text-align: center;
+		.t2-text{
+			color:#fff;
+			padding:20px 30px;
+			line-height: 1.2em;
+			font-size: rem-calc(14);
+		}
+	}
+	.t2-wrapper{
+		background-color: darken($t2-color-gray-fog,5%);
+		background-color: $t2-color-white;
+		position: relative;
+	}
+	.t2-close{
+			position: absolute;
+			top:4px;
+			right: 4px;
+			width: 30px;
+			height: 30px;
+			&:hover{
+				&:before{color:$t2-color-pantone-185;	}
+				cursor:pointer;
+			}
+			&:before{
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				line-height: 30px;
+				color: lighten($t2-color-gray-ash,5%);
+				font-size: rem-calc(26);
+			}
+	}
+	.t2-items{
+		background-color: $t2-color-white;
+		padding: 0 $t2-size-medium;
+		//padding-bottom:0;
+		display:block;
+		position: relative;
+		padding-bottom: $t2-size-xsmall;
+		min-height: 220px;
+
+		.t2-item{
+			padding: rem-calc(14) 0;
+			border-top: 1px solid $t2-color-gray-fog;
+			display: block;
+			width: 100%;
+			background-color: $t2-color-white;
+			line-height: 1.2em;
+			
+			.t2-image{
+				text-align: center;
+				display:none;
+				padding:$t2-size-medium 0 $t2-size-xsmall 0;
+				overflow: hidden;
+				img {
+					max-height: 100px;
+				}
+			}
+			.t2-title{
+				text-align: center;
+				font-size:rem-calc(20);
+				@extend .t2-font-regular;
+				margin:0;
+				margin-top: $t2-size-xsmall;
+				color: $t2-color-gray-concrete;
+			}
+			.t2-number{
+				text-align: center;
+				font-size:rem-calc(20);
+				@extend .t2-font-regular;
+				margin:0;
+				color: $t2-color-gray-carbon;
+			}
+			.t2-label{
+				font-size:rem-calc(14);
+				color:$t2-color-gray-carbon;
+				width: 100%;
+				
+				> span{
+					font-weight: bold;
+					//line-height: 3px;
+				}
+			}
+			&:first-child{
+				border-top:0;
+				padding: rem-calc(20) 0 rem-calc(22);
+			}
+		}
+	}
+	.t2-contract-add{
+		//background-color: darken($t2-color-gray-fog,5%);
+		background-color: $t2-color-gray-light;
+		&.t2-css-table.altern2{
+			.t2-content{
+				vertical-align: bottom;
+			}
+		}
+		.t2-button-wrapper{
+			margin:0;
+			padding:0 $t2-size-xsmall;
+			.t2-button{
+				display: inline-block;
+				margin:0 3px $t2-size-xsmall 3px;
+			}
+		}
+		.t2-content{
+			text-align: center;
+			padding: $t2-size-xsmall;
+			> .t2-icon{
+				text-align: center;
+				display:inline-block;
+				margin-top: $t2-size-xsmall;
+				&:hover{
+					color:lighten($t2-color-gray-concrete,10%);
+				}
+				color:$t2-color-gray-concrete;
+				&:before{
+					margin:0 0 $t2-size-medium 0;
+					line-height: 60px;
+					text-align: center;
+					display: inline-block;
+					font-size: rem-calc(70);
+					font-weight: bold;
+					
+					
+					
+				}
+			}
+			p{
+				text-align: center;
+				max-width: rem-calc(320);
+				margin-left:auto;
+				margin-right:auto;
+				font-size: rem-calc(14);
+			}
+			.t2-title{
+				text-align: center;
+				font-size:rem-calc(26);
+				@extend .t2-font-regular;
+				color: $t2-color-gray-concrete;
+				max-width: rem-calc(320);
+				margin:0 auto $t2-size-small auto;
+			}
+		}
+	}
+	.t2-menu{
+		background-color: $t2-color-gray-steam;
+		> a{
+			display: block;
+			font-weight: bold;
+			font-size: rem-calc(14);
+			line-height: 1.2em;
+			padding: $t2-size-xsmall;
+			border-top: 1px solid #e6e6e6;//darken($t2-color-gray-light,2%);
+			color: $t2-color-gray-carbon;
+			background-color: #fafafa; //lighten($t2-color-gray-light,3%);
+			.t2-icon{
+				float:right;
+			}
+			&:first-child{
+				//border-top:0;
+			}
+			@media #{$medium}{
+				&:hover{
+					background-color: darken(#fafafa,4%);//darken($t2-color-gray-light,3%);
+					//color: $t2-color-pantone-151;
+					color: $t2-color-gray-carbon;
+				}
+			}
+		}
+	}
+}

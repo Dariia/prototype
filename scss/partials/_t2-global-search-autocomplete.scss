@@ -1,0 +1,96 @@
+//global: search - autocomplete
+//types: mobile, tablet, desktop.
+
+.t2-global-search-autocomplete-parent {
+	overflow: visible;
+	z-index: 9999;
+}
+
+.t2-global-search-autocomplete {
+	position: relative;
+	width: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+	.t2-autocomplete-container {
+		.columns {
+			//ol
+			.t2-search-results {
+				list-style-type: none;
+				margin: 0;
+				//li
+				.t2-item {
+					.t2-item-link {
+						display: block;
+						width: 100%;
+						background: $t2-color-white;
+						color: $t2-color-pantone-cyan;
+						font-weight: normal;
+						padding: $t2-size-xsmall $t2-size-small;
+						font-size: rem-calc(16);
+						line-height: rem-calc(20);
+						@extend .t2-transition-all;
+						@extend .t2-truncate;
+						&:hover, &:active {
+							background: darken($t2-color-white, 2%);
+							color: $t2-color-pantone-300;
+						}
+					}
+					& + .t2-item {
+						.t2-item-link { border-top: 1px solid $t2-color-gray-fog; }
+					}
+				}
+			}
+		}
+	}	
+	&.autocomplete-type-mobile {
+		border-top: 3px solid $t2-color-gray-fog;
+		border-bottom: 2px solid $t2-color-gray-fog;
+		.t2-autocomplete-container {
+			.columns {
+				.t2-search-results {
+					.t2-item {
+						.t2-item-link { padding: $t2-size-xsmall; }
+					}
+				}
+			}
+		}		
+	}
+	&.autocomplete-type-tablet {
+		border-top: 1px solid $t2-color-gray-fog;
+		border-bottom: none;
+	}
+	&.autocomplete-type-desktop {
+		position: absolute;
+		margin: rem-calc(84) 0 0 0;
+
+		ol.t2-search-results {
+			border: 1px solid $t2-color-gray-fog;
+			-webkit-box-shadow: 0 0 10px 0 rgba(1,1,1,.1);
+			box-shadow: 0 0 10px 0 rgba(1,1,1,.1);
+			min-width: 300px;
+		}
+	}
+	//psuedo-arrow: top
+	&.t2-arrow-top {
+		&:before, &:after {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			content: "";
+			border-top: 0;
+		}
+		&:before {
+			margin: -11px 0 0 -11px;
+			border-right: 11px solid transparent;
+			border-bottom: 12px solid darken($t2-color-gray-fog, 3%);
+			border-left: 11px solid transparent;
+		}
+		&:after {
+			margin: -10px 0 0 -10px;
+			border-right: 10px solid transparent;
+			border-bottom: 11px solid $t2-color-white;
+			border-left: 10px solid transparent;
+		}		
+	}	
+}

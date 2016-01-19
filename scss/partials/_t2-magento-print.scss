@@ -1,0 +1,16 @@
+@media print {
+  .t2-nav-header-global,
+  .t2-nav-header-menu,
+  .t2-magento-shop-text,
+  .t2-nav-footer-menu,
+  .t2-nav-footer-links,
+  .t2-nav-footer-legal,
+  #customer-service-user-info,
+  .t2-button-magento-button-set,
+  .t2-magento-icon-remove ,
+  .t2-magento-remove-wrapper,
+  .show-for-small-only,
+  .no-print {
+    display:none !important;
+  }
+}

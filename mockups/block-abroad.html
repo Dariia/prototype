@@ -1,0 +1,228 @@
+<script src="https://docs.angularjs.org/angular.min.js" type="text/javascript"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>-->
+<script>
+	$(document).ready(function(){
+		$('#t2-abroad-countrylist').on('click', 'td.t2-editable', function() {
+	        var element = $(this);
+	        if(element.hasClass('t2-editable') && element.find("input").length==0){
+	            var val = $(this).find('span').html();
+	            if(typeof val!='undefined'){           
+		            newElement = $('<input type="text" value="'+val+'" />');
+		            element.append(newElement).find("span").css("visibility","hidden");
+					function exitInput(){
+						if (newElement.val() != val){
+							element.css("color","#005eb8");
+						}
+						element.html('<span>'+newElement.val()+'</span>');
+					}
+			        newElement.on('blur', function() {
+				    	exitInput();
+			        });
+			        newElement.keypress(function(e) {
+					    if(e.which == 13) {
+					       exitInput();
+					    }
+					});
+					newElement.select();
+				}
+			}
+	    });
+	});
+</script>
+<div ng-app="" class="ng-scope t2-abroad-edit">
+	<div class="row">
+		<div class="columns">
+			<div ng-init="countries = [
+				{name:'Spanien', code:'es', sms:'3.25', mms:'5.00', mobile:'2.10', fix:'14.32', openingfee:'2.23', isfixedplan:'true'},
+			    {name:'Sverige', code:'se', sms:'3.25', mms:'5.00', mobile:'2.10', fix:'14.32', openingfee:'2.23', isfixedplan:'true'},
+			    {name:'Island', code:'is', sms:'3.25', mms:'5.00', mobile:'2.10', fix:'14.32', openingfee:'2.23', isfixedplan:'false'},
+			    {name:'Storbritannien', code:'gb', sms:'3.25', mms:'5.00', mobile:'2.10', fix:'14.32', openingfee:'2.23', isfixedplan:'false'},
+			    {name:'Tyskland', code:'de', sms:'3.25', mms:'5.00', mobile:'2.10', fix:'14.32', openingfee:'2.23', isfixedplan:'true'},
+			    {name:'Finland', code:'fi', sms:'3.25', mms:'5.00', mobile:'2.10', fix:'14.32', openingfee:'2.23', isfixedplan:'false'},
+			    {name:'Nederländerna', code:'nl', sms:'3.25', mms:'5.00', mobile:'2.10', fix:'14.32', openingfee:'2.23', isfixedplan:'false'}
+			]"></div>
+			<input class="t2-filter" ng-model="searchText" placeholder="Filtrera lista" />
+			<table id="t2-abroad-countrylist">
+			  <tr>
+				  <th></th>
+				  <th>Land</th>
+				  <th>Lands&shy;kod</th>
+				  <th class="t2-pricemodel">SMS</th>
+				  <th class="t2-pricemodel">MMS</th>
+				  <th class="t2-pricemodel">Mobil</th>
+				  <th class="t2-pricemodel">Fast telefoni</th>
+				  <th class="t2-pricemodel">Öppnings&shy;avgift</th>
+				  <th>Fast pris</th>
+				  <th class="t2-addremove"><div class="t2-add t2-icon t2-icon-plus-circled"></div></th>
+			  </tr>
+			  <tr ng-repeat="country in countries | filter:searchText">
+			    <td class="t2-flag-wrapper"><span class="t2-flag-icon-{{country.code}} t2-flag-icon"></span></td>
+			    <td class="t2-editable"><span>{{country.name}}</span></td>
+			    <td class="t2-editable"><span>{{country.code}}</span></td>
+			    <td class="t2-pricemodel t2-editable"><span>{{country.sms}}</span></td>
+			    <td class="t2-pricemodel t2-editable"><span>{{country.mms}}</span></td>
+			    <td class="t2-pricemodel t2-editable"><span>{{country.mobile}}</span></td>
+			    <td class="t2-pricemodel t2-editable"><span>{{country.fix}}</span></td>
+			    <td class="t2-pricemodel t2-editable"><span>{{country.openingfee}}</span></td>
+			    <td class="t2-fixedmodel"><label><input type="checkbox" ng-checked="{{country.isfixedplan}}"/></label></td>
+			    <td class="t2-addremove"><div class="t2-remove t2-icon t2-icon-minus-circled"></div></td>
+			  </tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
+<section class="t2-abroad wide">
+		
+	<div class="t2-partial t2-dropdown-selector"> 
+	        <div class="row">
+	            <div class="large-24 medium-24 small-24 columns">
+	                <div class="t2-content">
+	                    <!-- dropdown/submenu -->
+	                    <div class="t2-nav-submenu t2-dropdown-container">
+	                        <div class="row">
+	                            <div class="large-9 medium-11 small-24 small-centered columns">
+	                               
+	                                    <div class="t2-heading-container">
+	                                        <h2 class="t2-heading">Till vilket land vill du ringa?</h2>
+	                                    </div>
+
+	                                <div class="t2-nav-dropdownlist t2-nav-nestedlist">
+	                                    <a class="title parent t2-button t2-button-type-outline t2-button-color-light">
+	                                        <!-- current number -->
+	                                        <span class="t2-text">Välj land<span class="t2-icon t2-icon-arrow-combo"></span></span>
+	                                    </a>
+	                                    <ul style="display: none;">
+	                                        <li class="t2-filter-container t2-icon t2-icon-search">
+	                                            <input type="text" ng-model="filterContracts" placeholder="Sök land" class="title t2-filter ng-pristine ng-untouched ng-valid">
+	                                        </li>
+	                                        <li ng-repeat="contract in mt2.contracts | filter:filterContracts" class="ng-scope">
+	                                            <a class="title"><span class="t2-text ng-binding">070-1112233</span></a>
+	                                        </li>
+	                                        <li ng-repeat="contract in mt2.contracts | filter:filterContracts" class="ng-scope">
+	                                            <a class="title"><span class="t2-text ng-binding">070-1112233</span></a>
+	                                        </li>
+	                                        <li ng-repeat="contract in mt2.contracts | filter:filterContracts" class="ng-scope">
+	                                            <a class="title"><span class="t2-text ng-binding">070-1112233</span></a>
+	                                        </li>
+	                                    </ul>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+
+	</div>
+	
+	<div class="t2-partial t2-partial-country wide">	
+		
+			<div class="row">
+				<div class="large-16 medium-18 large-centered medium-centered columns">
+					<div class="t2-content">
+		            		<span class="t2-wrapper">
+		            			<div class="t2-flag-icon-is t2-flag-icon"></div>
+		            			<!--<span class="hide t2-background" style="background-image:url('http://upload.wikimedia.org/wikipedia/en/archive/4/4c/20140526092805!Flag_of_Sweden.svg');"></span>
+		            		--></span>
+							<span class="t2-title">Island</span>
+
+					</div>
+				</div>
+			</div>
+			<div class="row t2-price-info">
+				<div class="large-8 medium-8 small-24 columns">
+					<div class="t2-content">
+						<div class="t2-big">0,45&nbsp;kr<br/>/minut</div>
+						<div class="t2-small">till mobil</div>
+					</div>
+					
+				</div>
+				<div class="large-8 medium-8 small-24 columns">
+					<ul class="t2-list">
+						<li><span class="t2-text">Till Fast telefon</span> <span class="t2-price">0,10 kr/min</span></li>
+						<li><span class="t2-text">Till Fast telefon</span> <span class="t2-price">0,10 kr/min</span></li>
+						<li><span class="t2-text">Till Fast telefon</span> <span class="t2-price">0,10 kr/min</span></li>
+						<li><span class="t2-text">Till Fast telefon</span> <span class="t2-price">0,10 kr/min</span></li>
+					</ul>
+				</div>
+				<div class="large-8 medium-8 small-24 columns">
+					<div class="t2-editorial t2-block-discover-editorial">
+						<h2 class="t2-xxs">Fast pris till utlandet</h2>
+						<p>Lorem ipsum dolor sit amet, 249 kr/mån adipisciong elit, sed do 1000 min eiusmod 100 SMS/MMS ut labore et dodlore magna aliqua. Ut enim ad minim veniam.</p>
+						<div class="t2-button-wrapper t2-button-left">
+							<div class="t2-button t2-button-type-solid t2-button-color-185">Läs mer</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+		
+	</div>
+
+	<div class="t2-partial t2-popular-countries">
+		<div class="row">
+			<div class="columns">
+				<div class="t2-title">Populärt just nu:</div>
+			</div>
+		</div>	
+		<div class="row">
+	        <div class="large-14 medium-20 small-24 small-centered large-centered medium-centered columns">
+	            <ul class="large-block-grid-6 medium-block-grid-6 small-block-grid-3 t2-list">
+		            <li>
+		            	<a class="t2-link">
+		            		<span class="t2-wrapper">
+		            			<span class="t2-flag-icon t2-flag-icon-us"></span>
+		            		</span>
+							<span class="t2-content">USA</span>
+						</a>
+		            </li>
+		            <li>
+		            	<a class="t2-link">
+		            		<span class="t2-wrapper">
+		            			<span class="t2-flag-icon t2-flag-icon-jm"></span>
+		            		</span>
+							<span class="t2-content">Jamaica</span>
+						</a>
+		            </li>
+		            <li>
+		            	<a class="t2-link">
+		            		<span class="t2-wrapper">
+		            			<span class="t2-flag-icon t2-flag-icon-au"></span>
+		            		</span>
+							<span class="t2-content">Australia</span>
+						</a>
+		            </li>
+		            <li>
+		            	<a class="t2-link">
+		            		<span class="t2-wrapper">
+		            			<span class="t2-flag-icon t2-flag-icon-gb"></span>
+		            		</span>
+							<span class="t2-content">Storbritannien</span>
+						</a>
+		            </li>
+		            <li>
+		            	<a class="t2-link">
+		            		<span class="t2-wrapper">
+		            			<span class="t2-flag-icon t2-flag-icon-de"></span>
+		            		</span>
+							<span class="t2-content">Tyskland</span>
+						</a>
+		            </li>
+		            <li>
+		            	<a class="t2-link">
+		            		<span class="t2-wrapper">
+		            			<span class="t2-flag-icon t2-flag-icon-se"></span>
+		            		</span>
+							<span class="t2-content">Sverige</span>
+						</a>
+		            </li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+	
+</section>

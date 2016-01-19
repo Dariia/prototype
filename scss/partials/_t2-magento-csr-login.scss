@@ -1,0 +1,29 @@
+.csr-login-top {
+    padding-top:30px;
+    @media #{$large-up}{
+        padding-top:50px;
+    }
+    h2 {
+        @include t2-font-bold;
+        font-size:2em;
+        text-transform:uppercase;
+        @media #{$large-up}{
+          font-size:3em;
+          padding-bottom:15px;
+        }
+        strong {
+            color: $t2-color-green-light;
+        }
+    }
+    .t2-magento-cols > div {
+        position:relative;
+    }
+    img {
+        width:100%;
+    }
+    .t2-button {
+        min-height:2.3rem;
+        padding:0.1rem 0.5rem;
+        width:100%;
+    }
+}

@@ -1,0 +1,240 @@
+<!-- mockup-script, start -->
+<script type="text/javascript">
+    $(window).load(function () {
+       $('.t2b-block-contact').find('.t2-trigger').on('click', function (e) {
+           e.preventDefault();
+           var currentTrigger = $(this);
+           var allTriggers = currentTrigger.parents('.t2b-block-contact').find('.t2-trigger');
+           var currentReceiver = currentTrigger.parents('.t2-item').find('.t2-receiver');
+           var allReceivers = currentTrigger.parents('.t2b-block-contact').find('.t2-receiver');
+           
+           if(currentTrigger.hasClass('t2-active')) {
+               allTriggers.removeClass('t2-active');
+               allReceivers.removeClass('t2-active');
+               return
+           }
+           
+           allTriggers.removeClass('t2-active');
+           allReceivers.removeClass('t2-active');
+           currentTrigger.addClass('t2-active');
+           currentReceiver.addClass('t2-active');
+           
+           //one time height, recalc.
+           var equalize = true;
+           if (equalize) {
+                t2.equalize.init();
+                equalize = false;   
+           }
+           
+           return
+       }); 
+    });
+</script>
+<!-- mockup-script, end -->
+
+<!-- t2b block: contact, start -->
+<section class="t2b-block t2b-block-contact wide">
+	<!-- banner section -->
+	<div class="t2-banner-area wide">
+		<div class="row">
+			<div class="large-24 medium-24 small-24 columns t2-banner-content">
+				<div class="row">
+					<div class="large-12 medium-8 small-24 columns t2-title-container">
+						<h2 class="t2-title">Kontakta kundtjänst</h2>
+					</div>
+					<div class="large-12 medium-12 small-24 columns t2-trigger-placeholder hide-for-small"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- content section -->
+	<div class="t2-content-area wide">
+		<div class="row">
+			<div class="large-24 medium-24 small-24 columns t2-items">
+				<div class="row">
+					<!-- item -->
+					<div class="large-24 medium-24 small-24 columns t2-item t2-item-type-email">
+                        <div class="row">
+                            <div class="large-6 medium-8 small-24 columns t2-trigger-container">
+                                <a href="#" class="t2-trigger t2-icon t2-icon-down-open-1">E-post</a>
+                            </div>
+                        </div>
+                        <div class="row t2-content-container t2-receiver">
+                            <!-- form, start -->
+                            <div class="t2-form">
+            					<form class="t2-form-section" data-t2-equalize equalize-mobile-auto>
+            						
+            						<!-- left -->
+            						<div class="large-12 medium-12 small-24 columns t2-part-left">
+            							<!-- heading -->
+            							<div class="row">
+            								<div class="large-24 medium-24 small-24 columns t2-heading-container" data-t2-equalize-watch='{"set":1}'>
+            									<h2 class="t2-heading">Beskriv ditt problem med ett par menigar</h2>
+            								</div>	
+            							</div>
+            							<!-- row one -->
+            							<div class="row t2-textarea-container">
+            								<div class="large-24 medium-24 small-24 columns" data-t2-equalize-watch='{"set":2}'>
+            								    <textarea id="" class="t2-tall"></textarea>
+            								</div>
+            							</div>
+            							<!-- row two -->
+            							<div class="row">
+            								<div class="large-24 medium-24 small-24 columns t2-select-container">
+            								    <select>
+                								    <option selected disabled>Vad behöver du ha hjälp med?</option>
+                								    <option value="fast">Fast telefoni</option>
+                								    <option value="fastmob">Fast telefoni via mobilnätet</option>
+                								    <option value="mob">Mobilabonnemang</option>
+                								    <option value="mbb">Mobilt bredband</option>
+                								    <option value="intbre">Internet/Bredband</option>
+                								    <option value="levhå">Leverans av hårdvara</option>
+            								    </select>
+            								</div>
+            							</div>
+            						</div>
+            						<!-- right -->
+            						<div class="large-12 medium-12 small-24 columns t2-part-right">
+            							<!-- heading -->
+            							<div class="row">
+            								<div class="large-24 medium-24 small-24 columns t2-heading-container" data-t2-equalize-watch='{"set":1}'>
+            									<h3 class="t2-heading">Fyll i dina uppgifter så kontaktar vi dig</h3>
+            								</div>	
+            							</div>
+            							<!-- fields -->
+                                        <div class="row t2-field-container" data-t2-equalize-watch='{"set":2}'>
+    										<div class="large-24 medium-24 small-24 columns">
+    											<label for="field01">Ange E-postadress</label>
+    											<input type="text" id="field01" class="t2-tall" />
+    										</div>
+    										<div class="large-24 medium-24 small-24 columns">
+    											<label for="field02">Ange kundnummer/organisationsnummer</label>
+    											<input type="text" id="field02" class="t2-tall" />
+    										</div>
+    										<div class="large-24 medium-24 small-24 columns">
+    											<label for="field03">Ange telefonnummer</label>
+    											<input type="text" id="field03" class="t2-tall" />
+    										</div>
+                                        </div>                                                                     
+            							<!-- submit -->
+            							<div class="row">
+    									    <div class="large-24 medium-24 small-24 columns t2-custom-button-wrapper">
+    											<input type="submit" value="Kontakta mig" class="t2-button t2-button-type-solid t2-button-color-cyan">
+    									    </div>
+    									</div>	
+            						</div>
+            					</form>
+                            </div>
+                            <!-- form, end-->
+                        </div>
+					</div>
+					<!-- item -->
+					<div class="large-24 medium-24 small-24 columns t2-item t2-item-type-call">
+                        <div class="row">
+                            <div class="large-6 medium-8 small-24 columns t2-trigger-container">
+                                <a href="#" class="t2-trigger t2-icon t2-icon-down-open-1">Ring</a>
+                            </div>
+                        </div>
+                        <div class="row t2-content-container t2-receiver" data-t2-equalize equalize-mobile-auto>
+            						
+    						<!-- left -->
+    						<div class="large-8 medium-8 small-24 columns t2-call-item">
+    							<!-- heading -->
+    							<div class="row">
+    								<div class="large-24 medium-24 small-24 columns t2-heading-container">
+    									<h3 class="t2-heading" data-t2-equalize-watch='{"set":1}'>Kundservice</h3>
+    								</div>	
+    							</div>
+    							<div class="row">
+        							<div class="large-24 medium-24 small-24 columns t2-call-content">
+            	                        <ul>
+            	                            <li>
+            	                                <ul data-t2-equalize-watch='{"set":4}'>
+            	                                    <li><span class="key">Mån-Fre</span> <span class="val">10-11</span></li>
+            	                                    <li><span class="key">Lör</span> <span class="val">10-11</span></li>
+            	                                    <li><span class="key">Sön</span> <span class="val">10-11</span></li>
+            	                                </ul>
+            	                            </li>
+            	                            <li>
+            	                                <ul>
+            	                                    <li><span><strong><a href="tel:0200232323" title="0200-23 23 23">0200-23 23 23</a></strong></span></li>
+            	                                    <li><span>Från utlandet:</span></li>
+            	                                    <li><span>(+46)772 – 25 25 25</span></li>
+            	                                </ul>
+            	                            </li>
+            	                        </ul>
+        							</div>
+    							</div>
+    						</div>
+    						<!-- middle -->
+    						<div class="large-8 medium-8 small-24 columns t2-call-item">
+    							<!-- heading -->
+    							<div class="row">
+    								<div class="large-24 medium-24 small-24 columns t2-heading-container">
+    									<h3 class="t2-heading" data-t2-equalize-watch='{"set":1}'>Leveransfrågor, webbutiken</h3>
+    								</div>	
+    							</div>
+    							<div class="row">
+        							<div class="large-24 medium-24 small-24 columns t2-call-content">
+            	                        <ul>
+            	                            <li>
+            	                                <ul data-t2-equalize-watch='{"set":4}'>
+            	                                    <li><span class="key">Mån-Tors</span> <span class="val">10-11</span></li>
+            	                                    <li><span class="key">Fredag</span> <span class="val">10-11</span></li>
+            	                                    <li><span class="key">Lör</span> <span class="val">Stängt</span></li>
+            	                                    <li><span class="key">Sön</span> <span class="val">Stängt</span></li>
+            	                                </ul>
+            	                            </li>
+            	                            <li>
+            	                                <ul>
+            	                                    <li><span><strong><a href="tel:0200232323" title="0200-23 23 23">0200-23 23 23</a></strong></span></li>
+            	                                </ul>
+            	                            </li>
+            	                        </ul>
+        							</div>
+    							</div>
+    						</div>
+    						<!-- right -->
+    						<div class="large-8 medium-8 small-24 columns t2-call-item">
+    							<!-- heading -->
+    							<div class="row">
+    								<div class="large-24 medium-24 small-24 columns t2-heading-container">
+    									<h3 class="t2-heading" data-t2-equalize-watch='{"set":1}'>Spring Kundservice</h3>
+    								</div>	
+    							</div>
+    							<div class="row">
+        							<div class="large-24 medium-24 small-24 columns t2-call-content">
+            	                        <ul>
+            	                            <li>
+            	                                <ul data-t2-equalize-watch='{"set":4}'>
+            	                                    <li><span class="key">Mån-Fre</span> <span class="val">10-11</span></li>
+            	                                    <li><span class="key">Lör</span> <span class="val">10-11</span></li>
+            	                                    <li><span class="key">Sön</span> <span class="val">10-11</span></li>
+            	                                </ul>
+            	                            </li>
+            	                            <li>
+            	                                <ul>
+            	                                    <li><span><strong><a href="tel:0200232323" title="0200-23 23 23">0200-23 23 23</a></strong></span></li>
+            	                                    <li><span>Från utlandet:</span></li>
+            	                                    <li><span>(+46)772 – 25 25 25</span></li>
+            	                                </ul>
+            	                            </li>
+            	                            <li>
+            	                                <ul>
+            	                                    <li><span>Du kan ringa oss, oavsett dag eller tid på dygnet.<br />Vi har alltid servicepersonal på plats.</span></li>
+            	                                </ul>
+            	                            </li>
+            	                        </ul>
+        							</div>
+    							</div>
+    						</div>
+                            
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+<!-- t2b block: contact, end -->

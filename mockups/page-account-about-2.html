@@ -1,0 +1,307 @@
+<section class="t2-page-account t2-page-account-subscription t2-form wide">
+	<div class="t2-subscription-summary">
+		<h1>Abonnemang</h1>
+		<div class="row">
+			<div class="large-8 medium-8 small-24 columns">
+				<div class="t2-content">
+					
+					
+					<div class="t2-file-container">
+						<input type="file" class="t2-file-input hide" multiple="multiple"/>
+						<div class="t2-button-wrapper t2-button-left">
+							<span class="t2-file-button t2-button t2-button-type-outline t2-button-color-light">Välj bilagor</span>
+						</div>
+					</div>
+					<script type="text/javascript">
+						
+						$(document).ready(function(){
+							$(".t2-file-container").each(function(){
+								var container = $(this),
+								input = $(this).find(".t2-file-input"),
+								list = $(this).find(".t2-file-list"),
+								button = $(this).find(".t2-file-button"),
+								createList = function(){
+									var files = $.map(input[0].files, function(file) {
+										return file.name;
+									});
+									list = $("<ul class=\"t2-file-list\"></ul>").hide();
+									for (var i = 0; i < files.length; i++) {
+										list.append($("<li>"+ files[i] +"</li>"));
+										console.log(files[i]);
+									}
+									
+									container.append(list);
+									list.slideDown(120);
+									
+								};
+								button.on("click",function(){
+									input.trigger("click");
+								});
+								input.on("change",function(){
+									if(list.length){
+										list.slideUp(120,function(){
+											$(this).remove();
+											createList();
+										});
+									}else createList();
+								});
+							});	
+						});
+						
+					</script>
+					
+					<div class="t2-title"><span class="t2-icon t2-icon-mobile"></span>Mobilnummer</div>
+					<div class="t2-text">0737135213</div>
+				</div>
+			</div>
+			<div class="large-8 medium-8 small-24 columns">
+				<div class="t2-content">
+					<div class="t2-title"><span class="t2-icon t2-icon-doc-text"></span>Kostnad</div>
+					<div class="t2-text">299 kr/mån</div>
+				</div>
+			</div>
+			<div class="large-8 medium-8 small-24 columns">
+				<div class="t2-content">
+					<div class="t2-title"><span class="t2-icon t2-icon-calendar"></span>Bindningstid</div>
+					<div class="t2-text">2016-12-12</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="t2-subscription-misc" data-t2-equalize>
+		<div class="row">
+			
+			<div class="large-16 medium-16 columns" data-t2-equalize-watch>
+				<div class="t2-col-left">
+				<h2>Övrig information</h2>
+				<div class="row">
+					<div class="large-12 medium-12 columns">
+						<div class="t2-content">
+							<div class="t2-title">Simkortsnummer</div>
+							<div class="t2-text">8946071208260057004</div>
+						</div>
+						<div class="t2-content">
+							<div class="t2-title">PUK-kod</div>
+							<div class="t2-text">39569385</div>
+						</div>
+					</div>
+					<div class="large-12 medium-12 columns">
+						<div class="t2-content">
+							<div class="t2-title">Kundnummer</div>
+							<div class="t2-text">29452945345</div>
+						</div>
+						<div class="t2-content">
+							<div class="t2-title">Namn</div>
+							<div class="t2-text">Charlottes mobil</div>
+							<div class="t2-button-wrapper">
+								<a class="t2-button t2-button-type-outline t2-button-color-light">Ändra</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				</div>
+			</div>
+			<div class="large-8 medium-8 small-24 columns t2-col-right" data-t2-equalize-watch>
+				<div class="t2-image" style="background-image:url(Content/img/t2-subscription-summary.png);"></div>
+				<img class="t2-image-filler" src="Content/img/t2-subscription-summary.png" alt="Om ditt abonnemang" />
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- partial: content -->
+	<!--<div class="t2-partial-content wide">	
+		<div class="row">
+			<div class="large-24 medium-24 small-24 columns">
+				<div class="t2-content">
+					<h2 class="t2-title">Om ditt abonnemang</h2>
+					<div class="t2-ingress">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, uis nostrud exercitali.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+	
+	<!-- partial: about summary -->
+	<!--<div class="t2-partial-about-summary wide">
+		<div class="row">
+			<div class="large-24 medium-24 small-24 columns t2-about-summary" data-t2-equalize equalize-mobile-auto>
+				<div class="row">
+
+					<div class="large-8 medium-8 small-24 columns t2-summary-item">
+						<div class="row">
+						    <div class="large-24 medium-24 small-24 columns" data-t2-equalize-watch='{"set":1}'>
+								<h3 class="t2-heading">Om abonnemanget</h3>  
+						    </div>
+						</div>
+						<div class="row">
+							<div class="large-24 medium-24 small-24 columns">
+								<ul class="t2-item-list">
+									<li class="t2-item">
+										<span class="t2-key">Kundnummer</span>
+										<span class="t2-val">1985-11-02 **44</span>
+									</li>
+									<li class="t2-item">
+										<span class="t2-key">Telefonnummer</span>
+										<span class="t2-val">0707-646464</span>
+									</li>
+									<li class="t2-item">
+										<span class="t2-key">Typ av abonnemang</span>												<span class="t2-val">Volym 2 GB</span>
+										<div class="t2-link-container t2-button-wrapper">
+											<a href="#" class="t2-link t2-button t2-button-type-outline t2-button-color-light">Ändra</a>
+										</div>	
+									</li>
+									<li class="t2-item">
+										<span class="t2-key">Data som ingår</span>
+										<span class="t2-val">2 GB</span>
+										<div class="t2-link-container t2-button-wrapper">
+											<a href="#" class="t2-link t2-button t2-button-type-outline t2-button-color-light">Köp mer data</a>
+										</div>
+									</li>
+									<li class="t2-item">
+										<span class="t2-key">Bindningstid</span>
+										<span class="t2-val">2013-12-12</span>
+									</li>																		
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="large-8 medium-8 small-24 columns t2-summary-item">
+						<div class="row">
+						    <div class="large-24 medium-24 small-24 columns" data-t2-equalize-watch='{"set":1}'>
+								<h3 class="t2-heading">Fasta kostnader</h3>  
+						    </div>
+						</div>
+						<div class="row">
+							<div class="large-24 medium-24 small-24 columns">
+								<ul class="t2-item-list">
+									<li class="t2-item">
+										<span class="t2-key">Abonnemangskostnad</span>
+										<span class="t2-val">299 kr/mån</span>
+									</li>
+									<li class="t2-item">
+										<span class="t2-key">Delbetalning av mobil</span>
+										<span class="t2-val">199 kr/mån</span>
+									</li>
+									<li class="t2-item">
+										<span class="t2-key">Totalt</span>
+										<span class="t2-val">498 kr/mån</span>
+									</li>				
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				
+					<div class="large-8 medium-8 small-24 columns t2-summary-item">
+						<div class="row">
+						    <div class="large-24 medium-24 small-24 columns" data-t2-equalize-watch='{"set":1}'>
+								<h3 class="t2-heading">SIM & PUK</h3>  
+						    </div>
+						</div>
+						<div class="row">
+							<div class="large-24 medium-24 small-24 columns">
+								<ul class="t2-item-list">
+									<li class="t2-item">
+										<span class="t2-key">SIM-kortsnummer</span>
+										<span class="t2-val">1231213123</span>
+									</li>
+									<li class="t2-item">
+										<span class="t2-key">PUK-kod</span>
+										<span class="t2-val">123182376</span>
+									</li>								
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>-->
+
+	<!-- partial: list collection -
+	<div class="t2-partial-list-collection wide">
+		<div class="row">
+			<div class="large-24 medium-24 small-24 columns t2-list-collection" data-t2-equalize equalize-mobile-auto>
+				<div class="row">
+
+					<!-- list item : type normal 
+					<div class="large-12 medium-12 small-24 columns t2-collection-item t2-item-type-normal">
+						<div class="row">
+						    <div class="large-24 medium-24 small-24 columns" data-t2-equalize-watch='{"set":1}'>
+								<h3 class="t2-heading">Dina tilläggstjänster</h3>  
+						    </div>
+						</div>
+						<div class="row">
+							<div class="large-24 medium-24 small-24 columns">
+								<ul class="t2-item-list">
+									<li class="t2-item">
+										<span class="t2-key">Mobilsurf medium</span>
+										<span class="t2-val">79 kr/månad</span>
+									</li>
+									<li class="t2-item">
+										<span class="t2-key">Mobilsurf medium</span>
+										<span class="t2-val">79 kr/månad</span>
+									</li>
+									<li class="t2-item">
+										<span class="t2-key">Mobilsurf medium</span>
+										<span class="t2-val">79 kr/månad</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					<!-- list item : type normal -
+					<div class="large-12 medium-12 small-24 columns t2-collection-item t2-item-type-link">
+						<div class="row">
+						    <div class="large-24 medium-24 small-24 columns" data-t2-equalize-watch='{"set":1}'>
+								<h3 class="t2-heading">Prislistor</h3>  
+						    </div>
+						</div>
+						<div class="row">
+							<div class="large-24 medium-24 small-24 columns">
+								<ul class="t2-item-list">
+									<li class="t2-item">
+										<a href="#" class="t2-link t2-button t2-button-type-outline t2-button-color-light">
+											<span>Utlandspriser</span><span> (PDF)</span>
+											<span class="t2-icon t2-icon-export"></span>
+										</a>
+									</li>
+									<li class="t2-item">
+										<a href="#" class="t2-link t2-button t2-button-type-outline t2-button-color-light">
+											<span>Till Tele2 och Comviq</span><span> (PDF)</span>
+											<span class="t2-icon t2-icon-export"></span>
+										</a>
+									</li>
+									<li class="t2-item">
+										<a href="#" class="t2-link t2-button t2-button-type-outline t2-button-color-light">
+											<span>Till övriga nät</span><span> (PDF)</span>
+											<span class="t2-icon t2-icon-export"></span>
+										</a>
+									</li>																											
+								</ul>
+							</div>
+						</div>
+					</div>					
+
+				</div>
+			</div>
+		</div>
+	</div>	
+	-->
+</section>

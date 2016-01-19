@@ -1,0 +1,18 @@
+﻿//block: xform
+//xform form styling is located in t2-global-forms-xforms 
+.t2-block-xform {
+    padding: $t2-size-large 0;
+    .t2-editorial { margin-bottom: $t2-size-small/2; }
+	@media #{$small-only} {
+        > .row > .columns {
+            padding-left: $t2-size-xsmall;
+            padding-right: $t2-size-xsmall;
+        }
+    }
+    @media #{$medium-up} {
+        padding: $t2-size-medium*2 0;
+    }
+    @media #{$large-up} {
+        padding: $t2-size-xlarge 0;
+    }
+}

@@ -1,0 +1,49 @@
+//bourbon
+@import "../../bourbon/bourbon";
+
+//global
+@import "t2-global-body";
+@import "t2-global-forms";
+@import "t2-global-validation";
+@import "t2-global-forms-xforms";
+@import "t2-global-icons";
+@import "t2-global-buttons";
+@import "t2-global-editorial";
+@import "t2-global-navigation";
+@import "t2-global-navigation-megamenu";
+@import "t2-global-slideshow";
+@import "t2-global-dashboard";
+@import "t2-global-lists";
+@import "t2-global-404";
+@import "t2-global-search-autocomplete";
+@import "t2-global-notifications";
+@import "t2-global-block";
+@import "t2-global-headings";
+@import "t2-global-password-strength-indicator";
+@import "t2-magento-global-icons";
+
+//Magento
+@import "t2-magento-global-icons";
+@import "t2-magento-general";
+@import "t2-magento-product-listing";
+@import "t2-magento-standalone-addon-listing";
+@import "t2-magento-summary-table";
+@import "t2-magento-payback-form";
+@import "t2-magento-products";
+@import "t2-business-magento-products";
+@import "t2-res-magento-products";
+@import "t2-magento-cart";
+@import "t2-business-magento-cart";
+@import "t2-res-magento-cart";
+@import "t2-magento-configurators";
+@import "t2-magento-brandpage";
+@import "t2-magento-csr-login";
+@import "t2-magento-general-fix";
+
+//Add new partials at the bottom
+
+//Component
+@import "t2-component-employee";
+
+//Campaign
+@import "t2-campaign";

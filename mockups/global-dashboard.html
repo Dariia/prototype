@@ -1,0 +1,93 @@
+<!--<div class="t2-notification-context-message wide">
+	<div class="row">
+        <div class="columns">    
+        	<div class="t2-title">Hoppsan!</div>
+            <p>Vi kunde tyvärr inte hitta någon order på den angivna ordernummret. Kontrollera att du skrivit nummret rätt.</p>
+        </div>
+    </div>
+</div>
+-->
+
+<section class="t2-dashboard wide" id="dashboardtest">
+	<div class="t2-nav-submenu wide">
+
+	<div class="row">
+		<div class="columns">
+			<div class="t2-left-col">
+				<a class="t2-icon t2-icon-user" href=""></a>
+				<div class="t2-nav-dropdownlist t2-nav-nestedlist">
+					<a class="title parent"><span class="t2-text">0730740436, <span class="t2-special">Volym 2 GB Stuffs and stuff</span><span class="t2-icon t2-icon-arrow-combo"></span></span></a>
+					<ul>
+						<li>
+							<a class="title"><span class="t2-text">0730740436, <span class="t2-special">Volym 2 GB</span></span></a>
+						</li>
+						<li>
+							<a class="title"><span class="t2-text">0730740436, <span class="t2-special">Volym 2 GB</span></span></a>
+						</li>
+						<li>
+							<a class="title"><span class="t2-text">0730740436, <span class="t2-special">Volym 2 GB</span></span></a>
+						</li>
+					</ul>
+				</div>
+				<div class="t2-about">
+					<ul>
+						<li><span class="t2-wrapper"><span class="t2-icon t2-icon-simcard"></span>Bindningstid: <span class="t2-data">15 okt 2015</span></span></li>
+						<li><span class="t2-wrapper"><span class="t2-icon t2-icon-doc-text"></span>Månadskostnad: <span class="t2-data">299 kr</span></span></li>
+						<li><span class="t2-wrapper"><span class="t2-icon t2-icon-chart-line"></span>Dataförbrukning: <span class="t2-data">1,25 GB</span></span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="t2-right-col">
+
+				<div class="t2-wrapper"> 
+					<a class="t2-mt2-button" href="#"><span class="">Mitt Tele2<span class="t2-icon t2-icon-right-open-1"></span></span></a>
+					<a href="#"><span class="t2-icon t2-icon-logout"></span><span class="">Logga ut</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<section class="t2-partial-account-menu wide">
+    <div class="t2-nav-submenu wide ng-scope" ng-controller="MT2SubMenuController" ng-init="onInit()">
+        <div class="row">
+            <div class="columns">
+                <div class="t2-nav-nestedlist">
+                    <a class="title parent" href="/mitt-tele2/" ng-class="isVisible ? 'expanded' : ''">
+                        <span class="t2-text">
+                            Mitt Tele2
+                            <span class="t2-icon t2-icon-list-add" ng-click="toggleSubMenu($event)"></span>
+                        </span>
+                    </a>
+                        <ul ng-slide-show="isVisible" class="ng-isolate-scope" style="display: none;">
+                                <li>
+                <a class="title" href="/mitt-tele2/forbrukning/">Förbrukning</a>
+
+    </li>
+    <li>
+                <a class="title" href="/mitt-tele2/faktura/">Faktura</a>
+
+    </li>
+    <li>
+                <a class="title" href="/mitt-tele2/servicepage/">Tjänster</a>
+
+    </li>
+    <li>
+                <a class="title" href="/mitt-tele2/om-abonnemang/">Om abonnemang</a>
+
+    </li>
+
+                        </ul>
+                </div>
+                <div class="t2-right-col">
+                    <div class="t2-wrapper">
+                        <a href="/mitt-tele2/installningssida/" class="t2-icon t2-icon-cog"><span class="hide-at-medium-up">Inställningar</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+	$("#dashboardtest").detach().insertAfter($(".t2-nav-header-global"));
+</script>

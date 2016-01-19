@@ -1,0 +1,14 @@
+.t2-block-wide-video{
+	width: 100%;
+	position: relative;
+}
+
+.t2-background-video{
+	object-fit: cover;
+	object-position: center center;
+	min-width:100%;
+	min-height: 100%;
+	@media #{$small-only} {
+		display: none;
+    }
+}

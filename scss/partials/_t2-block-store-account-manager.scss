@@ -1,0 +1,44 @@
+//Store Block: Account Manager
+
+.t2-block-store-account-manager {
+    $scope-border-color: darken($t2-color-gray-fog, 5%);
+    .t2-col {
+        .t2-content-wrapper {}
+        &.t2-col-one {}
+        &.t2-col-two {}
+    }
+    @media #{$small-only} {
+        max-width: 320px;
+        border: 1px solid $scope-border-color;
+        border-top: 0;
+        border-bottom: 0;
+        margin: 0 auto;
+        padding: $t2-size-large 0;
+        .t2-col {
+            .t2-content-wrapper {}
+            &.t2-col-one {}
+            &.t2-col-two { margin-top: $t2-size-medium; }
+        }
+        > .row > .columns {
+            padding-left: $t2-size-xsmall;
+            padding-right: $t2-size-xsmall;
+        }
+    }
+    @media #{$medium-up} {
+        .t2-col {
+            .t2-content-wrapper { padding: $t2-size-medium*2 0; }
+            &.t2-col-one { padding-right: $t2-size-xlarge; }
+            &.t2-col-two {
+                padding-left: $t2-size-xlarge;
+                border-left: 1px solid $scope-border-color;
+            }
+        }
+    }
+    @media #{$large-up} {
+        .t2-col {
+            .t2-content-wrapper { padding: $t2-size-large*2 0; }
+            &.t2-col-one { padding-right: $t2-size-xlarge*2; }
+            &.t2-col-two { padding-left: $t2-size-xlarge*2; }
+        }
+    }
+}

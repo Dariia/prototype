@@ -1,0 +1,84 @@
+//Page: start, Block: Video
+.t2-page-start {
+	.t2-block-video { margin-top: -1px; }
+}
+//Block: video
+.t2-block-video {
+	position: relative;
+	background-color: $t2-color-black;
+	.t2-video {
+		display: none;
+		position: relative;
+		z-index: 1;
+		.t2-video-wrapper{
+			padding: $t2-size-small 0;
+		}
+
+		.flex-video {
+			margin-bottom: 0;
+			padding-top: 0;
+			
+			&.widescreen { padding-bottom: 56.25%; }
+		}
+		.t2-fader {
+			background-color: rgba(#000,0.7);
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+		.t2-close {
+			color: rgba(#fff,0.4);
+			position: absolute;
+			right: $t2-size-small;
+			cursor: pointer;
+			top: $t2-size-small;
+			margin-right: -15px;
+			margin-top: -15px;
+			z-index: 1;
+			height: 30px;
+			width: 30px;
+			text-align: center;
+			width: 30px;
+			height: 30px;
+			font-size: 30px;
+			line-height: 30px;
+			&:hover { color: rgba(#fff,0.6); }
+		}
+	}
+	.t2-title {
+		display: block;
+		color: $t2-color-white;
+		@extend .t2-font-heavy;
+		font-weight: normal;
+		font-size: rem-calc(80);
+		margin:0;
+		margin-bottom:$t2-gutter;
+		.t2-break { display: block; }
+	}
+	
+	.t2-background {
+		@include t2-background-size(cover);
+		background-repeat: no-repeat;
+		background-position: center center;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		position: absolute;
+	}
+	
+	.t2-content {
+		//padding: $t2-size-large*2 0;
+		text-align: center;
+		position: relative;
+		.t2-anchorlink{
+			position: absolute;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+		}
+	}
+} 

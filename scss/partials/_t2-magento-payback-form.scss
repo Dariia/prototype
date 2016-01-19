@@ -1,0 +1,554 @@
+.t2-magento-payback-form {
+    background: $t2-color-linkblue;
+    text-align:center;
+    line-height:normal;
+    @extend .t2-font-regular;
+
+    @media#{$small-only}{
+       font-size:rem-calc(14);
+        width:auto;
+        min-width:auto;
+    }
+    .redeem-storage {
+        display:inline-block;
+        @media#{$small-only}{
+            max-width:80%;
+        }
+    }
+    .loader {
+        bottom:-28px !important;
+    }
+    .t2-magento-payback-form-content {  
+        padding:15px 10% 15px;
+        width:auto;
+        min-width:0;
+        color:$t2-color-white;
+        @media#{$small-only}{
+            padding:10px 0 0;
+        }
+    }
+    h2 {
+        color:$t2-color-white;
+        margin:0;
+    }
+    h2,
+    .strong {
+        @extend .t2-font-bold;
+        display:block;
+        line-height:normal;
+    }
+    h2,
+    .strong span.t2-magento-redeem-product-price {
+        @extend .t2-font-heavy;
+        font-size:rem-calc(45);
+        @media#{$small-only}{
+           font-size:rem-calc(26);
+        }
+        text-transform:uppercase;
+        display:block;
+    }
+    .strong span.t2-magento-redeem-product-price {
+        font-size:rem-calc(100);
+        @media#{$small-only}{
+            font-size:rem-calc(36);
+        }
+    }
+    .strong {
+        font-size:rem-calc(17);
+        color:$t2-color-pantone-black;
+        padding-top:30px;
+        @media#{$small-only}{
+            padding-top:15px;
+            font-size:rem-calc(14);
+        }
+    }
+    .small.t2-magento-redeem-form-price-container {
+        @extend .t2-sans-serif;
+        font-weight:bold;
+        .t2-magento-redeem-product-header, .t2-magento-redeem-product-price, #redeem_extra_msg {
+            @extend .t2-sans-serif;
+            font-weight:bold;
+            font-size:rem-calc(16);
+        }
+        .strong span.t2-magento-redeem-product-price {
+            @extend .t2-sans-serif;
+            font-size:rem-calc(16) !important;
+            font-weight:bold !important;
+            @media#{$small-only}{
+               font-size:rem-calc(16);
+            }
+            text-transform:none;
+            display:inline;
+        }
+        #redeem_extra_msg .total {
+            font-size:rem-calc(19);
+            font-weight:bold;
+        }
+    }
+    input[type="text"],
+    input[type="text"]:focus,
+    input[type="number"],
+    input[type="tel"],
+    input[type="tel"]:focus,
+    input[type="phone"],
+    input[type="phone"]:focus,
+    input[type="number"]:focus,
+    .customSelect {
+        display:inline-block;
+        width:auto;
+        padding:0 20px 0 13px;
+        background-color:lighten($t2-color-linkblue, 15%);
+        border:0;
+        box-shadow:none;
+        color:$t2-color-pantone-black;
+        @extend .t2-font-regular;
+        font-size:rem-calc(17);
+        @media#{$small-only}{
+            font-size:rem-calc(13);
+        }
+    }
+    span.customSelect {
+        background-color:$t2-color-pantone-cyan;
+    }
+    .t2-magento-select {
+        padding-bottom:5px;
+    }
+    .customSelect {
+        background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAMCAYAAAC0qUeeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAADKSURBVHjahJGxSkNREETP3lz2FcEnNkLEdGks8wfprK3FRv/C2jp+RQpbv0BIIF1CPkKQFIKNYOEdC33yeLk3WRhYdofdYcYkUZlhIXwAKKXjL4lcxaZRSjUHKgD0+vWiGXj/6KXIvn5eRce+HfSHdDtbR0l0sTO42Wz9av6aJYfup5QSZpaX4RAcTu/up6OHp+XA2f32L8PhvKVXDjq7GA9LZCqzz4ZYhfBWuh74XUxafl+WnLMmQeAdM0M6AcilGFv9I5LtS/BnABJqlf0GVNdJAAAAAElFTkSuQmCC);
+        background-color:lighten($t2-color-linkblue, 15%);
+        background-position:100% 10px;
+        background-repeat:no-repeat;
+        @include  border-top-radius(3px);
+        @include  border-bottom-radius(3px);
+        height:30px;
+        @media#{$small-only}{
+            height:25px;
+        }
+        .customSelectInner {
+            width:auto !important;
+            line-height:30px;
+            @media#{$small-only}{
+                line-height:25px;
+            }
+        }
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="tel"]:focus,
+    input[type="phone"],
+    input[type="number"] {
+        line-height: 15px;
+        height:22px;
+        background: transparent;
+        border-bottom:1px solid $t2-color-pantone-black;
+        margin-bottom:5px;
+        @include placeholder {
+            color:$t2-color-pantone-black;
+        }
+        @include  border-top-radius(0);
+        @include  border-bottom-radius(0);
+    }
+    input[type="button"] {
+        font-size: rem-calc(11);
+        padding: 3px 10px;
+        @media#{$small-only}{
+            padding: 5px;
+        }
+        min-height: 0;
+        height: 30px;
+        @extend .t2-font-regular;
+        @include  border-top-radius(3px);
+        @include  border-bottom-radius(3px);
+        margin-bottom:3px;
+    }
+    #payback-price-block {
+        padding-bottom:15px;
+    }
+    .t2-magento-checkbox-wrapper {
+        margin:auto;
+        padding-bottom:15px;
+        overflow:hidden;
+        label{
+            color:$t2-color-pantone-white;
+            font-size:rem-calc(11);
+            a {
+                text-decoration:underline;
+                color:$t2-color-pantone-white;
+            }
+        }
+    }
+    @media#{$small-only}{
+        .t2-magento-cols > div {
+            float:none;
+        }
+    }
+    .tip-arrow {
+        margin-bottom:40px;
+        position:relative;
+        height:10px;
+        @media#{$small-only}{
+            display:none;
+        }
+            &:after {
+               cursor: pointer;
+               font-weight: normal;
+               speak: none;
+               display: inline-block;
+               margin:0;
+               margin-left:-30px;
+               left:50%;
+               font-variant: normal;
+               text-transform: none;
+               line-height: 1em;
+               font-family: 't2-magento-iconic';
+               content: '\e81f';
+               background:$t2-color-linkblue;
+               color:$t2-color-white;
+               font-size: 14px;
+               position: absolute;
+               bottom:-17px;
+               padding:3px 25px 9px;
+               @include  border-bottom-radius(3px);
+               zoom: 1;
+       }
+       &.active {
+           &:after {
+               content: '\e81e';
+           }
+       }
+    }
+    .t2-magento-question-icon {
+        cursor:pointer;
+        position:relative;
+        display:inline-block;
+        &:after {
+            position:absolute;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            z-index:100;
+        }
+        select {
+            display:none !important;
+        }
+    }
+    #t2-magento-redeem-brand-list {
+        display: inline;
+        width: auto;
+    }
+    #redeem-storage {
+        display:inline-block;
+        text-align:center;
+    }
+    #t2-magento-redeem-conditions-list option {
+        @media#{$large-up}{
+            display:none;
+        }
+        @media#{$medium-only}{
+            display:none;
+        }
+    }
+    .t2-magento-icon {
+        position:relative;
+        display:inline;
+        @media#{$small-only}{
+            position:inherit;
+            display:block;
+        }
+        .t2-magento-popup {
+            display:none;
+            @media#{$medium-only}{
+                width:500px;
+                margin-left:-360px;
+            }
+            @media#{$large-up}{
+                width:830px;
+                margin-left:-460px;
+            }
+            position:absolute;
+            top:40px;
+            left:50%;
+            background: $t2-color-pantone-white;
+            color:$t2-color-gray-concrete;
+            border:1px solid $t2-color-gray-haze;
+            font-size:rem-calc(11);
+            text-align:left;
+            z-index:1000;
+            @media#{$small-only}{
+                left:20px;
+                right:20px;
+                top:150px;
+                overflow:hidden;
+                @include  border-top-radius(10px);
+                @include  border-bottom-radius(10px);
+                border:0;
+            }
+            ul {
+                margin:0;
+                display:block;
+                li {
+                    list-style:none;
+                    list-style-position:outer;
+                    display:block;
+                    margin-bottom:5px;
+                    line-height:normal;
+                    font-size:rem-calc(12);
+                    position:relative;
+                    padding-left:8px;
+                    &:after {
+                        content:"-";
+                        position:absolute;
+                        top:0;
+                        left:0;
+                    }
+                }
+            }
+            &.visible {
+                display:table-row;
+                @media#{$small-only}{
+                    display:block;
+                }
+            }
+        }
+        .container {
+            overflow:hidden;
+        }
+        strong {
+            display:block;
+            padding-bottom:10px;
+            font-size:rem-calc(18);
+            color:$t2-color-linkblue;
+            text-align:center;
+            @media#{$small-only}{
+                text-align:left;
+            }
+        }
+        .col:first-child {
+            border-left:0;
+            @media#{$small-only}{
+                border-top:0;
+            }
+        }
+        img {
+            display: block;
+            height: auto;
+            margin: 0 auto;
+            padding-bottom:5px;
+            max-width: 60px;
+            width: 80%;
+            @media#{$small-only}{
+                width:70px;
+                position:absolute;
+                right:0;
+                top:0;
+                padding:10px;
+            }
+        }
+
+        .col {
+            cursor:pointer;
+            width:25%;
+            padding:15px;
+            float:none;
+            display:table-cell;
+            border-left:1px solid $t2-color-gray-haze;
+            position:relative;
+            @media#{$large-up}{
+                min-height:343px;
+            }
+            @media#{$small-only}{
+                padding-right:70px;
+                float:none;
+                display:block;
+                width:100%;
+                border-top:1px solid $t2-color-gray-haze;
+                border-left:0;
+
+                &:after {
+                    content:"";
+                    position:absolute;
+                    top:0;
+                    bottom:0;
+                    right:70px;
+                    width:1px;
+                    background:$t2-color-gray-haze;
+                }
+            }
+            .arrow-up {
+                display:none;
+                position:absolute;
+                top:100%;
+                margin-top:-10px;
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid $t2-color-green-light;
+                margin-left:-15px;
+                left:50%;
+            }
+            .arrow-down {
+                position:absolute;
+                display:none;
+                top:-1px;
+                width: 0;
+                height: 0;
+               	border-left: 10px solid transparent;
+               	border-right: 10px solid transparent;
+               	border-top: 10px solid $t2-color-green-light;
+                margin-left:-15px;
+                left:50%;
+            }
+            &.active {
+                    background:$t2-color-gray-haze;
+                .arrow-down,
+                .arrow-up {
+                    display:none;
+                }
+            }
+        }
+        .arrow-up {
+            @media#{$small-only}{
+                display:none;
+            }
+            position:absolute;
+            top:-10px;
+            width: 0;
+            height: 0;
+            margin-left:-15px;
+            left:50%;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid $t2-color-pantone-white;
+        }
+    }
+
+    .t2-magento-reedem-product-table {
+        border-collapse:collapse;
+        td, th {
+            @extend .t2-sans-serif;
+            font-weight:bold;
+            padding:10px;
+            @media#{$small-only}{
+                padding: 5px;
+            }
+            text-align:left;
+            font-size:rem-calc(14);
+            @media#{$small-only}{
+                font-size:rem-calc(12);
+            }
+        }
+        th {
+            font-weight:normal;
+        }
+        @extend .t2-sans-serif;
+        th {
+            padding:10px;
+            @media#{$small-only}{
+                padding: 5px;
+            }
+            color:$t2-color-pantone-white;
+        }
+        .t2-magento-icon-remove {
+            overflow:hidden;
+            text-indent: -10;
+        }
+        .product-row {
+            background:$t2-color-pantone-white;
+        }
+        .t2-magento-remove-icon {
+            display:table-row;
+            > div {
+                padding:10px;
+                @media#{$small-only}{
+                    padding: 3px;
+                }
+                padding-right:3px;
+            }
+            .buttons {
+                overflow:hidden;
+            }
+             .buttons span {
+                color:$t2-color-pantone-white;
+                font-size:rem-calc(12);
+                 @media#{$small-only}{
+                     font-size:rem-calc(10);
+                 }
+                padding:13px;
+                display:table-cell;
+                float:left;
+                cursor:pointer;
+                 @media#{$small-only}{
+                     float:none;
+                     width:100%;
+                     display:block;
+                     padding:5px;
+                 }
+            }
+            .button-yes {
+                background:$t2-color-green-light;
+            }
+            .button-no {
+                background:$t2-color-red;
+            }
+        }
+        .t2-magento-remove-icon {
+            padding:0;
+        }
+        .discount-row td {
+            border-top: 5px solid $t2-color-linkblue;
+            background:$t2-color-pantone-white;
+            font-weight:bold;
+        }
+        .t2-magento-remove-row {
+            padding:0;
+        }
+        .total-discount-row {
+            td {
+                @extend .t2-font-bold;
+                font-size:rem-calc(16);
+            }
+            .total-price {
+                display:inline-block;
+                padding-left:10px;
+            }
+        }
+    }
+    #redeem_imei_toggle {
+        position:relative;
+        top:-15px;
+        @media#{$small-only}{
+           top:0;
+        }
+    }
+    #redeem_extra_msg {
+        color:$t2-color-pantone-black;
+        display:inline-block;
+        padding:0 10px 10px;
+        font-size:rem-calc(14px);
+        @extend .t2-sans-serif;
+        @media#{$small-only}{
+           font-size:rem-calc(12);
+        }
+        span {
+            display:inline-block;
+            padding-bottom:3px;
+        }
+    }
+}
+#reedem-loader {
+    @media#{$small-only}{
+       &.visible {
+           display:block;
+           position:fixed;
+           top:0;
+           left:0;
+           bottom:0;
+           right:0;
+           background:$t2-color-pantone-black;
+           opacity:0.6;
+           z-index:100;
+       }
+    }
+}

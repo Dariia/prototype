@@ -1,0 +1,316 @@
+@font-face {
+    font-family:'Tele2SlabWeb-Regular';
+    src:url('/Content/fonts/Tele2Slab/Tele2SlabWeb-Regular.eot');
+    src:url('/Content/fonts/Tele2Slab/Tele2SlabWeb-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/Content/fonts/Tele2Slab/Tele2SlabWeb-Regular.woff') format('woff'),
+        url('/Content/fonts/Tele2Slab/Tele2SlabWeb-Regular.ttf') format('truetype'),
+        url('/Content/fonts/Tele2Slab/Tele2SlabWeb-Regular.svg#Tele2SlabWeb-Regular') format('svg');
+        font-weight:normal;
+        font-style:normal;
+}
+
+@font-face {
+    font-family:'Tele2SlabWeb-Bold';
+    src:url('/Content/fonts/Tele2Slab/Tele2SlabWeb-Bold.eot');
+    src:url('/Content/fonts/Tele2Slab/Tele2SlabWeb-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/Content/fonts/Tele2Slab/Tele2SlabWeb-Bold.woff') format('woff'),
+        url('/Content/fonts/Tele2Slab/Tele2SlabWeb-Bold.ttf') format('truetype'),
+        url('/Content/fonts/Tele2Slab/Tele2SlabWeb-Bold.svg#Tele2SlabWeb-Bold') format('svg');
+        font-weight:normal;
+        font-style:normal;
+}
+
+@font-face {
+    font-family:'Tele2SlabWeb-Heavy';
+    src:url('/Content/fonts/Tele2Slab/Tele2SlabWeb-Heavy.eot');
+    src:url('/Content/fonts/Tele2Slab/Tele2SlabWeb-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('/Content/fonts/Tele2Slab/Tele2SlabWeb-Heavy.woff') format('woff'),
+        url('/Content/fonts/Tele2Slab/Tele2SlabWeb-Heavy.ttf') format('truetype'),
+        url('/Content/fonts/Tele2Slab/Tele2SlabWeb-Heavy.svg#Tele2SlabWeb-Heavy') format('svg');
+        font-weight:normal;
+        font-style:normal;     
+}
+$t2-heading-lineheight: 1.0em;
+
+@mixin t2-font-regular(){
+	font-family:"Tele2SlabWeb-Regular", Georgia, serif;
+    font-weight: normal !important;
+    line-height: 1.2em;
+    font-variant: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: auto;
+	span, p{
+	    line-height: 1.2em;
+    }
+}
+@mixin t2-font-bold(){
+	font-family:"Tele2SlabWeb-Bold", Georgia, serif;
+    font-weight: normal !important;
+    line-height: 1.06em;
+    font-variant: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: auto;
+    span, p{
+	    line-height: 1.06em;
+    }
+}
+@mixin t2-font-heavy(){
+	font-family:"Tele2SlabWeb-Heavy", Georgia, serif;
+    text-transform: uppercase;
+    font-weight: normal !important;
+    line-height: 0.88em;
+    font-variant: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: auto;
+	
+    span, p{
+	    line-height: 0.88em;
+    }
+}
+
+.t2-font-regular {
+	@include t2-font-regular();
+}
+.t2-font-bold {
+    @include t2-font-bold();
+}
+.t2-font-heavy {
+    @include t2-font-heavy();
+}
+.t2-sans-serif {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.t2-sans-serif-bold {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold!important;
+}
+.t2-bold{
+	font-weight: bold;
+}
+
+*[menu-blaster-receiver], *[menu-blaster-instance-receiver] {
+    display: none;
+}
+
+body {
+	@extend .t2-sans-serif;
+	//background-color: #222;
+}
+
+p { 
+	color: $t2-color-gray-concrete;
+	font-size: rem-calc(14);
+	line-height: 1.7em;
+}
+
+a {
+    color:#444;
+    @include t2-transition(background-color border-color color z-index, 0.12s, ease-in-out);
+	//@media #{$medium} {
+	//	&:hover{
+	//		
+	//	}
+	//}
+}
+
+.t2-text-center{
+	text-align: center;
+}
+.t2-text-left{
+	text-align: left;
+}
+.t2-text-right{
+	text-align: right;
+}
+
+
+h1,h2,h3,h4 {
+	font-weight: normal;
+}
+
+.t2-arealink {
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+.t2-css-table {
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;	
+    > * {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.wide {
+	width: 100%;
+}
+
+.t2-no-overflow {
+    //overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    > .t2-content-area{
+		//background-color: $t2-color-white;
+    }
+}
+
+.row {
+    min-width: rem-calc(320);
+    .row{
+    	min-width:0;
+    }
+}
+
+//To set height to auto on t2-equalize-watch in mobile view:
+//Add "equalize-mobile-auto" attribute to parent data-t2-equalize element.
+@media #{$small-only} {
+    [equalize-mobile-auto] [data-t2-equalize-watch]{
+        height: auto!important;	
+    }
+}
+//same as above but for medium/tablet
+@media #{$medium-only} {
+    [equalize-tablet-auto] [data-t2-equalize-watch]{
+        height: auto!important;	
+    }
+}
+
+//transition
+.t2-transition-all {
+    -webkit-transition: all 150ms ease;
+    -moz-transition: all 150ms ease;
+    transition: all 150ms ease;
+}
+
+//Hyphenation.
+.hyphenate,
+.t2-hyphenate {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+//Truncate
+.t2-truncate {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.t2-margin-top-small{
+	margin-top: $t2-size-small;
+}
+.t2-margin-top-medium{
+	margin-top: $t2-size-medium;
+}
+.t2-margin-top-large{
+	margin-top: $t2-size-large;
+}
+.t2-margin-bottom-small{
+	margin-bottom: $t2-size-small;
+}
+.t2-margin-bottom-bottom{
+	margin-bottom: $t2-size-medium;
+}
+.t2-margin-bottom-large{
+	margin-bottom: $t2-size-large;
+}
+
+//Borders:
+.t2-border-top-color-gray-ddd { border-top: 1px solid $t2-color-gray-ddd; } 
+
+@media #{$large} {
+    .hide-at-large-up{ display:none !important; }
+}
+@media #{$large-only} {
+    .hide-at-large{ display:none !important; }
+}
+@media #{$medium} {
+    .hide-at-medium-up { display:none !important; }
+}
+@media #{$medium-only} {
+    .hide-at-medium{ display:none !important; }
+}
+@media #{$small} {
+    .hide-at-small-up { display:none !important; }
+}
+@media #{$small-only} {
+    .hide-at-small { display:none !important; }
+}
+
+
+.t2-block-border-top, .t2-block-border-bottom, .t2-block-border-topbottom{
+	border-color: darken($t2-color-gray-fog,5%) !important;
+	border-style: solid !important;
+	border-width: 0 !important;
+	background-color: $t2-color-white !important;
+}
+.t2-block-border-top{
+	border-top-width: 1px !important;
+}
+.t2-block-border-bottom{
+	border-bottom-width: 1px !important;
+}
+.t2-block-border-topbottom{
+	border-bottom-width: 1px !important;
+	border-top-width: 1px !important;
+}
+.t2-intro {
+    .t2-title{
+        @extend .t2-font-bold;
+    }
+}
+
+ul, ol, dl{
+	span, a{
+		line-height: 1.2em;
+	}
+}
+.loadingSpinner{
+	position: relative;
+	.spinner{
+		left:auto;
+		right:-20px;
+	}
+}
+
+.t2-heading, t2-title, h1, h2, h3, h4, h5, h6, .t2-subtitle{
+	line-height: $t2-heading-lineheight;
+}
+.t2-preamble{
+	.t2-heading, t2-title, h1, h2, h3, h4, h5, h6, .t2-subtitle{
+		line-height: 1.2em;
+	}
+}
+.t2-block-readly{
+	margin-top: $t2-size-large;
+}
+//responsive
+body {
+    &:after {
+        content: "small";
+        display: none;
+        @media #{$medium} {
+            content: "medium";
+        }
+        @media #{$large} {
+            content: "large";
+        }
+    }
+}
+

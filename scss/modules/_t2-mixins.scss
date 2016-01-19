@@ -1,0 +1,45 @@
+@mixin t2-userSelectNone(){
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+@mixin t2-transform($method, $var) {
+	transform: $method+"("+$var+")";
+	-webkit-transform: $method+"("+$var+")";
+	-moz-transform: $method+"("+$var+")";
+	-o-transform: $method+"("+$var+")";
+	-ms-transform: $method+"("+$var+")";
+}
+@mixin t2-trantran($transition-time, $method) {
+	transition:transform $transition-time $method;
+	-webkit-transition:-webkit-transform $transition-time $method;
+    -moz-transition:-moz-transform $transition-time $method;
+    -o-transition:-o-transform $transition-time $method;
+    -ms-transition:-o-transform $transition-time $method;
+    
+}
+@mixin t2-transition($transition-property, $transition-time, $method) {
+    $stringen:null;
+    $position:1;
+    $length: length($transition-property);
+	@each $prop in $transition-property{
+		@if ($position == $length){
+			$stringen: $stringen $prop $transition-time $method;	
+		}@else{
+			$stringen: $stringen $prop $transition-time $method+",";
+		}
+		$position: $position+1;
+	}
+    -webkit-transition: $stringen;
+    -moz-transition: $stringen;
+    -ms-transition: $stringen;
+    -o-transition: $stringen;
+    transition: $stringen;
+}
+@mixin t2-background-size($method){
+	background-size: $method;
+	-ms-behavior: url(/Scripts/polyfills/backgroundsize.min.htc);
+}
